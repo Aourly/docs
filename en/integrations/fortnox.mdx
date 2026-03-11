@@ -1,0 +1,124 @@
+---
+title: "Fortnox Integration"
+description: "Connect Aourly to Fortnox to automatically sync invoices, customers, accounts, and vouchers between the two systems."
+---
+
+Connect Aourly to Fortnox and let the two systems talk to each other automatically. Instead of entering the same invoices, customers, and accounting data twice, the integration keeps everything in sync so you can focus on your actual work.
+
+## What is Fortnox?
+
+Fortnox is Sweden's most widely used cloud-based accounting software. It handles bookkeeping, invoicing, payroll, and more. Most Swedish accountants are familiar with Fortnox, which makes it a natural companion for Aourly.
+
+## Why connect Aourly to Fortnox?
+
+When you create and send invoices through Aourly, the integration automatically pushes that data into your Fortnox account. This means:
+
+- **Invoices** you create in Aourly appear in Fortnox without re-entering them
+- **Customers** are synchronized so your client database stays consistent
+- **Vouchers** are pushed to Fortnox for proper bookkeeping records
+- **Accounts** and **financial years** are pulled from Fortnox so Aourly uses the same chart of accounts your accountant works with
+
+The result is less manual work, fewer mistakes, and accounting that is always up to date.
+
+## Prerequisites
+
+Before you begin, make sure you have:
+
+- An active Fortnox account with API access (most plans include this)
+- Owner-level access to your Aourly company
+- Your Fortnox login credentials handy
+
+## Connecting Fortnox
+
+### Step 1: Open the Integrations page
+
+In the Aourly sidebar, click on your company name to open the tenant menu, then select **Integrations**. This page is only visible to company owners.
+
+### Step 2: Start the connection
+
+Click the **Connect Fortnox** button on the Fortnox card. Aourly will redirect you to Fortnox to authorize the connection.
+
+### Step 3: Authorize Aourly in Fortnox
+
+On the Fortnox website, log in if prompted. You will see a list of the permissions Aourly needs. Review them and click **Grant Access** to authorize the connection.
+
+### Step 4: Return to Aourly
+
+Fortnox redirects you back to Aourly automatically. A success notification confirms the integration is active.
+
+### Step 5: Configure account mapping
+
+Once connected, Aourly imports your chart of accounts and financial years from Fortnox. Go through the account mapping to verify that revenue accounts, VAT accounts, and other key accounts are correctly linked.
+
+If you are unsure about which accounts to map, consult your accountant. Getting this right from the start avoids bookkeeping headaches later.
+
+### Step 6: Verify the connection
+
+The Integrations page now shows your Fortnox status as **Connected**. You can see when the last sync occurred and trigger a manual sync at any time.
+
+## What gets synced
+
+| Data type        | Direction          | Description                                      |
+|------------------|--------------------|--------------------------------------------------|
+| Invoices         | Aourly → Fortnox   | Invoices created in Aourly are pushed to Fortnox |
+| Customers        | Aourly → Fortnox   | Client records are synced to Fortnox              |
+| Vouchers         | Both directions     | Accounting vouchers are synced between systems    |
+| Accounts         | Fortnox → Aourly   | Chart of accounts is imported into Aourly         |
+| Financial years  | Fortnox → Aourly   | Fiscal year periods are pulled from Fortnox       |
+
+## Managing the connection
+
+### Viewing connection status
+
+The Integrations page displays the current status of your Fortnox connection, including when the last successful sync occurred.
+
+### Disconnecting
+
+If you need to disconnect, click **Disconnect** on the Fortnox card. Data that was already synced remains in both systems. No new data will be synchronized after disconnecting.
+
+### Reconnecting after expiration
+
+Fortnox authorization tokens can expire over time. If this happens, Aourly displays a warning on the Integrations page. Click **Reconnect** to go through the authorization flow again. Your existing data and mappings are preserved.
+
+## Troubleshooting
+
+**Authorization expired**: Re-authorize by clicking Reconnect on the Integrations page. You do not need to reconfigure account mappings.
+
+**Sync errors**: If an invoice fails to sync, check that the customer exists in both systems and that the account mapping is complete. Aourly will retry failed syncs automatically.
+
+**Missing accounts**: If you recently added new accounts in Fortnox, trigger a manual sync from the Integrations page to pull the latest chart of accounts.
+
+## Frequently asked questions
+
+**Do I need a paid Fortnox plan?**
+You need an active Fortnox account with API access. Most Fortnox plans include this, but verify with Fortnox if you are on their most basic tier.
+
+**Can coordinators or performers set up the integration?**
+No. Only the company owner has access to the Integrations page and can manage connections.
+
+**Will disconnecting delete my data?**
+No. Disconnecting only stops future synchronization. All previously synced data remains in both Aourly and Fortnox.
+
+
+<Info>Fortnox is Sweden's most popular cloud-based accounting software. Connecting it to Aourly eliminates the need to manually enter invoice and customer data in both systems.</Info>
+
+<Tip>After connecting, your existing accounts and financial years are automatically imported from Fortnox. New invoices and customers created in Aourly will be pushed to Fortnox when synced.</Tip>
+
+<Warning>Only the company owner can manage integrations. If you are a coordinator or performer, ask your company owner to set up the Fortnox connection.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="What data is synced between Aourly and Fortnox?">
+    Invoices, customers, and vouchers are pushed from Aourly to Fortnox. Accounts and financial years are pulled from Fortnox into Aourly. This keeps both systems in sync without manual data entry.
+  </Accordion>
+  <Accordion title="What happens if the Fortnox authorization expires?">
+    If the connection expires, you will see a warning on the Integrations page. Simply click Reconnect to go through the authorization flow again. No data is lost when reconnecting.
+  </Accordion>
+  <Accordion title="Can I disconnect Fortnox?">
+    Yes. On the Integrations page, click Disconnect on the Fortnox card. Previously synced data remains in both systems, but no new data will be synchronized.
+  </Accordion>
+  <Accordion title="Do I need a paid Fortnox plan?">
+    You need an active Fortnox account with API access. Most Fortnox plans include API access, but verify with Fortnox if you are on their most basic tier.
+  </Accordion>
+</AccordionGroup>

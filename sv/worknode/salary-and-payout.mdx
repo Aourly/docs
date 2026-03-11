@@ -1,0 +1,202 @@
+---
+title: "Lön och utbetalning"
+description: "Förstå hur din lön beräknas via Worknode, inklusive avdrag för avgifter, skatter, arbetsgivaravgifter och pension."
+---
+
+När du fakturerar via Worknode får du inte hela fakturabeloppet. Istället behandlar Worknode betalningen och betalar dig en nettolön efter avdrag för avgifter, skatter och obligatoriska bidrag. Den här guiden förklarar exakt hur beräkningen fungerar.
+
+## Betalningsflödet
+
+Så här går det till efter att en kund betalat din faktura:
+
+1. **Kunden betalar fakturan** -- pengarna går till Worknodes klientmedelskonto
+2. **Momsen separeras** -- momsdelen avsätts (den tillhör Skatteverket, inte dig eller Worknode)
+3. **Worknode drar sin avgift** -- en månadsavgift och/eller procentuell avgift beroende på din plan
+4. **Aourlys andel dras** -- plattformsavgift för faktureringsverktyget
+5. **Arbetsgivaravgifter beräknas** -- de obligatoriska arbetsgivaravgifterna (~31,42 %)
+6. **Inkomstskatt innehålls** -- baserat på skatteprocenten i din profil
+7. **Pension dras** -- om du har konfigurerat en pensionsprocent
+8. **Nettolön betalas** -- det återstående beloppet sätts in på ditt bankkonto
+
+## Förstå löneuppdelningen
+
+Så här fungerar varje avdrag, med ett konkret exempel. Anta att du skickar en faktura på 12 500 kr inklusive 25 % moms:
+
+### Fakturatotal inklusive moms
+
+Det här är vad kunden betalar. I vårt exempel: **12 500 kr**
+
+### Moms
+
+Moms är inte din inkomst -- den samlas in på uppdrag av Skatteverket. Vid 25 % är momsen på 12 500 kr lika med 2 500 kr.
+
+**Fakturatotal exklusive moms: 10 000 kr**
+
+### Worknode-avgifter
+
+Worknode tar betalt baserat på din plan (Flex eller Pro). Det kan inkludera en månadsavgift och/eller en procentandel av fakturabeloppet exklusive moms. I det här exemplet antar vi en avgift på 6 %:
+
+**Worknode-avgift: 600 kr**
+
+### Aourlys andel
+
+Aourly tar en plattformsavgift. I det här exemplet antar vi en liten procentandel:
+
+**Aourly-avgift: ~200 kr**
+
+Kvarvarande: ~9 200 kr
+
+### Arbetsgivaravgifter
+
+Alla svenska arbetsgivare måste betala arbetsgivaravgifter, cirka 31,42 %. Dessa finansierar socialförsäkring, sjukvård, pension och andra offentliga förmåner. Bidraget beräknas på det kvarvarande beloppet:
+
+**Arbetsgivaravgifter: ~2 196 kr**
+
+Bruttolön: ~7 004 kr
+
+### Inkomstskatt (preliminärskatt)
+
+Inkomstskatt innehålls baserat på procentsatsen i din profil. Om din skattesats är 30 %:
+
+**Inkomstskatt: ~2 101 kr**
+
+### Pensionsavsättning (tjänstepension)
+
+Om du har konfigurerat en pensionsprocent (till exempel 5 %):
+
+**Pension: ~350 kr**
+
+### Nettolön
+
+Efter alla avdrag:
+
+**Nettolön: ~4 553 kr**
+
+Det här är vad du får på ditt bankkonto.
+
+## Avdragssammanfattning
+
+| Post                          | Belopp (kr) | Kommentar                              |
+|-------------------------------|-------------|----------------------------------------|
+| Fakturatotal (inkl. moms)     | 12 500      | Vad kunden betalar                     |
+| Moms (25 %)                   | -2 500      | Betalas till Skatteverket              |
+| Fakturatotal (exkl. moms)     | 10 000      | Utgångspunkt för löneberäkning         |
+| Worknode-avgift (6 %)         | -600        | Beror på din plan                      |
+| Aourly-avgift                 | -200        | Plattformsavgift                       |
+| Arbetsgivaravgifter           | -2 196      | ~31,42 %, obligatoriskt                |
+| Bruttolön                     | 7 004       |                                        |
+| Inkomstskatt (30 %)           | -2 101      | Baserad på din profilinställning       |
+| Pension (5 %)                 | -350        | Valfritt, baserad på din inställning   |
+| **Nettolön**                  | **4 553**   | **Insatt på ditt bankkonto**           |
+
+De exakta siffrorna beror på din plans avgiftsprocent, din skattesats och din pensionsinställning. Aourly visar dig den faktiska uppdelningen för varje utbetalning.
+
+> **Varning:** Din nettolön kommer att vara betydligt lägre än fakturabeloppet. Det är normalt och beror på alla arbetsgivarförpliktelser. När du sätter ditt timpris, ta hänsyn till dessa avdrag så att din nettolön möter dina behov.
+
+## Varför avdragen finns
+
+Det är viktigt att förstå att dessa avdrag inte alla är "kostnader" i traditionell mening:
+
+- **Arbetsgivaravgifter** finansierar dina sociala förmåner: sjukpenning, föräldrapenning och grundpension. Dessa är förmåner du får som svensk anställd.
+- **Inkomstskatt** är samma skatt som alla betalar. Worknode innehåller den så att du inte behöver betala den i en klumpsumma senare.
+- **Pension** är ditt eget sparande, avsatt för pensionering.
+- **Worknode- och Aourly-avgifter** är den faktiska kostnaden för tjänsten.
+
+> **Info:** Även om arbetsgivaravgifter minskar din nettolön jämfört med att fakturera med eget företag, får du sociala förmåner i gengäld (sjukpenning, föräldrapenning, pension). Om du drev eget företag skulle du betala dessa avgifter själv som arbetsgivare.
+
+## Utbetalningsschema
+
+Löneutbetalningar behandlas vanligtvis enligt ett regelbundet schema -- veckovis eller månadsvis beroende på din Worknode-plan. Worknode samlar in alla mottagna kundbetalningar under perioden, kör löneberäkningarna och sätter in din nettolön på bankkontot i din profil.
+
+Det exakta utbetalningsdatumet beror på Worknodes behandlingsschema. Du kan följa kommande och tidigare utbetalningar i Aourly.
+
+## Intäktsspårning
+
+Aourly tillhandahåller en intäktshändelselogg där du kan se:
+
+- Varje mottagen fakturabetalning
+- Löneberäkningsuppdelningen för varje betalning
+- Löpande totaler av dina intäkter
+- Historik över alla utbetalningar
+
+Kontrollera detta regelbundet för att verifiera att avdragen stämmer med dina förväntade procentsatser och för att förstå ditt intäktsmönster över tid.
+
+## Skatterapportering
+
+Worknode hanterar din skatterapportering som din arbetsgivare:
+
+- **Månadsvis**: De rapporterar din inkomst och skatteinnehållningar till Skatteverket
+- **Årligen**: Din anställningsinkomst från Worknode visas i din årliga deklaration
+- **Skatteunderlag**: Du får samma typ av arbetsgivardokumentation som alla svenska anställda
+
+Du behöver inte lämna in en separat företagsdeklaration. Din inkomst från Worknode rapporteras som inkomst av tjänst.
+
+## Justera dina inställningar
+
+Om du vill ändra din skattesats eller pensionsprocent kan du göra det i din Worknode-profil. Ändringar av ekonomiska inställningar kräver en ändringsförfrågan som Worknode godkänner (se guiden [Profilinställning](profile-setup)).
+
+Vanliga anledningar att justera:
+
+- **Flytt till ny kommun**: Din kommunalskatt ändras, så din skattesats bör uppdateras
+- **Inkomständringar**: Om din totala årsinkomst ändras avsevärt kan din skattesats behöva justeras
+- **Starta eller ändra pensionsavsättningar**: Du kan börja avsätta när som helst eller justera procentsatsen
+
+## Tips
+
+- **Verifiera din skattesats årligen.** Kommunala skattesatser kan ändras och din inkomstnivå kan flytta dig till en annan skatteklass.
+- **Följ dina intäktshändelser.** Regelbunden uppföljning hjälper dig att upptäcka eventuella avvikelser tidigt.
+- **Överväg pensionsavsättningar.** Om Worknode är din huvudsakliga inkomst bygger även några procent pensionssparande över tid.
+- **Planera för avgiften.** Kom ihåg att Worknodes serviceavgift, Aourlys avgift, arbetsgivaravgifter och skatter tillsammans utgör en betydande del av fakturabeloppet. När du sätter ditt timpris, ta hänsyn till dessa avdrag.
+- **Använd lönekalkylatorn.** Om Aourly tillhandahåller en lönekalkylator, använd den för att uppskatta din nettolön innan du skapar en faktura. Det hjälper dig att offrera lämpliga priser till kunder.
+
+## Vanliga frågor
+
+**När får jag betalt?**
+Efter att kunden betalat och Worknode behandlat lönen. Utbetalningar följer ett regelbundet schema (veckovis eller månadsvis beroende på din plan).
+
+**Kan jag se en uppdelning av avdragen?**
+Ja. Worknode tillhandahåller lönespecifikationer och Aourly visar intäktshändelser med en detaljerad uppdelning för varje utbetalning.
+
+**Vad händer om en kund inte betalar?**
+Worknode hanterar inkasso. Du kan behöva vänta på betalning innan din lön kan behandlas, eftersom lön betalas från mottagna kundbetalningar.
+
+**Hur beräknas min nettolön?**
+Utgå från fakturabeloppet exklusive moms. Subtrahera Worknode- och Aourly-avgifterna, beräkna sedan arbetsgivaravgifter. Från bruttolönen subtraheras inkomstskatt och pensionsavsättningar. Resten är din nettolön.
+
+**Hanterar Worknode min deklaration?**
+Ja. De rapporterar din inkomst till Skatteverket som din arbetsgivare. Dina Worknode-inkomster visas som inkomst av tjänst i din årliga deklaration.
+
+**Varför är min nettolön så mycket lägre än fakturabeloppet?**
+Skillnaden beror på moms (som aldrig var din inkomst), Worknode- och Aourly-avgifter, arbetsgivaravgifter, inkomstskatt och pension. Det är jämförbart med vad alla anställda i Sverige upplever -- skillnaden mellan brutto och netto är betydande i det svenska skattesystemet.
+
+**Vad är arbetsgivaravgifter?**
+En obligatorisk svensk löneskatt på cirka 31,42 % som alla arbetsgivare betalar. Den finansierar socialförsäkring, sjukvård, pension och andra offentliga förmåner. Som din arbetsgivare betalar Worknode detta på dina vägnar från fakturaintäkterna.
+
+
+<Info>Arbetsgivaravgifter på cirka 31,42 % är en obligatorisk svensk löneskatt som alla arbetsgivare betalar. Den finansierar socialförsäkring, sjukvård och andra offentliga förmåner. Även om den minskar din nettolön jämfört med att fakturera med eget företag, får du sociala förmåner i gengäld (sjukpenning, föräldrapenning, pension).</Info>
+
+<Warning>Din nettolön kommer att vara betydligt mindre än fakturabeloppet. Det är normalt och beror på alla arbetsgivarförpliktelser inklusive moms, avgifter, arbetsgivaravgifter, inkomstskatt och pension.</Warning>
+
+<Tip>Använd Aourlys lönekalkylator (om tillgänglig) för att uppskatta din nettolön innan du skapar en faktura. Det hjälper dig att sätta lämpliga timpriser.</Tip>
+
+<Info>Moms som samlats in på fakturor är inte en del av din lön. Den betalas till Skatteverket av Worknode. Din löneberäkning utgår från fakturabeloppet exklusive moms.</Info>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="När får jag betalt?">
+    Efter att kunden betalt fakturan och Worknode behandlat lönen. Utbetalningar sker vanligtvis enligt ett regelbundet schema (veckovis eller månadsvis beroende på din plan).
+  </Accordion>
+  <Accordion title="Kan jag se en uppdelning av avdragen?">
+    Ja. Worknode tillhandahåller lönespecifikationer och Aourly visar intäktshändelser med en detaljerad uppdelning av varje löneberäkning, inklusive alla avdrag från bruttofakturabeloppet till din nettolön.
+  </Accordion>
+  <Accordion title="Vad händer om en kund inte betalar?">
+    Worknode hanterar inkasso. Du kan behöva vänta på betalning innan din lön kan behandlas, eftersom lön betalas från mottagna kundbetalningar.
+  </Accordion>
+  <Accordion title="Hur beräknas min nettolön?">
+    Utgå från fakturabeloppet exklusive moms: subtrahera Worknodes plattformsavgift, subtrahera Aourlys andel, beräkna sedan arbetsgivaravgifter (~31,42 %), subtrahera inkomstskatt (baserad på din konfigurerade procentsats), subtrahera pensionsavsättningar (om några). Resten är din nettolön.
+  </Accordion>
+  <Accordion title="Hanterar Worknode min skattedeklaration?">
+    Ja. Som din arbetsgivare rapporterar Worknode din inkomst och skatteinnehållningar till Skatteverket. Du ser detta i din årliga deklaration. Dina Worknode-inkomster visas som inkomst av tjänst.
+  </Accordion>
+</AccordionGroup>

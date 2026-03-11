@@ -1,0 +1,183 @@
+---
+title: "Registrera tid"
+description: "Hur du loggar arbetstid i Aourly."
+---
+
+Tidrapportering är kärnan i Aourly. Varje timme du registrerar matar in i tidrapporter, fakturor och lönsamhetsrapporter. Denna guide går igenom hur du skapar tidposter, förstår de olika fälten och bygger goda rapporteringsvanor.
+
+## Innan du börjar
+
+För att registrera tid behöver du:
+- Ett **aktivt uppdrag** (jobb) att registrera tid mot
+- Vara tillagd som **aktiv utförare** på det uppdraget
+- Uppdraget måste ha ett timpris konfigurerat för dig
+
+Om något av detta saknas kommer uppdraget inte att visas i tidpostformuläret.
+
+## Skapa en tidpost
+
+### Från Tid-sidan
+
+1. Klicka på **Tid** i huvudmenyn till vänster.
+2. Klicka på **Skapa tidpost** (knappen uppe till höger).
+3. Fyll i formulärfälten som beskrivs nedan.
+4. Klicka **Skapa** för att spara.
+
+### Från översikten
+
+Översikten innehåller en snabbåtgärd för att skapa tidposter. Klicka på genvägen för tidposter för att gå direkt till formuläret med dagens datum förifyllt.
+
+## Fält i tidposten
+
+### Uppdrag
+
+Välj vilket jobb tiden gäller. Rullgardinsmenyn visar bara aktiva uppdrag där du är utförare. Uppdraget avgör:
+- Vilken kund tiden faktureras till
+- Vilken valuta som används
+- Vilken tidrapport posten tillhör
+
+### Uppgift (valfritt)
+
+Om uppdraget har definierade uppgifter kan du koppla posten till en specifik uppgift. Uppgifter hjälper dig att kategorisera arbete inom ett uppdrag, till exempel:
+- "Design" kontra "Utveckling" kontra "Testning"
+- "Fas 1 - Research" kontra "Fas 2 - Implementation"
+
+Uppgifter är valfria. Om ditt uppdrag är enkelt kan du hoppa över detta fält.
+
+### Datum
+
+Datumet då arbetet utfördes. Standardvärdet är dagens datum. Du kan välja ett tidigare datum för att registrera tid retroaktivt.
+
+### Starttid och sluttid
+
+Ange när du började och slutade arbeta. Till exempel ger 09:00 till 12:30 dig 3,5 timmar. Denna metod ger den mest exakta spårningen och hjälper dig analysera dina arbetsmönster.
+
+### Timmar
+
+Alternativt kan du ange det totala antalet arbetade timmar direkt (till exempel 3,5). Använd detta när du inte har exakta start- och sluttider, eller när du föredrar ett enklare tillvägagångssätt.
+
+### Timpris
+
+Fylls i automatiskt från din utförarkonfiguration på uppdraget. Priset visas som referens och används för att beräkna totalkostnaden:
+
+**Totalkostnad = Timmar x Timpris**
+
+Till exempel: 3,5 timmar till 900 kr/timme = 3 150 kr.
+
+### Kommentar
+
+En fritext-beskrivning av det utförda arbetet. Kommentarer är viktiga eftersom de:
+- Visas på tidrapporter för granskning
+- Kan inkluderas på fakturor som skickas till kunden
+- Hjälper dig minnas vad du gjorde när du granskar tidigare arbete
+- Ger transparens och bygger kundförtroende
+
+**Bra kommentarer:**
+- "Implementerade responsiv navigeringsmeny och fixade mobillayoutproblem"
+- "Kundmöte: genomgång av Q2-strategi och roadmap-planering"
+- "Databasoptimering: indexerade ofta använda kolumner, minskade frågetiden med 40%"
+
+**Mindre användbara kommentarer:**
+- "Arbete"
+- "Utveckling"
+- "Möte"
+
+> **Tips:** Logga tid dagligen för korrekta underlag. Kommentarer underlättar vid granskning av tidrapporter.
+
+## Tidpoststatusar
+
+Varje tidpost har en status som spårar dess framsteg genom faktureringscykeln:
+
+### Föreslagen
+
+Den initiala statusen när du skapar en post eller när automatisk tidrapportering genererar en. Föreslagna poster:
+- Kan fritt redigeras eller raderas
+- Ingår ännu inte i fakturaberäkningar
+- Representerar arbete som utförts men inte granskats
+
+### Väntar på godkännande
+
+Posten har skickats för godkännande. Den väntar på att en ägare eller samordnare ska granska och godkänna den.
+
+### Godkänd
+
+Posten har godkänts och är redo att inkluderas på en faktura. Godkända poster:
+- Kan inte redigeras (för att bevara det godkända underlaget)
+- Ingår i beräkningar av fakturerbara belopp
+- Väntar på att läggas till på en faktura
+
+### Fakturerad
+
+Posten har inkluderats på en faktura som skickats till kunden. Den är nu del av ett formellt faktureringsdokument.
+
+### Betald
+
+Fakturan som innehåller denna post har markerats som betald. Faktureringscykeln för denna post är avslutad.
+
+## Automatiska tidsförslag
+
+Om automatisk tidrapportering är aktiverad på uppdraget skapar Aourly föreslagna tidposter baserat på varje utförares dagliga arbetsschema. Dessa poster:
+- Visas med status "Föreslagen"
+- Är förfyllda med de förväntade timmarna från det dagliga arbetsschemat
+- Kan redigeras, godkännas eller raderas precis som alla andra poster
+- Sparar dig från att manuellt skapa poster när ditt schema är förutsägbart
+
+## Tidrapporter och gruppering
+
+Tidposter organiseras automatiskt i **tidrapporter**. Varje tidrapport täcker en specifik period (vecka eller månad, beroende på uppdragets tidrapportfrekvens) och tillhör en specifik utförare på ett specifikt uppdrag.
+
+Du behöver inte skapa tidrapporter manuellt. De genereras automatiskt när du registrerar tidposter. Se guiden [Tidrapporter](timesheets) för mer information.
+
+## Redigera och radera poster
+
+Du kan redigera eller radera tidposter som har status **Föreslagen**. När en post har godkänts är den låst för att bevara faktureringsunderlaget.
+
+Så här redigerar du en post:
+1. Hitta posten på Tid-sidan
+2. Klicka på posten för att öppna den
+3. Ändra fälten efter behov
+4. Spara dina ändringar
+
+För att radera en post, använd raderingsåtgärden på posten. Detta tar permanent bort posten från tidrapporten.
+
+## Tips för effektiv tidrapportering
+
+### Logga dagligen
+
+Den enskilt viktigaste vanan för korrekt tidrapportering är att registrera dina timmar varje dag, helst i slutet av varje arbetspass. Att försöka rekonstruera en veckas arbete ur minnet är opålitligt och leder ofta till underfakturering.
+
+### Var specifik i kommentarer
+
+Skriv kommentarer som skulle vara begripliga för din kund på en faktura. Specificitet bygger förtroende och minskar faktureringstvister. Istället för "utvecklingsarbete", skriv "implementerade användarautentisering med tvåfaktorsverifiering".
+
+### Använd start- och sluttider när det är möjligt
+
+Även om det är snabbare att ange totala timmar ger start- och sluttider dig värdefull data om dina arbetsmönster. Över tid kan du analysera när du är mest produktiv och hur din tid fördelas över dagen.
+
+### Granska innan du skickar
+
+Innan du markerar tid för godkännande, granska dina poster för perioden. Kontrollera:
+- Saknade dagar (glömde du logga en dag?)
+- Felaktiga timmar (stavfel händer)
+- Saknade eller vaga kommentarer
+- Poster kopplade till fel uppgift
+
+### Använd automatisk tidrapportering klokt
+
+Om ditt schema är förutsägbart, aktivera automatisk tidrapportering på uppdraget. Det skapar poster baserat på ditt dagliga arbetsschema. Du kan sedan justera de autogenererade posterna istället för att skapa dem från grunden varje dag.
+
+
+<Tip>Logga tid dagligen för korrekta underlag.</Tip>
+
+<Info>Du kan logga tid för tidigare datum.</Info>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Kan jag logga tid på ett avslutat uppdrag?">
+    Nej, uppdraget måste vara aktivt.
+  </Accordion>
+  <Accordion title="Kan jag redigera en sparad tidpost?">
+    Ja, så länge den inte är godkänd eller fakturerad.
+  </Accordion>
+</AccordionGroup>

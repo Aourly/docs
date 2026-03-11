@@ -1,0 +1,155 @@
+---
+title: "Creating Expenses"
+description: "Learn how to create and track business expenses in Aourly, including multi-line expenses with VAT and receipt uploads."
+---
+
+Tracking expenses is essential for any freelancer or sole proprietor. Whether it is a train ticket for a client meeting, software subscriptions, or materials for a project, Aourly helps you record, categorize, and (when applicable) bill expenses to clients.
+
+## Before You Begin
+
+To create expenses, you need:
+- Access to Aourly as an owner, coordinator, or performer
+- For billable expenses: an Active assignment to link the expense to
+- The receipt (physical or digital) for the expense
+
+## Step-by-Step: Creating an Expense
+
+### 1. Open the Expenses Page
+
+Click **Expenses** in the sidebar. The overview shows all your expenses, with filters for status and type. You can also use the dashboard quick action to jump directly to the creation form.
+
+### 2. Start the Creation Form
+
+Click **Create Expense** in the top-right corner.
+
+### 3. Choose the Expense Type
+
+Select one of two types:
+- **Billable** (External): Expenses you will pass on to the client, such as travel for a client meeting or materials purchased for their project.
+- **Non-billable** (Internal): Expenses your business bears, such as office supplies, software subscriptions, or general business costs.
+
+The type determines whether the expense can be included on a client invoice. See the [Expense Types & Categories](expense-types-and-categories) guide for detailed guidance.
+
+### 4. Select a Category
+
+Choose the most appropriate expense category. Categories help organize your expenses and make reporting easier. Your company can configure custom categories to match your business needs.
+
+### 5. Link to an Assignment (Billable Expenses)
+
+For billable expenses, select the assignment this cost relates to. This determines:
+- Which client will be billed
+- Which invoice the expense will appear on
+- The currency (inherited from the assignment if not overridden)
+
+Non-billable expenses can optionally be linked to an assignment for internal cost tracking, but it is not required.
+
+### 6. Add Expense Rows
+
+Each expense has one or more rows. A row represents a single line item:
+
+| Field | Description |
+|-------|-------------|
+| **Amount** | The cost of the item (in the smallest currency unit) |
+| **VAT Rate** | The applicable VAT percentage |
+
+**Single-row example**: A taxi ride for 350 SEK at 6% VAT -- one row.
+
+**Multi-row example**: A business dinner receipt with:
+- Food: 890 SEK at 12% VAT
+- Beverages: 210 SEK at 25% VAT
+
+Two rows capture the different VAT rates accurately.
+
+### 7. Set the Currency
+
+Select the currency for the expense. This is typically SEK for domestic expenses but can be set to any supported currency for international purchases or business travel.
+
+### 8. Write a Note
+
+Add a descriptive note explaining:
+- What was purchased and why
+- Who it was for
+- The business purpose
+
+Good notes help during bookkeeping and if the expense is ever questioned by tax authorities.
+
+**Good note**: "Client lunch with Maria from TechCorp to discuss Q2 project scope. 2 attendees."
+
+**Weak note**: "Lunch"
+
+### 9. Upload the Receipt
+
+Attach a photo or scan of the receipt. You can upload an image file or a PDF. For Swedish bookkeeping compliance, the receipt should show:
+- The seller's name and organization number
+- The date of purchase
+- What was purchased
+- The amount including VAT
+- The VAT breakdown (if applicable)
+
+### 10. Save
+
+Click **Create** to save the expense. It starts in **Unhandled** status, ready for review.
+
+## Expense Margin (Markup)
+
+For billable expenses, you can apply a **margin** (markup). This is an additional amount added on top of the actual cost when invoicing the client. The margin is configured on the assignment as a general markup percentage.
+
+**Example**: You buy materials for 5,000 SEK and the assignment has a 10% markup. The client is invoiced 5,500 SEK (5,000 + 500 margin).
+
+The margin is stored separately from the expense amount, so you always see the actual cost and the billing amount.
+
+## Expense Participants
+
+For shared expenses (like a team dinner or a meeting with multiple attendees), you can add **participants**. Each participant has:
+- A **name**
+- An optional **company** affiliation
+
+Participants are important for Swedish tax deductions on representation expenses. Skatteverket requires documentation of who attended a business meal or event.
+
+## Tips for Expense Management
+
+### Log Immediately
+
+Create expenses as soon as they occur. Snap a photo of the receipt with your phone and upload it right away. Paper receipts fade, get lost, or become unreadable over time.
+
+### Use Correct VAT Rates
+
+Swedish VAT rates:
+- **25%**: Standard rate (most goods and services)
+- **12%**: Food, hotels, camping
+- **6%**: Books, newspapers, public transport, cultural events
+- **0%**: Exports, certain financial services
+
+Using the correct VAT rate is essential for accurate bookkeeping and VAT reporting.
+
+### Separate Personal and Business
+
+Only log genuine business expenses. Mixing personal and business costs creates bookkeeping problems and potential issues with Skatteverket.
+
+### Review Regularly
+
+Check your expense list weekly. Ensure all receipts are attached, categories are correct, and billable expenses are linked to the right assignments.
+
+
+<Tip>Log expenses as they happen. Waiting until the end of the month means lost receipts and forgotten details.</Tip>
+
+<Info>The total expense amount is calculated from the sum of all expense rows. Margin (markup) is added on top for billable expenses.</Info>
+
+<Warning>Always attach a receipt for expenses you plan to deduct. Swedish tax authorities (Skatteverket) require receipt documentation for all business deductions.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Can I create an expense without a receipt?">
+    Yes, technically you can. However, for Swedish bookkeeping and tax compliance, you should always attach a receipt for deductible business expenses.
+  </Accordion>
+  <Accordion title="What are expense rows?">
+    Expense rows are individual line items within an expense. Each row has its own amount and VAT rate. This is useful when a single receipt contains items with different VAT rates (e.g., food at 12% and a book at 6%).
+  </Accordion>
+  <Accordion title="Can I edit an expense after creating it?">
+    Yes, you can edit expenses that are in Unhandled status. Once an expense is Handled or Paid, changes may be restricted.
+  </Accordion>
+  <Accordion title="Do I need to link every expense to an assignment?">
+    Only billable expenses need to be linked to an assignment (so they can be invoiced to the client). Non-billable expenses can optionally be linked for cost tracking purposes.
+  </Accordion>
+</AccordionGroup>

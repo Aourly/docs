@@ -1,0 +1,184 @@
+---
+title: "Kunddetaljer"
+description: "Djupgående guide till varje kundfält i Aourly, inklusive faktureringsinställningar, momshantering och påslagskonfiguration."
+---
+
+Varje kund i Aourly har en uppsättning fält som styr hur de identifieras, faktureras och hanteras. Den här guiden går igenom varje fält, förklarar när det är relevant och hjälper dig konfigurera kunder korrekt för smidig fakturering.
+
+## Nå kunddetaljer
+
+1. Navigera till **Kunder** i sidomenyn
+2. Klicka på den kund du vill granska eller konfigurera
+3. Kunddetaljsidan visar alla inställningar organiserade i logiska sektioner
+
+## Kundidentitetsfält
+
+### Namn
+
+Kundens företagsnamn eller personnamn. Det är den primära identifieraren och visas på alla fakturor, i kundlistan och genom hela Aourly där kunden refereras.
+
+### E-post
+
+Kundens primära e-postadress, som används för allmän kommunikation. Om ingen faktura-e-post är angiven skickas fakturor även hit.
+
+### Faktura-e-post
+
+En separat e-postadress specifikt för att ta emot fakturor. Många svenska företag har en dedikerad faktureringsadress som `faktura@foretag.se` eller `ekonomi@foretag.com`. När den är angiven skickas fakturor till denna adress istället för den primära e-posten.
+
+> **Tips:** Fråga alltid din kund om de har en dedikerad faktura-e-post. Att skicka fakturor till fel adress är en vanlig orsak till försenade betalningar.
+
+### Organisationsnummer
+
+Kundens svenska organisationsnummer (t.ex. 556123-4567). Det visas på fakturor och är viktigt för B2B-transaktioner i Sverige. För internationella kunder anger du deras motsvarande företagsregistreringsnummer.
+
+### Momsregistreringsnummer
+
+Kundens momsregistreringsnummer. Det här fältet är särskilt viktigt för:
+
+- **EU-kunder utanför Sverige** -- Att ange ett giltigt EU-momsregistreringsnummer möjliggör omvänd skattskyldighet. Det innebär att du inte debiterar moms på fakturan, utan kunden redovisar den i sitt eget land.
+- **Verifiera momsregistrering** -- För svenska kunder är det användbart att ha momsregistreringsnumret för dina egna poster och bokföring.
+
+> **Tips:** För att omvänd skattskyldighet ska gälla måste både landet (angivet som ett EU-land utanför Sverige) och ett giltigt momsregistreringsnummer finnas.
+
+### Kundnummer
+
+En automatiskt genererad sekventiell identifierare som tilldelas när kunden skapas. Kundnumret:
+
+- Visas på fakturor som referens
+- Är unikt inom ditt företag
+- Kan inte ändras manuellt
+- Används i bokföringsintegrationer (Fortnox, Visma)
+
+### Landskod
+
+Kundens land. Det är ett av de viktigaste fälten eftersom det bestämmer momshantering:
+
+| Land | Momshantering |
+|---------|---------------|
+| **Sverige** | Svensk standardmoms på 25 % |
+| **EU-land (med momsregistreringsnummer)** | Omvänd skattskyldighet -- ingen moms på fakturan |
+| **EU-land (utan momsregistreringsnummer)** | Svensk moms kan gälla |
+| **Land utanför EU** | Ingen moms debiteras (export) |
+
+### Adress, postnummer, ort
+
+Kundens faktureringsadress. Den visas på fakturor och bör stämma överens med kundens officiella företagsadress för efterlevnad.
+
+### Telefon
+
+Kundens telefonnummer. Lagras som referens och visas inte på fakturor som standard.
+
+### Kontaktperson
+
+Namnet på personen du arbetar med hos kundföretaget. Användbart när kunden är en större organisation med flera avdelningar. Kontaktpersonens namn kan inkluderas på fakturor.
+
+## Fakturerings- och ekonomiinställningar
+
+### Betalningsvillkor
+
+Betalningsvillkor anger hur många dagar kunden har på sig att betala en faktura från utfärdandedatumet. Det är det **betalningsvillkor** som visas på varje faktura.
+
+Vanliga betalningsvillkor i Sverige:
+
+| Villkor | Betydelse | Vanlig användning |
+|---------|---------|------------|
+| 10 dagar | Snabb betalning | Småföretag, kända kontakter |
+| 15 dagar | Korta villkor | Vanligt i vissa branscher |
+| 30 dagar | Standard | De flesta B2B-affärer i Sverige (30 dagar netto) |
+| 45--60 dagar | Förlängda | Storföretag |
+
+Betalningsvillkor som anges på kunden blir standardvärde för nya fakturor. Du kan åsidosätta dem på enskilda fakturor vid behov.
+
+> **Tips:** Kom överens om betalningsvillkor med din kund innan arbetet påbörjas. Tydliga villkor förebygger obekväma samtal när fakturan förfaller.
+
+### Valuta
+
+Om du fakturerar en kund i en valuta som skiljer sig från ditt företags basvaluta anger du kundens valuta här. När en kunds valuta skiljer sig från din företagsvaluta:
+
+- Fakturabelopp visas i kundens valuta
+- Växelkurser tillämpas vid fakturaskapandet
+- Bokföringsposter registreras i ditt företags basvaluta
+
+### Valutapåslag %
+
+En procentsats som läggs på växelkursen vid fakturering i utländsk valuta. Det kompenserar för:
+
+- Valutakursfluktuationer mellan fakturaskapande och betalning
+- Bankavgifter för valutakonvertering
+- Administrativ overhead för hantering av utländsk valuta
+
+Ett påslag på **2--5 %** är vanligt inom svensk konsulting. Till exempel, med ett valutapåslag på 3 %, om den faktiska växelkursen ger en fakturarad på 10 000 NOK, blir det fakturerade beloppet 10 300 NOK.
+
+### Generellt påslag %
+
+Det generella påslaget appliceras på **utlägg** när de inkluderas på fakturor till denna kund. Det gör att du kan ta ut en vinstmarginal på kostnader du har haft för kundens räkning.
+
+**Så fungerar det:** Om du anger 10 % generellt påslag och lägger till ett reseutlägg på 500 SEK på en faktura ser kunden en fakturarad på 550 SEK för det utlägget.
+
+Vanliga inställningar:
+
+- **0 %** -- Vidarefakturera utlägg till självkostnadspris
+- **5--10 %** -- Standard för de flesta konsultrelationer
+- **10--20 %** -- Vanligt för material eller underleverantörskostnader
+- **Lämna tomt** -- Faller tillbaka på företagets standardpåslag
+
+## Hur kundinställningar kaskaderar
+
+Kundinställningar fungerar som standardvärden som flödar ner till fakturor:
+
+1. **Företagsstandarder** -- Anges i företagsprofilen
+2. **Kundöverstyrningar** -- Anges på kunddetaljsidan (betalningsvillkor, valuta, påslag)
+3. **Fakturaöverstyrningar** -- Anges på enskilda fakturor (kan åsidosätta alla kundstandarder)
+
+Denna hierarki innebär att du kan ange förnuftiga standardvärden på företags- och kundnivå, och bara göra justeringar på specifika fakturor vid behov.
+
+## Inställningar och befintliga fakturor
+
+Ändringar av kundinställningar påverkar bara **framtida** fakturor. Redan skapade fakturor behåller de inställningar de genererades med. Det säkerställer att dina skickade fakturor förblir korrekta och konsekventa med vad kunden tog emot.
+
+Om du behöver korrigera inställningar på en befintlig faktura som inte har skickats ännu, redigera fakturan direkt istället för att ändra kundinställningar.
+
+## Bästa praxis
+
+### Håll momsuppgifter korrekta
+
+Felaktiga momsinställningar kan leda till efterlevnadsproblem. Om en kund finns i EU, verifiera alltid deras momsregistreringsnummer. Europeiska kommissionen tillhandahåller ett VIES-valideringsverktyg för detta ändamål.
+
+### Ange valutapåslag för internationella kunder
+
+Om du fakturerar i en annan valuta än SEK, överväg alltid att ange ett valutapåslag. Även ett litet påslag (2--3 %) skyddar dig mot valutakursrörelser under betalningsperioden.
+
+### Använd faktura-e-post konsekvent
+
+Om en kund tillhandahåller en dedikerad faktura-e-post, använd den alltid. Det säkerställer att fakturor når kundens leverantörsreskontra direkt, vilket leder till snabbare betalningar.
+
+### Granska inställningar före första fakturan
+
+Innan du skapar den första fakturan till en ny kund, granska alla deras inställningar: betalningsvillkor, valuta, momsregistreringsnummer, land och påslagsprocent. Att få dessa rätt från början undviker korrigeringar senare.
+
+
+<Info>Inställningar på kundnivå fungerar som standardvärden för nya fakturor. Du kan åsidosätta betalningsvillkor, valuta och påslag på enskilda fakturor.</Info>
+
+<Tip>För internationella kunder, ange alltid både land och momsregistreringsnummer. Det säkerställer korrekt momshantering på fakturor.</Tip>
+
+<Warning>Ändringar av kundinställningar påverkar bara framtida fakturor. Befintliga fakturor behåller de villkor de skapades med.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Vad är valutapåslag?">
+    Valutapåslag är en procentsats som läggs på växelkursen vid fakturering i utländsk valuta. Det kompenserar för valutakursfluktuationer och konverteringskostnader. Till exempel innebär ett 3 % påslag på en USD-faktura att det omräknade beloppet ökas med 3 %.
+  </Accordion>
+  <Accordion title="Vad är generellt påslag?">
+    Generellt påslag är en procentsats som läggs på utlägg (som resekostnader eller material) när de inkluderas på fakturor. Det gör att du kan ta ut en vinstmarginal på kostnader du har haft för kundens räkning.
+  </Accordion>
+  <Accordion title="När spelar momsregistreringsnumret roll?">
+    Momsregistreringsnumret är avgörande för EU-kunder utanför Sverige. När ett giltigt momsregistreringsnummer finns och kunden är i ett annat EU-land kan Aourly tillämpa omvänd skattskyldighet, vilket innebär att moms inte debiteras på fakturan utan kunden redovisar den i sitt eget land.
+  </Accordion>
+  <Accordion title="Vad används faktura-e-posten till?">
+    Faktura-e-posten är en separat e-postadress specifikt för att ta emot fakturor. Många företag har dedikerade fakturaavdelningar (t.ex. faktura@foretag.se). När den är angiven skickas fakturor till denna adress istället för den primära e-posten.
+  </Accordion>
+  <Accordion title="Kan olika uppdrag för samma kund ha olika priser?">
+    Ja. Priser sätts per utförare och per uppdrag, inte per kund. Du kan ha en kund med flera uppdrag till olika timpriser.
+  </Accordion>
+</AccordionGroup>

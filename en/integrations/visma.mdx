@@ -1,0 +1,127 @@
+---
+title: "Visma Integration"
+description: "Connect Aourly to Visma eEkonomi to sync invoices, customers, and accounting data between the two platforms."
+---
+
+Connect Aourly to Visma eEkonomi and keep your invoicing and accounting data synchronized automatically. No more double entry -- what you create in Aourly flows straight into your Visma account.
+
+## What is Visma?
+
+Visma is one of Scandinavia's largest business software providers. Their cloud-based accounting product, Visma eEkonomi, is popular among Swedish freelancers and small businesses. It handles bookkeeping, invoicing, and financial reporting.
+
+## Why connect Aourly to Visma?
+
+The integration removes the manual step of entering data in two places. When you work in Aourly, the relevant data is automatically pushed to or pulled from Visma:
+
+- **Invoices** created in Aourly are pushed to Visma
+- **Customers** are synchronized to keep your client database consistent
+- **Vouchers** are synced for proper bookkeeping records
+- **Accounts** and **financial years** are pulled from Visma so Aourly uses the same chart of accounts
+
+This saves time, reduces errors, and keeps your accounting up to date.
+
+## Prerequisites
+
+Before you begin, make sure you have:
+
+- An active Visma eEkonomi account
+- Owner-level access to your Aourly company
+- Your Visma login credentials ready
+
+## Connecting Visma
+
+### Step 1: Open the Integrations page
+
+In the Aourly sidebar, click your company name to open the tenant menu, then select **Integrations**. This page is only visible to company owners.
+
+### Step 2: Start the connection
+
+Click the **Connect Visma** button on the Visma card. Aourly will redirect you to Visma to authorize the connection.
+
+### Step 3: Authorize Aourly in Visma
+
+On the Visma website, log in if prompted. Review the list of permissions Aourly is requesting and click **Grant Access** to authorize.
+
+### Step 4: Return to Aourly
+
+Visma redirects you back to Aourly automatically. A success notification confirms the integration is active.
+
+### Step 5: Configure account mapping
+
+Once connected, Aourly imports your chart of accounts and financial years from Visma. Review the account mapping to verify that revenue accounts, VAT accounts, and other key accounts are correctly linked.
+
+If you are unsure about account mapping, check with your accountant before making changes.
+
+### Step 6: Verify the connection
+
+The Integrations page now shows your Visma status as **Connected**. You can see when the last sync happened and trigger a manual sync if needed.
+
+## What gets synced
+
+| Data type        | Direction         | Description                                     |
+|------------------|-------------------|-------------------------------------------------|
+| Invoices         | Aourly → Visma    | Invoices created in Aourly are pushed to Visma  |
+| Customers        | Aourly → Visma    | Client records are synced to Visma              |
+| Vouchers         | Both directions    | Accounting vouchers are synced between systems  |
+| Accounts         | Visma → Aourly    | Chart of accounts is imported into Aourly       |
+| Financial years  | Visma → Aourly    | Fiscal year periods are pulled from Visma       |
+
+## Managing the connection
+
+### Viewing connection status
+
+The Integrations page shows the current status of your Visma connection, including the last successful sync time.
+
+### Disconnecting
+
+Click **Disconnect** on the Visma card if you need to remove the integration. Already-synced data stays in both systems. No new data will be synchronized after disconnecting.
+
+### Reconnecting after expiration
+
+Visma authorization tokens can expire. When this happens, Aourly displays a warning on the Integrations page. Click **Reconnect** to authorize again. Your account mappings and previously synced data are preserved.
+
+## Troubleshooting
+
+**Authorization expired**: Click Reconnect on the Integrations page to re-authorize. You will not need to reconfigure your account mappings.
+
+**Sync errors**: If an invoice fails to sync, verify that the customer exists in both systems and that your account mapping is complete. Aourly retries failed syncs automatically.
+
+**Missing accounts**: If you added new accounts in Visma recently, trigger a manual sync from the Integrations page to import the latest chart of accounts.
+
+## Frequently asked questions
+
+**Which Visma products work with Aourly?**
+Aourly integrates with Visma eEkonomi, the cloud-based accounting platform. If you use the desktop version (Visma Administration), contact Aourly support to check compatibility.
+
+**Can I use both Visma and Fortnox?**
+You should only connect one accounting system per company to avoid duplicate entries. Disconnect one integration before connecting the other.
+
+**Can coordinators or performers set up the integration?**
+No. Only the company owner has access to the Integrations page.
+
+**Will disconnecting delete my data?**
+No. Disconnecting stops future synchronization only. All previously synced data remains in both Aourly and Visma.
+
+
+<Info>Visma is one of Scandinavia's largest business software providers. Visma eEkonomi (formerly Visma Spcs) is their cloud-based accounting solution widely used by Swedish small businesses and freelancers.</Info>
+
+<Tip>After connecting, accounts and financial years are automatically imported from Visma. New invoices and customers in Aourly will be pushed to Visma during synchronization.</Tip>
+
+<Warning>Only the company owner can manage integrations. Coordinators and performers do not have access to the Integrations page.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="What data is synced between Aourly and Visma?">
+    Invoices, customers, and vouchers are pushed from Aourly to Visma. Accounts and financial years are pulled from Visma into Aourly, keeping both systems consistent.
+  </Accordion>
+  <Accordion title="Which Visma products does Aourly support?">
+    Aourly integrates with Visma eEkonomi (the cloud-based accounting platform). If you use Visma Administration (the desktop version), check with Aourly support for compatibility.
+  </Accordion>
+  <Accordion title="What happens if the Visma authorization expires?">
+    You will see a warning on the Integrations page. Click Reconnect to go through the authorization flow again. Your account mappings and previously synced data are preserved.
+  </Accordion>
+  <Accordion title="Can I use both Fortnox and Visma at the same time?">
+    No. You should connect one accounting system per company to avoid duplicate entries and conflicting data. Disconnect one before connecting the other.
+  </Accordion>
+</AccordionGroup>

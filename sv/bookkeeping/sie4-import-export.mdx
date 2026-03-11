@@ -1,0 +1,162 @@
+---
+title: "SIE4 Import och Export"
+description: "Lär dig hur du importerar och exporterar SIE4-filer för att migrera bokföringsdata, dela med din revisor eller för årsredovisning."
+---
+
+SIE4 är det svenska standardfilformatet för utbyte av bokföringsdata mellan system. Oavsett om du migrerar till Aourly från ett annat bokföringsverktyg, delar data med din revisor eller förbereder din årsredovisning -- SIE4 är sättet att flytta bokföringsdata in och ut ur Aourly.
+
+## Vad är SIE4?
+
+SIE (Standard Import Export) är ett filformat utvecklat av SIE-gruppen i Sverige. Det har varit branschstandard i decennier och stöds av i princip alla svenska bokföringsprogram, inklusive Fortnox, Visma, Bokio och många andra.
+
+En SIE4-fil innehåller:
+
+- **Företagsinformation** -- organisationsnummer, företagsnamn, räkenskapsårsdatum.
+- **Kontoplan** -- alla kontonummer och namn.
+- **Ingående balanser** -- kontosaldon vid räkenskapsårets början.
+- **Verifikationer** -- alla bokföringstransaktioner med debet- och kreditposter.
+- **Utgående balanser** -- kontosaldon vid räkenskapsårets slut.
+
+Filen är ren text med en specifik struktur, men du behöver inte förstå formatet -- Aourly hanterar läsning och skrivning åt dig.
+
+## Importera SIE4-filer
+
+### När du bör importera
+
+Importera en SIE4-fil när:
+
+- **Du migrerar från ett annat system** -- du byter från Fortnox, Visma eller ett annat verktyg till Aourlys inbyggda bokföring och vill ta med din historiska data.
+- **Du startar ett nytt räkenskapsår med ingående balanser** -- din revisor tillhandahåller en SIE4-fil med utgående balanser från föregående år.
+- **Du återställer data** -- du behöver återställa tidigare exporterade bokföringsposter.
+
+### Så importerar du
+
+1. Navigera till **Bokföring** och klicka på fliken **Importer**.
+2. Klicka på **Importera SIE4**.
+3. Välj SIE4-filen från din dator (vanligtvis en `.se`- eller `.si`-fil).
+4. Aourly läser filen och importerar datan.
+
+### Granska importen
+
+Efter importen visar Aourly en sammanfattning:
+
+- Antal konton som importerats eller uppdaterats.
+- Antal verifikationer som importerats.
+- Antal transaktioner som bearbetats.
+- Eventuella varningar (t.ex. konton som inte matchar BAS-standarden).
+- Eventuella fel (t.ex. felaktig data i filen).
+
+Importhistoriken bevaras på fliken Importer så att du kan granska tidigare importer när som helst.
+
+### Importtips
+
+- **Kontrollera räkenskapsåret** -- se till att SIE4-filen täcker rätt period innan du importerar.
+- **Undvik dubbletter** -- om du importerar samma fil två gånger kan du få dubbla verifikationer. Importera bara en fil en gång per räkenskapsår.
+- **Verifiera efter import** -- kontrollera flikarna Konton och Verifikationer för att bekräfta att datan ser korrekt ut.
+
+## Exportera SIE4-filer
+
+### När du bör exportera
+
+Exportera en SIE4-fil när:
+
+- **Du delar med din revisor** -- din revisor kan importera filen i sitt system för årsbokslut, skattedeklaration eller granskning.
+- **Du migrerar till ett annat system** -- om du byter bort från Aourly kan du exportera din data och ta med den.
+- **Årsredovisning** -- vissa verktyg för årsredovisning accepterar SIE4-filer.
+- **Säkerhetskopia** -- exportera i slutet av varje räkenskapsår som en permanent kopia av din bokföringsdata.
+
+### Så exporterar du
+
+1. Navigera till **Bokföring**.
+2. Använd åtgärden **Exportera SIE4**.
+3. Välj det **räkenskapsår** du vill exportera.
+4. Aourly genererar SIE4-filen.
+5. Ladda ner filen till din dator.
+
+Den exporterade filen innehåller din fullständiga kontoplan, alla verifikationer för det valda räkenskapsåret samt ingående och utgående balanser.
+
+### Exporttips
+
+- **Exportera regelbundet** -- ett bra arbetssätt är att exportera i slutet av varje månad eller kvartal som en löpande säkerhetskopia.
+- **Namnge dina filer** -- byt namn på den nedladdade filen med företagsnamn och period (t.ex. `MinFirma_2025.se`) för enkel identifiering.
+- **Dela säkert** -- SIE4-filer innehåller känslig finansiell data. Använd säkra metoder (krypterad e-post, delade mappar med åtkomstkontroll) vid delning med din revisor.
+
+## Räkenskapsår
+
+SIE4 import och export är kopplade till räkenskapsår. Innan du importerar eller exporterar, se till att dina räkenskapsår är korrekt definierade.
+
+### Hantera räkenskapsår
+
+Navigera till **Bokföring** och klicka på fliken **Räkenskapsår**. Här kan du:
+
+- Se befintliga räkenskapsår med start- och slutdatum.
+- Skapa nya räkenskapsår för kommande perioder.
+- Se vilka år som har bokföringsdata.
+
+De flesta enskilda näringsidkare använder kalenderåret (1 januari till 31 december). Om ditt räkenskapsår avviker, se till att det är korrekt konfigurerat innan du importerar eller exporterar.
+
+## Vanliga arbetsflöden
+
+### Migrera till Aourly
+
+1. Exportera en SIE4-fil från ditt nuvarande bokföringssystem.
+2. Importera den till Aourly.
+3. Verifiera den importerade datan.
+4. Fortsätt din bokföring i Aourly framåt.
+
+### Årsbokslut med din revisor
+
+1. Exportera SIE4 för det avslutade räkenskapsåret.
+2. Skicka den till din revisor.
+3. Din revisor upprättar årsbokslut och årsredovisning.
+4. Om revisorn tillhandahåller uppdaterade utgående balanser i en SIE4-fil, importera den som ingående balanser för det nya året.
+
+### Säkerhetskopia
+
+1. Exportera SIE4 i slutet av varje räkenskapsår.
+2. Förvara filen på en säker plats.
+3. Svensk lag kräver att du sparar bokföringsmaterial i sju år.
+
+## Vanliga frågor
+
+**Vad är SIE4?**
+SIE4 är det svenska standardfilformatet för utbyte av bokföringsdata. Det innehåller din kontoplan, verifikationer och saldon i ett format som alla svenska bokföringsprogram kan läsa.
+
+**När ska jag importera en SIE4-fil?**
+Vid migrering från ett annat system, återställning av data eller inläsning av ingående balanser från din revisor.
+
+**När ska jag exportera en SIE4-fil?**
+Vid delning av data med din revisor, migrering bort från Aourly, årsredovisning eller säkerhetskopiering.
+
+**Kan jag importera flera SIE4-filer?**
+Ja, men var försiktig med att inte importera överlappande data. Varje import spåras på fliken Importer.
+
+**Hur länge ska jag spara mina SIE4-exporter?**
+Bokföringslagen kräver att bokföringsmaterial sparas i sju år. Förvara dina SIE4-exporter på en säker plats med säkerhetskopia.
+
+
+<Info>SIE4 är det svenska standardfilformatet för utbyte av bokföringsdata mellan system. Det stöds av i princip alla svenska bokföringsprogram.</Info>
+
+<Tip>Exportera en SIE4-fil i slutet av varje räkenskapsår som en säkerhetskopia av dina bokföringsposter.</Tip>
+
+<Warning>Import av en SIE4-fil lägger till data i din bokföring. Se till att du importerar rätt fil för rätt räkenskapsår för att undvika dubbletter.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Vad är SIE4?">
+    SIE4 är ett svenskt standardfilformat för bokföringsdata. Det innehåller kontoplan, verifikationer, saldon och företagsinformation. Det används för att överföra data mellan bokföringssystem.
+  </Accordion>
+  <Accordion title="När ska jag importera en SIE4-fil?">
+    Importera vid migrering från ett annat bokföringssystem till Aourly. SIE4-filen tar med dina befintliga konton, verifikationer och saldon.
+  </Accordion>
+  <Accordion title="När ska jag exportera en SIE4-fil?">
+    Exportera när du delar data med din revisor, migrerar till ett annat system, upprättar årsredovisning eller skapar en säkerhetskopia av dina bokföringsposter.
+  </Accordion>
+  <Accordion title="Kan jag importera flera SIE4-filer?">
+    Ja. Varje import spåras separat på fliken Importer. Var noga med att inte importera överlappande data, eftersom det kan skapa dubbletter.
+  </Accordion>
+  <Accordion title="Vilka räkenskapsår är tillgängliga för export?">
+    Du kan exportera alla räkenskapsår som har definierats på fliken Räkenskapsår. Se till att dina räkenskapsår är korrekt konfigurerade innan du exporterar.
+  </Accordion>
+</AccordionGroup>

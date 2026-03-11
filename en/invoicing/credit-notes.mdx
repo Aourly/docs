@@ -1,0 +1,106 @@
+---
+title: "Credit Notes"
+description: "Learn what credit notes are, when to use them, and how to create one to reverse or correct a sent invoice."
+---
+
+Sometimes an invoice needs to be corrected after it has been sent. Perhaps you billed the wrong amount, the client cancelled part of the work, or you agreed on a discount after the invoice was already delivered. Since sent invoices cannot be edited in Aourly, the solution is to issue a **credit note**.
+
+## What Is a Credit Note?
+
+A credit note (kreditfaktura in Swedish) is an official document that reverses the amount on an original invoice. It is a standard practice in Swedish business accounting and is required by bookkeeping regulations when you need to correct a previously issued invoice.
+
+Credit notes:
+
+- Are linked to the original invoice they reverse.
+- Have their own sequential invoice number.
+- Are clearly marked as **Credit** type (as opposed to the normal **Debit** type).
+- Reverse the VAT reported on the original invoice.
+
+## When to Issue a Credit Note
+
+Common reasons for issuing a credit note:
+
+- **Billing errors** -- you invoiced the wrong amount, wrong rate, or wrong number of hours.
+- **Cancelled work** -- the client cancelled a project or part of the scope after you already invoiced.
+- **Post-invoice discounts** -- you and the client agreed on a discount after the invoice was sent.
+- **Returned goods** -- if applicable, goods were returned and need to be refunded.
+- **Duplicate invoicing** -- you accidentally invoiced the same work twice.
+
+## How to Create a Credit Note
+
+### Step 1: Open the Original Invoice
+
+Navigate to **Invoices** and find the invoice you need to credit. Click to open it. The invoice must have a **Sent** or **Paid** status -- you cannot credit a Draft invoice (just delete or edit it instead).
+
+### Step 2: Click Send Credit Invoice
+
+Click the **Send Credit Invoice** action button. This action is available on sent and paid invoices.
+
+### Step 3: Confirm
+
+Review the credit note details and confirm. Aourly will:
+
+- Create a new credit note document linked to the original invoice.
+- Assign the credit note its own invoice number.
+- Mark the original invoice status as **Credited**.
+- Generate a PDF for the credit note.
+
+### Step 4: Issue a Corrected Invoice (If Needed)
+
+If the credit was due to an error and the client still owes you money, create a new invoice with the correct details:
+
+1. Go through the normal [Creating Invoices](creating-invoices) process.
+2. Reference the original invoice number in the comments field so the client understands the correction chain.
+3. Review and send the new invoice as usual.
+
+## The Correction Workflow
+
+The full correction flow when you need to fix an error on a sent invoice:
+
+```
+Original Invoice (Sent) --> Credit Note (credits the original) --> New Invoice (with corrections)
+```
+
+This three-step process ensures a clean audit trail that satisfies Swedish bookkeeping requirements. Every transaction is documented and traceable.
+
+## Important Things to Know
+
+### You Cannot Edit Sent Invoices
+
+This is a fundamental rule in Aourly and in Swedish bookkeeping. Once an invoice is sent, it becomes part of your accounting record. The only way to correct it is through the credit-and-reissue process.
+
+### Credit Notes Affect Your Bookkeeping
+
+If you use a bookkeeping integration (Fortnox or Visma), the credit note will be exported to your accounting system automatically. The corresponding voucher entries will reverse the revenue and VAT from the original invoice.
+
+### Credit Notes Appear in Your Invoice List
+
+Credit notes show up in the invoice list alongside regular invoices. They are identifiable by their **Credit** type label. You can filter the invoice list by type to see only credit notes if needed.
+
+### Sequential Numbering Is Maintained
+
+Credit notes receive invoice numbers from the same sequential series as regular invoices. This maintains an unbroken number sequence as required by Swedish regulations.
+
+## Frequently Asked Questions
+
+**What is the difference between a credit note and deleting an invoice?**
+You can only delete draft invoices. Once an invoice is sent, it cannot be deleted -- it must be credited. This is required by Swedish bookkeeping law to maintain an audit trail.
+
+**Can I partially credit an invoice?**
+The Send Credit Invoice action credits the full amount. If you only need to correct part of the invoice, credit the full invoice and then create a new invoice for the correct amount.
+
+**Does my client receive the credit note?**
+The credit note PDF is generated and available for download. If email delivery is configured, the client is notified.
+
+**Does the credit note get its own number?**
+Yes. Credit notes are assigned their own sequential invoice number and are clearly identified as Credit type documents.
+
+**What happens to the original invoice after crediting?**
+The original invoice status changes to **Credited**. It remains in your invoice list for reference and audit purposes but the amount is no longer considered owed.
+
+
+<Warning>You cannot edit a sent invoice. Crediting and re-issuing is the only way to correct mistakes after sending.</Warning>
+
+<Info>Credit notes are linked to the original invoice and appear as a separate entry in your invoice list with the Credit type.</Info>
+
+<Tip>If you use a bookkeeping integration, the credit note will also be exported to your accounting system automatically.</Tip>

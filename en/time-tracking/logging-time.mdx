@@ -1,0 +1,196 @@
+---
+title: "Logging Time"
+description: "Learn how to create time entries in Aourly to accurately track the hours you work on each assignment."
+---
+
+Time tracking is at the heart of Aourly. Every hour you log feeds into timesheets, invoices, and profitability reports. This guide walks you through creating time entries, understanding the fields involved, and building good logging habits.
+
+## Before You Begin
+
+To log time, you need:
+- An **Active assignment** (job) to log time against
+- To be added as an **Active performer** on that assignment
+- The assignment must have an hourly rate configured for you
+
+If any of these are missing, the assignment will not appear in the time entry form.
+
+## Creating a Time Entry
+
+### From the Time Page
+
+1. Click **Time** in the main sidebar.
+2. Click **Create Time Entry** (top-right button).
+3. Fill in the form fields described below.
+4. Click **Create** to save.
+
+### From the Dashboard
+
+The dashboard includes a quick action for creating time entries. Click the time entry shortcut to jump directly to the creation form with today's date pre-filled.
+
+## Time Entry Fields
+
+### Assignment
+
+Select which job this time is for. The dropdown shows only Active assignments where you are a performer. The assignment determines:
+- Which client the time is billed to
+- What currency is used
+- Which timesheet the entry belongs to
+
+### Task (Optional)
+
+If the assignment has tasks defined, you can link the entry to a specific task. Tasks help you categorize work within an assignment, for example:
+- "Design" vs. "Development" vs. "Testing"
+- "Phase 1 - Research" vs. "Phase 2 - Implementation"
+
+Tasks are optional. If your assignment is straightforward, you can skip this field.
+
+### Date
+
+The date when the work was performed. Defaults to today. You can select any past date to log time retroactively.
+
+### Start Time and End Time
+
+Enter when you started and stopped working. For example, 09:00 to 12:30 gives you 3.5 hours. This method provides the most accurate tracking and helps you analyze your work patterns.
+
+### Hours
+
+Alternatively, you can enter the total hours worked directly (e.g., 3.5). Use this when you do not have exact start/end times, or when you prefer a simpler approach.
+
+### Hourly Rate
+
+Automatically filled from your performer configuration on the assignment. The rate is displayed for reference and is used to calculate the total cost:
+
+**Total cost = Hours x Hourly Rate**
+
+For example, 3.5 hours at 900 SEK/hour = 3,150 SEK.
+
+### Comment
+
+A free-text description of the work performed. Comments are important because they:
+- Appear on timesheets for review
+- Can be included on invoices sent to the client
+- Help you remember what you did when reviewing past work
+- Provide transparency and build client trust
+
+**Good comments:**
+- "Implemented responsive navigation menu and fixed mobile layout issues"
+- "Client meeting: Q2 strategy review and roadmap planning"
+- "Database optimization: indexed frequently queried columns, reduced query time by 40%"
+
+**Less useful comments:**
+- "Work"
+- "Development"
+- "Meeting"
+
+> **Tip:** Log time daily for accurate records. Comments help when reviewing timesheets later.
+
+## Time Entry Statuses
+
+Every time entry has a status that tracks its progress through the billing cycle:
+
+### Planned (Suggested)
+
+The initial status when you create an entry or when automatic time tracking generates one. Planned entries:
+- Can be freely edited or deleted
+- Are not yet included in invoice calculations
+- Represent work that happened but has not been reviewed
+
+### Pending Accept (Awaiting Approval)
+
+The entry has been submitted for approval. It is waiting for an owner or coordinator to review and approve it.
+
+### Billable (Approved)
+
+The entry has been approved and is ready to be included on an invoice. Approved entries:
+- Cannot be edited (to preserve the approved record)
+- Are included in billable amount calculations
+- Are waiting to be added to an invoice
+
+### Invoiced
+
+The entry has been included on an invoice sent to the client. It is now part of a formal billing document.
+
+### Paid
+
+The invoice containing this entry has been marked as paid. The billing cycle for this entry is complete.
+
+## Automatic Time Tracking Suggestions
+
+If automatic time tracking is enabled on the assignment, Aourly creates suggested time entries based on each performer's daily workload settings. These entries:
+- Appear as "Planned" (Suggested) status
+- Are pre-filled with the expected hours from the daily workload schedule
+- Can be edited, approved, or deleted like any other entry
+- Save you from manually creating entries when your schedule is predictable
+
+## Timesheets and Grouping
+
+Time entries are automatically organized into **timesheets**. Each timesheet covers a specific period (week or month, depending on the assignment's timesheet frequency) and belongs to a specific performer on a specific assignment.
+
+You do not need to create timesheets manually. They are generated automatically as you log time entries. See the [Timesheets](timesheets) guide for more details.
+
+## Editing and Deleting Entries
+
+You can edit or delete time entries that are in **Planned** (Suggested) status. Once an entry has been approved, it is locked to preserve the billing record.
+
+To edit an entry:
+1. Find the entry on the Time page
+2. Click the entry to open it
+3. Modify the fields as needed
+4. Save your changes
+
+To delete an entry, use the delete action on the entry. This permanently removes the entry from the timesheet.
+
+## Tips for Effective Time Logging
+
+### Log Daily
+
+The single most important habit for accurate time tracking is to log your hours every day, ideally at the end of each work session. Trying to reconstruct a week's worth of work from memory is unreliable and often leads to under-billing.
+
+### Be Specific in Comments
+
+Write comments that would make sense to your client on an invoice. Specificity builds trust and reduces billing disputes. Instead of "development work", write "implemented user authentication flow with two-factor support".
+
+### Use Start/End Times When Possible
+
+While entering total hours is faster, start/end times give you valuable data about your work patterns. Over time, you can analyze when you are most productive and how your time is distributed across the day.
+
+### Review Before Submitting
+
+Before marking time for approval, review your entries for the period. Check for:
+- Missing days (did you forget to log a day?)
+- Incorrect hours (typos happen)
+- Missing or vague comments
+- Entries assigned to the wrong task
+
+### Use Automatic Time Tracking Wisely
+
+If your schedule is predictable, enable automatic time tracking on the assignment. It will create entries based on your daily workload schedule. You can then adjust the auto-generated entries rather than creating them from scratch each day.
+
+
+<Tip>Log time daily for the most accurate records. It is much harder to remember what you did last week than what you did today.</Tip>
+
+<Tip>Comments help when reviewing timesheets later. Be specific about the work you performed.</Tip>
+
+<Info>Time entries are automatically grouped into timesheets based on the assignment's timesheet frequency.</Info>
+
+<Warning>Time entries can only be created for Active assignments. If you cannot find an assignment, check that it is Active and that you are an Active performer.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Can I log time for past dates?">
+    Yes, you can log time retroactively by changing the date field to any past date. The entry will be added to the correct timesheet period.
+  </Accordion>
+  <Accordion title="Can I log time on a completed assignment?">
+    No, the assignment must be Active for time logging. If an assignment has been completed, you would need to reactivate it first.
+  </Accordion>
+  <Accordion title="Can I edit a time entry after creating it?">
+    Yes, you can edit time entries that are in Planned (Suggested) status. Once an entry has been approved or invoiced, it can no longer be edited.
+  </Accordion>
+  <Accordion title="How are automatic time tracking suggestions generated?">
+    If automatic time tracking is enabled on the assignment, Aourly creates suggested entries based on each performer's daily workload settings. These appear as Planned entries that you can edit, approve, or delete.
+  </Accordion>
+  <Accordion title="Can I log time on weekends?">
+    Yes, you can log time on any day. The daily workload schedule only affects automatic time tracking and progress calculations, not manual time entry.
+  </Accordion>
+</AccordionGroup>

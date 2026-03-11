@@ -1,0 +1,124 @@
+---
+title: "Fortnox-integration"
+description: "Anslut Aourly till Fortnox för att automatiskt synkronisera fakturor, kunder, konton och verifikationer mellan systemen."
+---
+
+Anslut Aourly till Fortnox och låt de två systemen kommunicera automatiskt. Istället för att manuellt registrera samma fakturor, kunder och bokföringsdata två gånger håller integrationen allt synkroniserat så att du kan fokusera på ditt riktiga arbete.
+
+## Vad är Fortnox?
+
+Fortnox är Sveriges mest använda molnbaserade bokföringsprogram. Det hanterar bokföring, fakturering, löner och mycket mer. De flesta svenska revisorer är bekanta med Fortnox, vilket gör det till en naturlig partner för Aourly.
+
+## Varför ansluta Aourly till Fortnox?
+
+När du skapar och skickar fakturor via Aourly skickar integrationen automatiskt den informationen till ditt Fortnox-konto. Det innebär:
+
+- **Fakturor** du skapar i Aourly visas i Fortnox utan att du behöver registrera dem på nytt
+- **Kunder** synkroniseras så att din kunddatabas förblir konsekvent
+- **Verifikationer** skickas till Fortnox för korrekta bokföringsposter
+- **Konton** och **räkenskapsår** hämtas från Fortnox så att Aourly använder samma kontoplan som din revisor arbetar med
+
+Resultatet är mindre manuellt arbete, färre misstag och en bokföring som alltid är uppdaterad.
+
+## Förutsättningar
+
+Innan du börjar, se till att du har:
+
+- Ett aktivt Fortnox-konto med API-åtkomst (de flesta abonnemang inkluderar detta)
+- Ägarbehörighet till ditt Aourly-företag
+- Dina Fortnox-inloggningsuppgifter redo
+
+## Ansluta Fortnox
+
+### Steg 1: Öppna sidan Integrationer
+
+I Aourlys sidomeny klickar du på ditt företagsnamn för att öppna företagsmenyn och väljer **Integrationer**. Sidan är bara synlig för företagsägare.
+
+### Steg 2: Starta anslutningen
+
+Klicka på knappen **Anslut Fortnox** på Fortnox-kortet. Aourly omdirigerar dig till Fortnox för att auktorisera anslutningen.
+
+### Steg 3: Auktorisera Aourly i Fortnox
+
+På Fortnox webbplats loggar du in om du ombeds. Du ser en lista över de behörigheter som Aourly begär. Granska dem och klicka på **Bevilja åtkomst** för att godkänna anslutningen.
+
+### Steg 4: Återvänd till Aourly
+
+Fortnox omdirigerar dig tillbaka till Aourly automatiskt. En bekräftelse visar att integrationen är aktiv.
+
+### Steg 5: Konfigurera kontomappning
+
+När anslutningen är klar importerar Aourly din kontoplan och dina räkenskapsår från Fortnox. Gå igenom kontomappningen för att verifiera att intäktskonton, momskonton och andra viktiga konton är korrekt kopplade.
+
+Om du är osäker på vilka konton som ska kopplas, rådgör med din revisor innan du gör ändringar. Att få detta rätt från början undviker bokföringsproblem i framtiden.
+
+### Steg 6: Verifiera anslutningen
+
+Sidan Integrationer visar nu din Fortnox-status som **Ansluten**. Du kan se när den senaste synkroniseringen skedde och trigga en manuell synk när som helst.
+
+## Vad som synkroniseras
+
+| Datatyp          | Riktning            | Beskrivning                                           |
+|------------------|---------------------|-------------------------------------------------------|
+| Fakturor         | Aourly till Fortnox | Fakturor skapade i Aourly skickas till Fortnox        |
+| Kunder           | Aourly till Fortnox | Kundposter synkroniseras till Fortnox                 |
+| Verifikationer   | Båda riktningarna   | Bokföringsverifikationer synkas mellan systemen       |
+| Konton           | Fortnox till Aourly | Kontoplanen importeras till Aourly                    |
+| Räkenskapsår     | Fortnox till Aourly | Räkenskapsårsperioder hämtas från Fortnox             |
+
+## Hantera anslutningen
+
+### Visa anslutningsstatus
+
+Sidan Integrationer visar aktuell status för din Fortnox-anslutning, inklusive senaste lyckade synkronisering.
+
+### Koppla bort
+
+Om du behöver koppla bort klickar du på **Koppla bort** på Fortnox-kortet. Data som redan har synkroniserats finns kvar i båda systemen. Ingen ny data synkroniseras efter bortkoppling.
+
+### Återansluta efter att auktoriseringen löpt ut
+
+Fortnox auktoriseringstoken kan löpa ut med tiden. Om det händer visar Aourly en varning på sidan Integrationer. Klicka på **Återanslut** för att gå igenom auktoriseringsflödet igen. Dina befintliga mappningar och data bevaras.
+
+## Felsökning
+
+**Auktoriseringen har löpt ut**: Återauktorisera genom att klicka på Återanslut på sidan Integrationer. Du behöver inte konfigurera om kontomappningarna.
+
+**Synkroniseringsfel**: Om en faktura inte synkroniseras, kontrollera att kunden finns i båda systemen och att kontomappningen är komplett. Aourly försöker automatiskt synkronisera misslyckade synkroniseringar igen.
+
+**Saknade konton**: Om du nyligen lagt till nya konton i Fortnox, trigga en manuell synk från sidan Integrationer för att hämta den senaste kontoplanen.
+
+## Vanliga frågor
+
+**Behöver jag ett betalt Fortnox-abonnemang?**
+Du behöver ett aktivt Fortnox-konto med API-åtkomst. De flesta Fortnox-abonnemang inkluderar detta, men kontrollera med Fortnox om du har deras mest grundläggande abonnemang.
+
+**Kan samordnare eller utförare konfigurera integrationen?**
+Nej. Bara företagsägaren har tillgång till sidan Integrationer och kan hantera anslutningar.
+
+**Försvinner min data om jag kopplar bort?**
+Nej. Bortkoppling stoppar bara framtida synkronisering. All tidigare synkroniserad data finns kvar i både Aourly och Fortnox.
+
+
+<Info>Fortnox är Sveriges mest populära molnbaserade bokföringsprogram. Genom att ansluta det till Aourly slipper du manuellt registrera faktura- och kunddata i båda systemen.</Info>
+
+<Tip>Efter anslutningen importeras dina befintliga konton och räkenskapsår automatiskt från Fortnox. Nya fakturor och kunder som skapas i Aourly skickas till Fortnox vid synkronisering.</Tip>
+
+<Warning>Bara företagsägaren kan hantera integrationer. Om du är samordnare eller utförare, be din företagsägare att konfigurera Fortnox-anslutningen.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Vilken data synkroniseras mellan Aourly och Fortnox?">
+    Fakturor, kunder och verifikationer skickas från Aourly till Fortnox. Konton och räkenskapsår hämtas från Fortnox till Aourly. Det håller båda systemen synkroniserade utan manuell datainmatning.
+  </Accordion>
+  <Accordion title="Vad händer om Fortnox-auktoriseringen löper ut?">
+    Om anslutningen löper ut visas en varning på sidan Integrationer. Klicka på Återanslut för att gå igenom auktoriseringsflödet igen. Ingen data går förlorad vid återanslutning.
+  </Accordion>
+  <Accordion title="Kan jag koppla bort Fortnox?">
+    Ja. På sidan Integrationer klickar du på Koppla bort på Fortnox-kortet. Tidigare synkroniserad data finns kvar i båda systemen, men ingen ny data kommer att synkroniseras.
+  </Accordion>
+  <Accordion title="Behöver jag ett betalt Fortnox-abonnemang?">
+    Du behöver ett aktivt Fortnox-konto med API-åtkomst. De flesta Fortnox-abonnemang inkluderar API-åtkomst, men kontrollera med Fortnox om du har deras mest grundläggande abonnemang.
+  </Accordion>
+</AccordionGroup>

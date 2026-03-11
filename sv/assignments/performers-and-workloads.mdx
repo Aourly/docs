@@ -1,0 +1,148 @@
+---
+title: "Utförare och arbetsbelastning"
+description: "Lägg till utförare i uppdrag och hantera arbetsbelastning och timpriser."
+---
+
+Utförare är de personer som utför arbetet på ett uppdrag. I Aourly måste varje person som registrerar tid mot ett uppdrag vara tillagd som utförare. Denna guide beskriver hur du lägger till utförare, anger deras timpriser och konfigurerar arbetsscheman.
+
+## Vad är en utförare?
+
+En utförare är en teammedlem som är tilldelad att arbeta på ett specifikt uppdrag. Varje utförare har:
+- Ett eget **timpris** för uppdraget
+- En **förväntad veckoarbetsbelastning** (timmar per vecka)
+- En valfri **daglig arbetsfördelning** (timmar per veckodag)
+- Egna **tidrapporter** (tidposter grupperade per period)
+- En **status** (Aktiv, Pausad eller Avslutad)
+
+För de flesta enskilda företagare som använder Aourly kommer du att vara den enda utföraren på dina uppdrag. Om du samarbetar med underleverantörer eller har teammedlemmar kan du lägga till flera utförare på samma uppdrag.
+
+## Lägga till en utförare
+
+### Steg 1: Öppna uppdraget
+
+Navigera till **Jobb** i sidomenyn och klicka på uppdraget. I uppdragets detaljvy hittar du sektionen för utförare.
+
+### Steg 2: Välj teammedlem
+
+Klicka på **Lägg till utförare** och välj en användare från ditt företag. Listan visar alla teammedlemmar som har lagts till i ditt företag med utförarrollen i Aourly.
+
+### Steg 3: Ange timpris
+
+Ange timpriset för denna utförare på detta uppdrag. Viktiga punkter:
+- Priset är specifikt för detta uppdrag -- samma person kan ha olika priser på olika uppdrag.
+- Priset används för att beräkna kostnaden för varje tidpost (timmar x pris = kostnad).
+- För uppdrag med timpris påverkar detta direkt fakturerade belopp.
+- För uppdrag med fast pris eller retainer används priset för intern uppföljning och lönsamhetsanalys.
+
+### Steg 4: Ange veckoarbetstid
+
+Ange det förväntade antalet timmar som utföraren ska arbeta per vecka. Detta antal används för:
+- **Framstegsuppföljning**: Jämför faktiska timmar mot förväntade timmar.
+- **Arbetsbelastningshantering**: Förstå om en utförare ligger över eller under sitt mål.
+- **Omfattningsövervakning**: Spåra om uppdraget ligger i fas för att avslutas inom den uppskattade totala tidsramen.
+
+### Steg 5: Konfigurera daglig arbetsbelastning (valfritt)
+
+Du kan fördela veckotimmarna över enskilda veckodagar. För varje dag, måndag till söndag:
+- **Aktivera/inaktivera** dagen (ange om utföraren arbetar den dagen)
+- **Ange timmar** för den dagen
+
+Detta är särskilt användbart för:
+- Att definiera ett realistiskt arbetsschema (till exempel inga helger)
+- Att ställa in automatisk tidrapportering
+- Att planera runt deltidsarrangemang
+
+**Exempelkonfiguration för en 32-timmars arbetsvecka:**
+
+| Dag | Aktiverad | Timmar |
+|-----|-----------|--------|
+| Måndag | Ja | 8 |
+| Tisdag | Ja | 8 |
+| Onsdag | Ja | 8 |
+| Torsdag | Ja | 8 |
+| Fredag | Nej | 0 |
+| Lördag | Nej | 0 |
+| Söndag | Nej | 0 |
+
+> **Tips:** Dagliga arbetsbelastningsinställningar hjälper till med automatiska tidsförslag. Konfigurera dem noggrant för att få bästa möjliga autogenererade poster.
+
+## Utförarstatusar
+
+Varje utförare på ett uppdrag har en status:
+
+### Aktiv
+
+Utföraren arbetar för närvarande på uppdraget. De kan:
+- Registrera tidposter
+- Få tidposter autogenererade (om automatisk tidrapportering är aktiverad)
+- Inkluderas i tidrapportsperioder
+
+### Pausad
+
+Utföraren är tillfälligt avstängd från uppdraget. När en utförare är pausad:
+- De kan inte registrera nya tidposter
+- Befintliga tidposter och tidrapporter bevaras
+- De kan återaktiveras senare när arbetet återupptas
+
+Använd pausning när en teammedlem behöver ett tillfälligt uppehåll från projektet, till exempel under semester eller vid omfördelning till annat arbete.
+
+### Avslutad
+
+Utförarens deltagande i uppdraget är avslutat. När en utförare är avslutad:
+- De kan inte registrera nya tidposter
+- All historisk tiddata och alla tidrapporter förblir tillgängliga
+- Utförarens bidragshistorik bevaras för rapportering och fakturering
+
+Använd detta när en teammedlem permanent lämnar projektet.
+
+## Automatisk tidrapportering
+
+Om du aktiverar **Automatisk tidrapportering** på uppdraget skapar Aourly automatiskt tidposter baserat på varje utförares dagliga arbetsschema. Detta är användbart när:
+- Du har ett förutsägbart, återkommande schema
+- Du vill ha förfyllda poster som du kan justera efter behov
+- Du vill minska arbetet med manuell tidregistrering
+
+Autogenererade poster visas med status "Föreslagen" och kan redigeras, godkännas eller raderas precis som alla andra tidposter.
+
+## Hur arbetsbelastning påverkar andra funktioner
+
+### Tidrapporter
+
+Varje utförare har egna tidrapporter för uppdraget. Tidrapporter grupperar tidposter per period (veckovis eller månadsvis, beroende på uppdragets tidrapportfrekvens). Det innebär:
+- Utförare A och Utförare B har separata tidrapporter även för samma period.
+- Godkännande och fakturering sker per utförare och period.
+
+### Framstegsuppföljning
+
+Uppdragets översikt visar framstegsmätningar baserade på utförarnas arbetsbelastning:
+- **Förväntade timmar**: Beräknade från veckoarbetsbelastning och antalet förflutna veckor.
+- **Faktiska timmar**: Summan av registrerade tidposter.
+- **Avvikelse**: Skillnaden mellan förväntade och faktiska timmar, som visar över- eller underleverans.
+
+### Fakturering
+
+När fakturor skapas grupperas tidposter per utförare. Varje utförares poster visar deras individuella timpris och timmar, vilket ger kunden en tydlig uppdelning av vem som arbetat med vad och till vilken kostnad.
+
+## Bästa praxis
+
+- **Ange timpriser noggrant**: Priset du anger här används för alla kostnadsberäkningar. Dubbelkolla att det stämmer med kundavtalet.
+- **Var realistisk med arbetsbelastning**: Alltför optimistiska uppskattningar leder till missvisande framstegsmätningar. Ange timmar som speglar den faktiska förväntade tillgängligheten.
+- **Använd daglig arbetsfördelning för automatisk tidrapportering**: Om du aktiverar automatisk tidrapportering ger korrekta dagliga fördelningar mycket mer användbara autogenererade poster.
+- **Pausa hellre än avsluta i förtid**: När en utförare behöver ett tillfälligt uppehåll, pausa dem istället för att avsluta deras deltagande. Detta bevarar förväntningen om fortsättning.
+- **Avsluta hellre än radera**: När en utförare permanent lämnar ett projekt, avsluta dem istället för att ta bort dem. Detta bevarar deras tidposthistorik för korrekt rapportering och fakturering.
+
+
+<Tip>Daglig arbetsfördelning hjälper till med automatiska tidsförslag baserat på schema.</Tip>
+
+<Info>Att pausa en utförare förhindrar nya tidposter men behåller befintliga.</Info>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Kan en utförare ha olika timpriser på olika uppdrag?">
+    Ja, timpriset sätts per utförare och uppdrag.
+  </Accordion>
+  <Accordion title="Vad händer om jag tar bort en utförare?">
+    Befintliga tidposter behålls, men utföraren kan inte längre logga ny tid på uppdraget.
+  </Accordion>
+</AccordionGroup>

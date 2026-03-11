@@ -1,0 +1,154 @@
+---
+title: "Bookkeeping Integration Setup"
+description: "Step-by-step guide to connecting Aourly with Fortnox or Visma for automated bookkeeping sync."
+---
+
+If you use Fortnox or Visma for your accounting, you can connect them to Aourly so that invoices and bookkeeping vouchers sync automatically. This eliminates double data entry and keeps your accounting system up to date with your invoicing.
+
+## Choosing a Provider
+
+Aourly supports two accounting providers:
+
+| Provider | Description |
+|----------|-------------|
+| **Fortnox** | The most widely used accounting software in Sweden. Popular with both freelancers and accountants. |
+| **Visma** | A major Scandinavian accounting platform with strong support for Swedish businesses. |
+
+If you already have an account with one of these providers, connect that one. If your accountant has a preference, follow their recommendation. If you are starting fresh, Fortnox is the more common choice among Swedish freelancers.
+
+## Step-by-Step Connection Process
+
+### Step 1: Open the Bookkeeping Page
+
+Navigate to **Bookkeeping** from the main sidebar. You will land on the **Overview** tab.
+
+### Step 2: Click Choose Integration
+
+In the connection status widget, click **Choose Integration**. This starts the setup wizard.
+
+### Step 3: Select Your Provider
+
+Choose **Fortnox** or **Visma**. You will be redirected to the provider's website for authorization.
+
+### Step 4: Authorize via OAuth
+
+On the provider's website:
+
+1. Log in with your Fortnox or Visma credentials.
+2. Review the permissions Aourly is requesting.
+3. Click **Authorize** (or equivalent) to grant access.
+
+You will be redirected back to Aourly after authorization. This process uses OAuth, which means Aourly never sees or stores your password. The connection uses secure tokens that can be revoked at any time.
+
+Make sure you log in with an account that has **admin permissions** in the provider. Limited user accounts may not have sufficient access for the integration to work.
+
+### Step 5: Configure Invoice Mode
+
+Choose how Aourly should format invoices when exporting to your provider:
+
+- **Swedish standard** -- uses the BAS chart of accounts and Swedish invoicing conventions. This is the right choice for most Swedish freelancers.
+- **International** -- for businesses that primarily invoice in foreign currencies or follow international accounting standards.
+
+### Step 6: Map Your Accounts
+
+Configure which accounts in your provider should be used for key categories:
+
+| Category | Typical BAS Account | Purpose |
+|----------|-------------------|---------|
+| **Revenue** | 3010-3090 | Where invoice revenue is recorded |
+| **VAT (outgoing)** | 2610-2650 | Where outgoing VAT is recorded |
+| **Accounts receivable** | 1510 | Tracks money owed to you by clients |
+| **Bank account** | 1930 | Your corporate bank account |
+| **Rounding** | 3740 | For rounding differences |
+
+Aourly provides default suggestions based on the BAS standard. If you are not sure about the mappings, accept the defaults or consult your accountant.
+
+### Step 7: Set Your Accounting Method
+
+Choose between two accounting methods:
+
+**Accrual (Faktureringsmetoden)**
+- Revenue is recorded when the invoice is **sent**.
+- Expenses are recorded when they are **invoiced to you**.
+- VAT is reported in the period the invoice is dated.
+- Required for businesses with annual revenue above 3 million SEK.
+
+**Cash (Kontantmetoden)**
+- Revenue is recorded when payment is **received**.
+- Expenses are recorded when they are **paid**.
+- VAT is reported in the period the payment occurs.
+- Available to sole proprietors with annual revenue under 3 million SEK.
+
+The accounting method affects when transactions appear in your books and how your VAT returns are prepared. If you are unsure, ask your accountant.
+
+### Step 8: Verify the Connection
+
+After completing the setup:
+
+- The connection status widget should show a **green connected** indicator.
+- Try sending an invoice to confirm it syncs correctly to your provider.
+- Check your Fortnox or Visma account to see the synced data.
+
+## What Gets Synced
+
+Once connected, Aourly automatically syncs:
+
+- **Invoices** -- when you send an invoice in Aourly, it appears in your provider.
+- **Credit notes** -- credit notes are synced along with their linked original invoices.
+- **Vouchers** -- the accounting entries for invoices and payments are created in your provider.
+
+## Disconnecting an Integration
+
+If you need to disconnect:
+
+1. Go to the **Bookkeeping Overview** tab.
+2. Click the disconnect option in the connection status widget.
+3. Confirm the disconnection.
+
+Disconnecting stops syncing but does not delete any data from either Aourly or the provider. Previously synced invoices and vouchers remain in your provider's system.
+
+You can reconnect at any time by going through the setup process again.
+
+## Switching Providers
+
+To switch from Fortnox to Visma (or vice versa):
+
+1. Disconnect the current integration.
+2. Set up the new integration following the steps above.
+
+Keep in mind that data already synced to the old provider stays there. The new provider will only receive data going forward.
+
+## Troubleshooting
+
+**Connection shows as disconnected or errored:**
+The OAuth token may have expired. Click the reconnect option to re-authorize. If the problem persists, check that your provider account is active and that you have admin permissions.
+
+**Invoices are not syncing:**
+Verify the connection status is green. Check that the account mappings are complete. If a specific invoice fails, look for error messages in the bookkeeping overview.
+
+**Account mappings seem wrong:**
+You can update the account mappings at any time from the integration settings. Consult your accountant if you are unsure which accounts to use.
+
+## Frequently Asked Questions
+
+**Can I switch between Fortnox and Visma?**
+Yes. Disconnect one and connect the other. Previously synced data stays in the old provider.
+
+**What is the difference between Accrual and Cash accounting?**
+Accrual records revenue when invoiced; Cash records it when paid. This affects VAT reporting timing.
+
+**Do I need an existing Fortnox or Visma account?**
+Yes. Sign up at fortnox.se or visma.se before connecting to Aourly.
+
+**Is the connection secure?**
+Yes. Aourly uses OAuth for authorization and never stores your provider password. Tokens are encrypted and can be revoked.
+
+**How do I disconnect?**
+Go to the Bookkeeping Overview tab and use the disconnect option. This stops syncing but preserves all existing data.
+
+
+<Warning>Disconnecting an integration does not delete data from the provider. However, new invoices and vouchers will no longer sync until you reconnect.</Warning>
+
+<Info>The OAuth authorization is secure -- Aourly never sees or stores your Fortnox or Visma password.</Info>
+
+<Tip>If your accountant manages your Fortnox or Visma account, involve them in the setup process to ensure correct account mapping.</Tip>

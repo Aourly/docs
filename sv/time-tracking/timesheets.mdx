@@ -1,0 +1,136 @@
+---
+title: "Tidrapporter"
+description: "Visa och hantera tidrapporter grupperade per period."
+---
+
+Tidrapporter är bryggan mellan enskilda tidposter och fakturor. De grupperar dina loggade timmar i definierade perioder, vilket gör det enkelt att granska, godkänna och fakturera ditt arbete. Denna guide förklarar vad tidrapporter är, hur de fungerar och hur de kopplar till resten av Aourly.
+
+## Vad är en tidrapport?
+
+En tidrapport är en samling tidposter som:
+- Tillhör en **enskild utförare** på ett **enskilt uppdrag**
+- Täcker en **specifik tidsperiod** (till exempel 1-31 mars 2026)
+- Spårar **totalt antal timmar** och **totalkostnad** för den perioden
+- Kan **godkännas** och kopplas till en **faktura**
+
+Tänk på den som ett sammanfattningsblad för en utförares arbete på ett uppdrag under en period.
+
+## Hur tidrapporter skapas
+
+Tidrapporter genereras automatiskt. När du registrerar en tidpost kontrollerar Aourly:
+1. Vilket uppdrag och vilken utförare posten tillhör
+2. Datumen för posten
+3. Uppdragets inställning för tidrapportfrekvens
+
+Baserat på detta läggs posten antingen till i en befintlig tidrapport för den perioden eller så skapas en ny. Du behöver aldrig skapa tidrapporter manuellt.
+
+## Tidrapportperioder
+
+Periodens längd beror på uppdragets inställning för **tidrapportfrekvens**:
+
+| Frekvens | Period | Exempel |
+|----------|--------|---------|
+| Veckovis | 7 dagar (måndag till söndag) | 3-9 mars 2026 |
+| Månadsvis | En kalendermånad | 1-31 mars 2026 |
+
+Varje period har ett tydligt start- och slutdatum. Tidposter tilldelas den tidrapport vars period innehåller postens datum.
+
+## Visa tidrapporter
+
+### Tid-sidan
+
+Navigera till **Tid** i sidomenyn för att se dina tidrapporter. Sidan innehåller:
+- En **periodväljare** (DatePeriodSelector-widget) för att navigera mellan veckor, månader eller år
+- En **sammanfattningsvy** som visar totalt antal timmar och kostnad per period
+- Möjligheten att **expandera** varje tidrapport för att se enskilda poster
+
+### Växla mellan vyer
+
+Använd periodväljaren för att växla mellan:
+- **Veckovy** -- Se en vecka i taget, användbart för detaljerad daglig granskning
+- **Månadsvy** -- Se en hel månad, användbart för förberedelse inför fakturering
+- **Årsvy** -- Se årstotaler, användbart för rapportering och skatteändamål
+
+### Tidrapportdetaljer
+
+När du visar en tidrapports detaljer ser du:
+- **Period**: Start- och slutdatum
+- **Uppdrag**: Vilket jobb tidrapporten gäller
+- **Utförare**: Vem tiden tillhör
+- **Totalt antal timmar**: Summan av alla posters timmar under perioden
+- **Totalkostnad**: Summan av alla posters kostnader (timmar x pris)
+- **Godkännandestatus**: Om tidrapporten har godkänts
+- **Fakturalänk**: Om tidrapporten har fakturerats, vilken faktura den tillhör
+- **Enskilda poster**: Varje tidpost med datum, timmar, pris, uppgift och kommentar
+
+## Tidrapportens livscykel
+
+En tidrapport går igenom dessa steg:
+
+### 1. Samla poster
+
+Allteftersom du registrerar tid under en period samlas poster i tidrapporten. Totalerna uppdateras automatiskt. Under denna fas har poster vanligtvis status "Föreslagen".
+
+### 2. Granskning och godkännande
+
+I slutet av en period (eller när det passar) granskas tidrapporten. Enskilda poster kan godkännas och får då status "Godkänd". Tidrapporten i sig kan godkännas när alla poster har granskats.
+
+Se guiden [Tidsgodkännande](time-approval) för detaljer om godkännandeprocessen.
+
+### 3. Fakturering
+
+Godkända tidrapporter (eller deras godkända poster) kan inkluderas på en faktura. När en faktura skapas kopplas tidrapporten till den och posterna markeras som "Fakturerad". Detta förhindrar dubbelfakturering.
+
+### 4. Betalning
+
+När kunden betalar fakturan markeras de associerade posterna som "Betald", vilket avslutar livscykeln.
+
+## En utförare, ett uppdrag, en tidrapport
+
+Ett viktigt koncept: tidrapporter är avgränsade per utförare, per uppdrag och per period. Det innebär att:
+
+- Om du har **två utförare** på ett uppdrag har varje utförare sina egna tidrapporter
+- Om du arbetar på **tre uppdrag** har du separata tidrapporter för varje
+- Om du visar en **månadsperiod** ser du en tidrapport per uppdrag du arbetat på den månaden
+
+Denna uppdelning gör det tydligt vem som arbetat med vad och möjliggör oberoende godkännande och fakturering.
+
+## Koppla tidrapporter till fakturor
+
+Faktureringsflödet använder tidrapporter som den primära enheten. När du skapar en faktura:
+
+1. Välj ett uppdrag
+2. Välj den period eller de tidrapporter som ska inkluderas
+3. Aourly hämtar alla godkända poster från dessa tidrapporter
+4. Fakturan genereras med rader som speglar det utförda arbetet
+
+När tidrapporten väl fakturerats är den kopplad till fakturarekordet. Du kan alltid spåra tillbaka från en faktura för att se exakt vilka tidposter den täcker.
+
+Godkända tidrapporter som inte har fakturerats representerar intjänade men ofakturerade intäkter. Kontrollera dessa regelbundet för att hålla din fakturering aktuell.
+
+## Tidrapporter och översikten
+
+Översikten ger en överblick på hög nivå av din tiddata över alla uppdrag. Den hämtar från dina tidrapporter för att visa:
+- Totalt antal timmar denna vecka/månad
+- Timfördelning per uppdrag
+- Ofakturerade timmar (godkända men ännu inte fakturerade)
+- Jämförelse mot arbetsbelastningsmål
+
+## Tips för att hantera tidrapporter
+
+- **Granska veckovis**: Även om du fakturerar månadsvis, granska dina tidrapporter varje vecka för att fånga fel tidigt.
+- **Godkänn utan dröjsmål**: Låt inte ogodkända tidrapporter samlas på hög. Regelbundna godkännanden håller din faktureringskedja i rörelse.
+- **Kontrollera luckor**: Leta efter dagar utan poster. Saknade poster är förlorade intäkter.
+- **Använd periodväljaren**: Växla mellan vecko- och månadsvyer för olika perspektiv på din tiddata.
+- **Stäm av innan fakturering**: Innan du skapar en faktura, verifiera att tidrapportens totaler stämmer med dina förväntningar. Detta är ditt sista tillfälle att fånga avvikelser.
+
+
+<Info>Godkända tidrapporter kan omvandlas till fakturarader vid fakturering.</Info>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Vad är skillnaden mellan en tidpost och en tidrapport?">
+    En tidpost är en enskild tidsregistrering. En tidrapport är en samling tidposter grupperade per period (vecka/månad) och uppdrag.
+  </Accordion>
+</AccordionGroup>

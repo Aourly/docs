@@ -1,0 +1,174 @@
+---
+title: "Integrationsinställning för bokföring"
+description: "Steg-för-steg-guide för att ansluta Aourly med Fortnox eller Visma för automatiserad bokföringssynkronisering."
+---
+
+Om du använder Fortnox eller Visma för din redovisning kan du ansluta dem till Aourly så att fakturor och bokföringsverifikationer synkroniseras automatiskt. Det eliminerar dubbelregistrering och håller ditt bokföringsprogram uppdaterat med din fakturering.
+
+## Välja leverantör
+
+Aourly stöder två bokföringsleverantörer:
+
+| Leverantör | Beskrivning |
+|------------|-------------|
+| **Fortnox** | Det mest använda bokföringsprogrammet i Sverige. Populärt bland både frilansare och revisorer. |
+| **Visma** | En stor skandinavisk redovisningsplattform med starkt stöd för svenska företag. |
+
+Om du redan har ett konto hos en av dessa leverantörer, anslut den. Om din revisor har en preferens, följ deras rekommendation. Om du börjar från noll är Fortnox det vanligaste valet bland svenska frilansare.
+
+## Steg-för-steg anslutningsprocess
+
+### Steg 1: Öppna bokföringssidan
+
+Navigera till **Bokföring** från sidomenyn. Du hamnar på fliken **Översikt**.
+
+### Steg 2: Klicka på Välj integration
+
+I widgeten för anslutningsstatus klickar du på **Välj integration**. Då startar konfigurationsguiden.
+
+### Steg 3: Välj din leverantör
+
+Välj **Fortnox** eller **Visma**. Du omdirigeras till leverantörens webbplats för auktorisering.
+
+### Steg 4: Auktorisera via OAuth
+
+På leverantörens webbplats:
+
+1. Logga in med dina Fortnox- eller Visma-uppgifter.
+2. Granska de behörigheter Aourly begär.
+3. Klicka på **Auktorisera** (eller motsvarande) för att bevilja åtkomst.
+
+Du omdirigeras tillbaka till Aourly efter auktoriseringen. Processen använder OAuth, vilket innebär att Aourly aldrig ser eller lagrar ditt lösenord. Anslutningen använder säkra tokens som kan återkallas när som helst.
+
+Se till att du loggar in med ett konto som har **administratörsbehörighet** hos leverantören. Konton med begränsade rättigheter kanske inte har tillräcklig åtkomst för att integrationen ska fungera.
+
+### Steg 5: Konfigurera fakturaläge
+
+Välj hur Aourly ska formatera fakturor vid export till din leverantör:
+
+- **Svensk standard** -- använder BAS-kontoplanen och svenska faktureringskonventioner. Det rätta valet för de flesta svenska frilansare.
+- **Internationell** -- för verksamheter som främst fakturerar i utländsk valuta eller följer internationella redovisningsstandarder.
+
+### Steg 6: Mappa dina konton
+
+Konfigurera vilka konton hos din leverantör som ska användas för nyckelkategorier:
+
+| Kategori | Typiskt BAS-konto | Syfte |
+|----------|-------------------|-------|
+| **Intäkter** | 3010-3090 | Där fakturaintäkter bokförs |
+| **Moms (utgående)** | 2610-2650 | Där utgående moms bokförs |
+| **Kundfordringar** | 1510 | Spårar pengar som kunder är skyldiga dig |
+| **Bankkonto** | 1930 | Ditt företagskonto |
+| **Avrundning** | 3740 | För avrundningsdifferenser |
+
+Aourly tillhandahåller standardförslag baserade på BAS-standarden. Om du är osäker på mappningarna, acceptera standardvärdena eller rådgör med din revisor.
+
+### Steg 7: Ange din bokföringsmetod
+
+Välj mellan två bokföringsmetoder:
+
+**Fakturametoden**
+- Intäkter bokförs när fakturan **skickas**.
+- Kostnader bokförs när de **faktureras till dig**.
+- Moms redovisas i den period fakturan är daterad.
+- Obligatorisk för företag med årsomsättning över 3 miljoner kronor.
+
+**Kontantmetoden**
+- Intäkter bokförs när betalning **mottas**.
+- Kostnader bokförs när de **betalas**.
+- Moms redovisas i den period betalningen sker.
+- Tillgänglig för enskilda näringsidkare med årsomsättning under 3 miljoner kronor.
+
+Bokföringsmetoden påverkar när transaktioner syns i dina räkenskaper och hur dina momsdeklarationer upprättas. Rådgör med din revisor om du är osäker.
+
+### Steg 8: Verifiera anslutningen
+
+När konfigurationen är klar:
+
+- Widgeten för anslutningsstatus bör visa en **grön anslutningsindikator**.
+- Testa genom att skicka en faktura och bekräfta att den synkroniseras korrekt till din leverantör.
+- Kontrollera ditt Fortnox- eller Visma-konto för att se den synkroniserade datan.
+
+## Vad som synkroniseras
+
+När anslutningen är aktiv synkroniserar Aourly automatiskt:
+
+- **Fakturor** -- när du skickar en faktura i Aourly visas den hos din leverantör.
+- **Kreditfakturor** -- kreditfakturor synkroniseras tillsammans med sina kopplade originalfakturor.
+- **Verifikationer** -- bokföringsposterna för fakturor och betalningar skapas hos din leverantör.
+
+## Koppla bort en integration
+
+Om du behöver koppla bort:
+
+1. Gå till fliken **Bokföring Översikt**.
+2. Klicka på bortkopplingsalternativet i widgeten för anslutningsstatus.
+3. Bekräfta bortkopplingen.
+
+Bortkopplingen stoppar synkronisering men raderar ingen data från varken Aourly eller leverantören. Tidigare synkroniserade fakturor och verifikationer finns kvar i leverantörens system.
+
+Du kan återansluta när som helst genom att gå igenom konfigurationsprocessen igen.
+
+## Byta leverantör
+
+För att byta från Fortnox till Visma (eller tvärtom):
+
+1. Koppla bort den nuvarande integrationen.
+2. Konfigurera den nya integrationen enligt stegen ovan.
+
+Tänk på att data som redan synkroniserats till den gamla leverantören finns kvar där. Den nya leverantören kommer bara att ta emot data framåt.
+
+## Felsökning
+
+**Anslutningen visas som bortkopplad eller felaktig:**
+OAuth-token kan ha löpt ut. Klicka på alternativet för återanslutning för att auktorisera om. Om problemet kvarstår, kontrollera att ditt leverantörskonto är aktivt och att du har administratörsbehörighet.
+
+**Fakturor synkroniseras inte:**
+Verifiera att anslutningsstatusen är grön. Kontrollera att kontomappningarna är kompletta. Om en specifik faktura misslyckas, leta efter felmeddelanden i bokföringsöversikten.
+
+**Kontomappningar verkar felaktiga:**
+Du kan uppdatera kontomappningarna när som helst från integrationsinställningarna. Rådgör med din revisor om du är osäker på vilka konton du ska använda.
+
+## Vanliga frågor
+
+**Kan jag byta mellan Fortnox och Visma?**
+Ja. Koppla bort den ena och anslut den andra. Tidigare synkroniserad data finns kvar hos den gamla leverantören.
+
+**Vad är skillnaden mellan fakturametoden och kontantmetoden?**
+Fakturametoden bokför intäkter vid fakturering; kontantmetoden bokför vid betalning. Det påverkar tidpunkten för momsredovisningen.
+
+**Behöver jag ett befintligt Fortnox- eller Visma-konto?**
+Ja. Registrera dig på fortnox.se eller visma.se innan du ansluter till Aourly.
+
+**Är anslutningen säker?**
+Ja. Aourly använder OAuth för auktorisering och lagrar aldrig ditt leverantörslösenord. Tokens är krypterade och kan återkallas.
+
+**Hur kopplar jag bort?**
+Gå till fliken Bokföring Översikt och använd bortkopplingsalternativet. Det stoppar synkronisering men bevarar all befintlig data.
+
+
+<Warning>Att koppla bort en integration raderar inte data hos leverantören. Däremot synkroniseras inte nya fakturor och verifikationer förrän du återansluter.</Warning>
+
+<Info>OAuth-auktoriseringen är säker -- Aourly ser eller lagrar aldrig ditt Fortnox- eller Visma-lösenord.</Info>
+
+<Tip>Om din revisor hanterar ditt Fortnox- eller Visma-konto, involvera dem i konfigurationsprocessen för att säkerställa korrekt kontomappning.</Tip>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Kan jag byta mellan Fortnox och Visma?">
+    Ja. Koppla bort den nuvarande integrationen och konfigurera den andra. Tidigare synkroniserad data finns kvar hos den ursprungliga leverantören.
+  </Accordion>
+  <Accordion title="Vad är skillnaden mellan fakturametoden och kontantmetoden?">
+    Fakturametoden bokför intäkter när fakturan skickas. Kontantmetoden bokför intäkter när betalning mottas. Valet påverkar tidpunkten för din momsredovisning.
+  </Accordion>
+  <Accordion title="Vad händer om anslutningen bryts?">
+    Kontrollera anslutningsstatusen på fliken Översikt. Du kan behöva auktorisera om via OAuth om din token har löpt ut. Aourly visar ett felmeddelande om synkroniseringen misslyckas.
+  </Accordion>
+  <Accordion title="Kan jag använda integrationen utan ett befintligt Fortnox- eller Visma-konto?">
+    Nej. Du behöver ett aktivt konto hos leverantören. Registrera dig på fortnox.se eller visma.se innan du ansluter.
+  </Accordion>
+  <Accordion title="Hur kopplar jag bort integrationen?">
+    Gå till fliken Bokföring Översikt och klicka på bortkopplingsalternativet i widgeten för anslutningsstatus. Det stoppar synkronisering men raderar inte data från något av systemen.
+  </Accordion>
+</AccordionGroup>

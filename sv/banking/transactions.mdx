@@ -1,0 +1,143 @@
+---
+title: "Banktransaktioner"
+description: "Lär dig hur du visar, lägger till och hanterar banktransaktioner, samt hur de relaterar till fakturor och bokföring."
+---
+
+Att spåra dina banktransaktioner i Aourly ger dig en tydlig bild av pengar som rör sig in och ut ur din verksamhet. Transaktioner kopplar dina fakturor till faktiska betalningar och matas in i din bokföring.
+
+## Komma åt transaktioner
+
+Öppna **Kontextmenyn** (ditt företagsnamn i sidomenyn) och klicka på **Transaktioner**. Denna sida listar alla registrerade transaktioner för alla dina bankkonton.
+
+## Förstå transaktionstyper
+
+Aourly stöder tre transaktionstyper:
+
+| Typ | Beskrivning |
+|-----|-------------|
+| **Kredit** | Pengar in -- vanligtvis kundbetalningar för dina fakturor. |
+| **Debet** | Pengar ut -- utgifter, skattebetalningar eller andra utflöden. |
+| **Reversering** | Korrigerar en tidigare transaktion -- används när en transaktion registrerats felaktigt. |
+
+## Visa och filtrera transaktioner
+
+Transaktionslistan visar alla registrerade transaktioner med nyckeluppgifter: datum, bankkonto, belopp, typ och beskrivning.
+
+Använd de tillgängliga filtren för att begränsa listan:
+
+- **Bankkonto** -- visa transaktioner för ett specifikt konto.
+- **Datumintervall** -- fokusera på en viss period.
+- **Transaktionstyp** -- filtrera efter kredit, debet eller reversering.
+
+Det gör det enkelt att hitta specifika transaktioner, särskilt vid avstämning eller när du förbereder underlag för din revisor.
+
+## Lägga till transaktioner manuellt
+
+Så registrerar du en transaktion:
+
+1. Klicka på **Skapa transaktion**.
+2. Välj **bankkonto** som transaktionen tillhör.
+3. Ange **beloppet**.
+4. Välj **typ** (debet eller kredit).
+5. Ange transaktionens **datum**.
+6. Lägg till en **beskrivning** som förklarar vad transaktionen avser.
+
+Manuella transaktioner är användbara för att:
+
+- Registrera betalningar du fått utanför Aourlys fakturabetalningsflöde.
+- Spåra utgående betalningar som hyra, programvarulicenser eller skattebetalningar.
+- Föra in historiska transaktioner när du konfigurerar Aourly för första gången.
+
+## Matcha transaktioner mot fakturor
+
+När en kund betalar en faktura bör du matcha betalningstransaktionen mot fakturan. Detta:
+
+- Kopplar betalningen till den specifika fakturan.
+- Uppdaterar fakturans status till **Betald**.
+- Skapar grunden för korrekta bokföringsposter.
+
+För att identifiera vilken faktura en betalning hör till, leta efter **OCR-numret** i betalningsuppgifterna från ditt kontoutdrag. Varje faktura i Aourly har ett unikt OCR-nummer, vilket gör matchningen enkel.
+
+## Betalningsavstämning
+
+Avstämning innebär att du matchar dina Aourly-transaktioner mot dina faktiska kontoutdrag. Regelbunden avstämning hjälper dig att:
+
+- **Upptäcka missade betalningar** -- identifiera fakturor som betalats men ännu inte registrerats i Aourly.
+- **Hitta fel** -- upptäcka dubbletter eller felaktiga belopp.
+- **Hålla bokföringen korrekt** -- säkerställa att dina finansiella uppgifter stämmer med verkligheten.
+
+En enkel avstämningsprocess:
+
+1. Öppna ditt kontoutdrag för perioden.
+2. Jämför varje inkommande betalning mot dina Aourly-transaktioner.
+3. Om det finns betalningar i din bank som saknas i Aourly, lägg till dem manuellt och koppla till rätt faktura.
+4. Om det finns transaktioner i Aourly som inte syns i din bank, undersök och korrigera (eventuellt med en reversering).
+
+## Hur transaktioner kopplar till bokföring
+
+När en transaktion är kopplad till en faktura kan Aourly generera motsvarande bokföringsverifikation. Till exempel, när en kund betalar en faktura:
+
+- **Bankkontot** (t.ex. BAS-konto 1930) debiteras.
+- **Kundfordringar** (t.ex. BAS-konto 1510) krediteras.
+
+Detta sker automatiskt om dina bankkonton är kopplade till bokföringskonton och du använder Aourlys bokföringsfunktion. Se guiden [Konton och verifikationer](../bookkeeping/accounts-and-vouchers) för mer information.
+
+## Reverseringstransaktioner
+
+Om du har gjort ett misstag -- till exempel registrerat en betalning dubbelt eller angett fel belopp -- kan du skapa en reverseringstransaktion för att korrigera det.
+
+En reversering:
+
+- Motverkar den ursprungliga transaktionen.
+- Bevarar en tydlig verifikationskedja (den ursprungliga transaktionen förblir synlig).
+- Är att föredra framför att radera transaktioner, vilket skulle bryta verifikationskedjan.
+
+Använd bara reverseringar för genuina korrigeringar. De ska inte användas som ersättning för kreditfakturor.
+
+## Tips för transaktionshantering
+
+- **Registrera betalningar snabbt** -- det håller dina fakturastatusar korrekta och din dashboard uppdaterad.
+- **Använd beskrivande text** -- när du lägger till manuella transaktioner, inkludera tillräckligt med detaljer så att du kan identifiera syftet månader senare.
+- **Stäm av regelbundet** -- månadsvis avstämning är en god vana. Det förhindrar att små avvikelser blir stora problem vid årsskiftet.
+- **Matcha med OCR-nummer** -- dessa autogenererade referensnummer gör det enkelt att identifiera vilken betalning som hör till vilken faktura.
+
+## Vanliga frågor
+
+**Synkroniseras transaktioner automatiskt med min bank?**
+Nej. Transaktioner skapas antingen automatiskt när du registrerar fakturabetalningar, eller läggs till manuellt. Det finns ingen automatisk bankintegration för närvarande.
+
+**Vad är en reverseringstransaktion?**
+En reversering korrigerar en tidigare registrerad transaktion. Om du till exempel registrerade en betalning dubbelt av misstag skapar du en reversering för att ångra dubbletten.
+
+**Hur relaterar transaktioner till bokföring?**
+Transaktioner kopplade till fakturor kan automatiskt generera bokföringsverifikationer med korrekta debet- och kreditposter. Detta kräver att dina bankkonton är kopplade till bokföringskonton.
+
+**Kan jag importera transaktioner från min bank?**
+I dagsläget hanteras transaktioner manuellt eller skapas via fakturabetalningsflödet. Se integrationssektionen för uppdateringar om stöd för bankflöden.
+
+**Vem kan hantera transaktioner?**
+Ägare och Koordinatorer kan visa och hantera banktransaktioner.
+
+
+<Info>Transaktioner i Aourly är register över pengar som rör sig in eller ut. De synkroniseras inte automatiskt med din bank -- du registrerar dem manuellt eller så skapas de när du registrerar fakturabetalningar.</Info>
+
+<Tip>Stäm av dina Aourly-transaktioner mot dina faktiska kontoutdrag regelbundet för att fånga eventuella avvikelser tidigt.</Tip>
+
+<Warning>Reverseringstransaktioner ska bara användas för att korrigera fel. De reverserar effekten av en tidigare transaktion.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Synkroniseras transaktioner automatiskt med min bank?">
+    Nej. Transaktioner registreras i Aourly när du registrerar betalningar mot fakturor eller lägger till dem manuellt. Det finns ingen automatisk bankintegration för närvarande.
+  </Accordion>
+  <Accordion title="Vad är en reverseringstransaktion?">
+    En reversering korrigerar en tidigare registrerad transaktion. Om du till exempel registrerade en betalning dubbelt av misstag skapar du en reversering för att ångra en av dem.
+  </Accordion>
+  <Accordion title="Hur relaterar transaktioner till bokföring?">
+    När en transaktion är kopplad till en faktura eller ett utlägg kan Aourly skapa motsvarande bokföringsverifikation med debet- och kreditposter till rätt konton.
+  </Accordion>
+  <Accordion title="Kan jag importera transaktioner från min bank?">
+    I dagsläget hanteras transaktioner manuellt eller skapas automatiskt vid registrering av fakturabetalningar. Se integrationssektionen för uppdateringar om stöd för bankflöden.
+  </Accordion>
+</AccordionGroup>

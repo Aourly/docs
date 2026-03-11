@@ -1,0 +1,149 @@
+---
+title: "Roles & Permissions"
+description: "Understanding the three roles in Aourly -- Owner, Coordinator, and Performer -- and what each can do."
+---
+
+Aourly uses a role-based access system with three distinct roles: **Owner**, **Coordinator**, and **Performer**. Each role has a specific set of permissions that determines what the user can see and do within the company workspace.
+
+## The Three Roles
+
+### Owner
+
+The Owner role provides full control over the company. Owners can manage every aspect of the business.
+
+**Owner capabilities:**
+
+- Create, edit, and delete clients
+- Create, edit, and manage all assignments
+- View and manage all team members' time entries and expenses
+- Create, review, send, and manage invoices
+- Access and manage bookkeeping, banking, and integrations
+- Edit the company profile and all company settings
+- Manage subscriptions and billing through Stripe
+- Invite and remove team members
+- Assign and change roles for team members
+- Access all reports and exports
+
+The person who creates a company automatically becomes its first Owner. A company must always have at least one Owner.
+
+### Coordinator
+
+Coordinators are trusted team members who help manage daily operations without needing access to billing and top-level company settings.
+
+**Coordinator capabilities:**
+
+- Create, edit, and manage clients
+- Create, edit, and manage assignments
+- View and manage time entries and expenses (their own and their team's)
+- Approve time entries and expenses submitted by Performers
+- Create and review invoices
+- View reports relevant to their assignments
+- Log their own time and expenses
+
+**Coordinators cannot:**
+
+- Access subscription and billing settings
+- Modify the company profile
+- Invite or remove team members
+- Change other users' roles
+
+### Performer
+
+Performers are the most focused role, designed for team members who primarily log their work.
+
+**Performer capabilities:**
+
+- Log time entries against assignments they are assigned to
+- Create and submit expenses
+- View their own timesheets and expense history
+- View assignments they are assigned to
+- Update their personal profile
+
+**Performers cannot:**
+
+- Create or edit clients
+- Create or manage assignments
+- Approve time entries or expenses
+- Create or view invoices
+- Access company settings, bookkeeping, or integrations
+
+## Permissions Summary
+
+| Feature | Owner | Coordinator | Performer |
+|---|---|---|---|
+| Log time and expenses | Yes | Yes | Yes |
+| View own timesheets | Yes | Yes | Yes |
+| Edit personal profile | Yes | Yes | Yes |
+| Create/edit clients | Yes | Yes | No |
+| Create/edit assignments | Yes | Yes | No |
+| Approve time/expenses | Yes | Yes | No |
+| Create/send invoices | Yes | Yes | No |
+| View all team data | Yes | Yes | No |
+| Company profile | Yes | No | No |
+| Subscription/billing | Yes | No | No |
+| Invite/manage members | Yes | No | No |
+| Bookkeeping/integrations | Yes | Limited | No |
+
+## Inviting Team Members
+
+To invite someone to your company:
+
+1. Navigate to your **company settings** (Owners only)
+2. Find the **team members** or **invitations** section
+3. Enter the person's email address
+4. Select the role: **Coordinator** or **Performer**
+5. Send the invitation
+
+The invited person receives an email with a link to join your company. If they already have an Aourly account, the company is added to their tenant menu. If they are new, they will register first and then be connected to your company.
+
+## Changing Roles
+
+Owners can change any team member's role at any time:
+
+1. Go to **company settings**
+2. Find the team member in the members list
+3. Change their role using the role selector
+4. Save the change
+
+Role changes take effect immediately.
+
+> **Warning:** Be careful when assigning the Owner role. Owners have full access to billing, company settings, and all data. Only assign this to trusted individuals.
+
+## Choosing the Right Role
+
+### Solo freelancer
+
+If you work alone, you only need the Owner role (which you get automatically).
+
+### Small team (2-5 people)
+
+A typical setup is one Owner and the rest as Performers. Add a Coordinator if someone helps with project management or needs to approve time entries.
+
+### Larger team
+
+Consider 1-2 Owners for business continuity, a few Coordinators for different projects, and Performers for everyone else.
+
+## Frequently Asked Questions
+
+### Can one person have different roles in different companies?
+
+Yes. Your role is assigned per company. You can be an Owner of your own company and a Performer in another.
+
+### Can a company have multiple Owners?
+
+Yes. You can assign the Owner role to more than one person if needed.
+
+### What if I need a role that combines Coordinator and Performer?
+
+Coordinator already includes all Performer capabilities plus additional management and approval permissions.
+
+### Can I change someone's role after they have been invited?
+
+Yes. Owners can change any team member's role from the company settings at any time.
+
+
+<Info>Every company must have at least one Owner. The person who creates the company automatically becomes its first Owner.</Info>
+
+<Tip>For solo freelancers, you only need the Owner role. Coordinator and Performer roles are for when you work with others.</Tip>
+
+<Warning>Be careful with the Owner role -- Owners have full access to billing, company settings, and all data. Only assign this to trusted individuals.</Warning>

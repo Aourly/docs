@@ -1,0 +1,126 @@
+---
+title: "Bank Transactions"
+description: "Learn how to view, add, and manage bank transactions, and understand how they relate to invoices and bookkeeping."
+---
+
+Tracking your bank transactions in Aourly gives you a clear picture of money flowing in and out of your business. Transactions link your invoices to actual payments and feed into your bookkeeping records.
+
+## Accessing Transactions
+
+Open the **Tenant Menu** (your company name in the sidebar) and click **Transactions**. This page lists all recorded transactions across all your bank accounts.
+
+## Understanding Transaction Types
+
+Aourly supports three transaction types:
+
+| Type | Description |
+|------|-------------|
+| **Credit** | Money coming in -- typically client payments for your invoices. |
+| **Debit** | Money going out -- expenses, tax payments, or other outflows. |
+| **Reversal** | Corrects a previous transaction -- used when a transaction was recorded in error. |
+
+## Viewing and Filtering Transactions
+
+The transaction list shows all recorded transactions with key details: date, bank account, amount, type, and description.
+
+Use the available filters to narrow the list:
+
+- **Bank account** -- show transactions for a specific account only.
+- **Date range** -- focus on a particular period.
+- **Transaction type** -- filter by credit, debit, or reversal.
+
+This makes it easy to find specific transactions, especially during reconciliation or when preparing for your accountant.
+
+## Adding Transactions Manually
+
+To record a transaction:
+
+1. Click **Create Transaction**.
+2. Select the **bank account** the transaction belongs to.
+3. Enter the **amount**.
+4. Choose the **type** (debit or credit).
+5. Set the **date** of the transaction.
+6. Add a **description** explaining what the transaction is for.
+
+Manual transactions are useful for:
+
+- Recording payments you received outside of Aourly's invoice payment flow.
+- Tracking outgoing payments like rent, software subscriptions, or tax payments.
+- Entering historical transactions when setting up Aourly for the first time.
+
+## Matching Transactions to Invoices
+
+When a client pays an invoice, you should match the payment transaction to the invoice. This:
+
+- Links the payment to the specific invoice.
+- Updates the invoice status to **Paid**.
+- Creates the foundation for accurate bookkeeping entries.
+
+To identify which invoice a payment belongs to, look for the **OCR number** in the payment details from your bank statement. Each invoice in Aourly has a unique OCR number, making matching straightforward.
+
+## Payment Reconciliation
+
+Reconciliation is the process of matching your Aourly transaction records with your actual bank statements. Regular reconciliation helps you:
+
+- **Catch missed payments** -- identify invoices that were paid but not yet registered in Aourly.
+- **Spot errors** -- find duplicate entries or incorrect amounts.
+- **Keep bookkeeping accurate** -- ensure your financial records match reality.
+
+A simple reconciliation process:
+
+1. Open your bank statement for the period.
+2. Compare each incoming payment against your Aourly transactions.
+3. For any payments in your bank that are not in Aourly, add them manually and link to the correct invoice.
+4. For any transactions in Aourly that do not appear in your bank, investigate and correct (possibly using a reversal).
+
+## How Transactions Connect to Bookkeeping
+
+When a transaction is linked to an invoice, Aourly can generate the corresponding bookkeeping voucher. For example, when a client pays an invoice:
+
+- The **bank account** (e.g., BAS account 1930) is debited.
+- The **accounts receivable** (e.g., BAS account 1510) is credited.
+
+This happens automatically if your bank accounts are linked to bookkeeping accounts and you use Aourly's bookkeeping feature. See the [Accounts and Vouchers](../bookkeeping/accounts-and-vouchers) guide for more details.
+
+## Reversal Transactions
+
+If you made a mistake -- for example, registering a payment twice or entering the wrong amount -- you can create a reversal transaction to correct it.
+
+A reversal:
+
+- Offsets the original transaction.
+- Keeps a clear audit trail (the original transaction remains visible).
+- Is preferable to deleting transactions, which would break the audit trail.
+
+Only use reversals for genuine corrections. They should not be used as a substitute for credit notes on invoices.
+
+## Tips for Transaction Management
+
+- **Register payments promptly** -- this keeps your invoice statuses accurate and your dashboard up to date.
+- **Use descriptive text** -- when adding manual transactions, include enough detail so you can identify the purpose months later.
+- **Reconcile regularly** -- monthly reconciliation is a good habit. It prevents small discrepancies from becoming big problems at year-end.
+- **Match using OCR numbers** -- these auto-generated reference numbers make it easy to identify which payment goes with which invoice.
+
+## Frequently Asked Questions
+
+**Are transactions synced with my bank automatically?**
+No. Transactions are either created automatically when you register invoice payments, or added manually. There is no automatic bank feed integration at this time.
+
+**What is a reversal transaction?**
+A reversal corrects a previously recorded transaction. For example, if you registered a payment twice by mistake, create a reversal to undo the duplicate.
+
+**How do transactions relate to bookkeeping?**
+Transactions linked to invoices can automatically generate bookkeeping vouchers with the correct debit and credit entries. This requires your bank accounts to be linked to bookkeeping accounts.
+
+**Can I import transactions from my bank?**
+Currently, transactions are managed manually or created through the invoice payment flow. Check the integrations section for updates on bank feed support.
+
+**Who can manage transactions?**
+Owners and Coordinators can view and manage bank transactions.
+
+
+<Info>Transactions in Aourly are records of money moving in or out. They are not synced with your bank automatically -- you register them manually or they are created when you register invoice payments.</Info>
+
+<Tip>Regularly reconcile your Aourly transactions with your actual bank statements to catch any discrepancies early.</Tip>
+
+<Warning>Reversal transactions should only be used to correct errors. They reverse the effect of a previous transaction.</Warning>

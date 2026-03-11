@@ -1,0 +1,166 @@
+---
+title: "Roller och behörigheter"
+description: "Förstå de tre rollerna i Aourly -- ägare, samordnare och utförare -- och vad varje roll kan göra."
+---
+
+Aourly använder ett rollbaserat åtkomstsystem med tre distinkta roller: **Ägare**, **Samordnare** och **Utförare**. Varje roll har en specifik uppsättning behörigheter som bestämmer vad användaren kan se och göra inom företagets arbetsyta.
+
+## De tre rollerna
+
+### Ägare
+
+Ägarrollen ger full kontroll över företaget. Ägare kan hantera varje aspekt av verksamheten.
+
+**Ägarbehörigheter:**
+
+- Skapa, redigera och ta bort kunder
+- Skapa, redigera och hantera alla uppdrag
+- Se och hantera alla teammedlemmars tidposter och utlägg
+- Skapa, granska, skicka och hantera fakturor
+- Åtkomst till och hantera bokföring, bank och integrationer
+- Redigera företagsprofilen och alla företagsinställningar
+- Hantera prenumerationer och fakturering via Stripe
+- Bjuda in och ta bort teammedlemmar
+- Tilldela och ändra roller för teammedlemmar
+- Åtkomst till alla rapporter och exporter
+
+Personen som skapar ett företag blir automatiskt dess första ägare. Ett företag måste alltid ha minst en ägare.
+
+### Samordnare
+
+Samordnare är betrodda teammedlemmar som hjälper till att hantera den dagliga verksamheten utan att behöva åtkomst till fakturering och övergripande företagsinställningar.
+
+**Samordnarbehörigheter:**
+
+- Skapa, redigera och hantera kunder
+- Skapa, redigera och hantera uppdrag
+- Se och hantera tidposter och utlägg (egna och teamets)
+- Godkänna tidposter och utlägg som skickats in av utförare
+- Skapa och granska fakturor
+- Se rapporter relaterade till sina uppdrag
+- Registrera egen tid och egna utlägg
+
+**Samordnare kan inte:**
+
+- Åtkomst till prenumerations- och faktureringsinställningar
+- Ändra företagsprofilen
+- Bjuda in eller ta bort teammedlemmar
+- Ändra andra användares roller
+
+### Utförare
+
+Utförare är den mest fokuserade rollen, utformad för teammedlemmar som främst registrerar sitt arbete.
+
+**Utförarbehörigheter:**
+
+- Registrera tidposter mot uppdrag de är tilldelade
+- Skapa och skicka in utlägg
+- Se egna tidrapporter och utläggshistorik
+- Se uppdrag de är tilldelade
+- Uppdatera sin personliga profil
+
+**Utförare kan inte:**
+
+- Skapa eller redigera kunder
+- Skapa eller hantera uppdrag
+- Godkänna tidposter eller utlägg
+- Skapa eller se fakturor
+- Åtkomst till företagsinställningar, bokföring eller integrationer
+
+## Behörighetsöversikt
+
+| Funktion | Ägare | Samordnare | Utförare |
+|---|---|---|---|
+| Registrera tid och utlägg | Ja | Ja | Ja |
+| Se egna tidrapporter | Ja | Ja | Ja |
+| Redigera personlig profil | Ja | Ja | Ja |
+| Skapa/redigera kunder | Ja | Ja | Nej |
+| Skapa/redigera uppdrag | Ja | Ja | Nej |
+| Godkänna tid/utlägg | Ja | Ja | Nej |
+| Skapa/skicka fakturor | Ja | Ja | Nej |
+| Se all teamdata | Ja | Ja | Nej |
+| Företagsprofil | Ja | Nej | Nej |
+| Prenumeration/fakturering | Ja | Nej | Nej |
+| Bjuda in/hantera medlemmar | Ja | Nej | Nej |
+| Bokföring/integrationer | Ja | Begränsad | Nej |
+
+## Bjuda in teammedlemmar
+
+Så bjuder du in någon till ditt företag:
+
+1. Navigera till **företagsinställningar** (bara ägare)
+2. Hitta avsnittet **teammedlemmar** eller **inbjudningar**
+3. Ange personens e-postadress
+4. Välj roll: **Samordnare** eller **Utförare**
+5. Skicka inbjudan
+
+Den inbjudna personen får ett e-postmeddelande med en länk för att gå med i ditt företag. Om de redan har ett Aourly-konto läggs företaget till i deras företagsmeny. Om de är nya registrerar de sig först och kopplas sedan till ditt företag.
+
+## Ändra roller
+
+Ägare kan ändra valfri teammedlems roll när som helst:
+
+1. Gå till **företagsinställningar**
+2. Hitta teammedlemmen i medlemslistan
+3. Ändra deras roll via rollväljaren
+4. Spara ändringen
+
+Rolländringar träder i kraft omedelbart.
+
+> **Varning:** Var försiktig när du tilldelar ägarrollen. Ägare har full åtkomst till fakturering, företagsinställningar och all data. Tilldela den bara till betrodda personer.
+
+## Välja rätt roll
+
+### Ensam frilansare
+
+Om du arbetar ensam behöver du bara ägarrollen (som du får automatiskt).
+
+### Litet team (2--5 personer)
+
+En typisk konfiguration är en ägare och resten som utförare. Lägg till en samordnare om någon hjälper till med projektledning eller behöver godkänna tidposter.
+
+### Större team
+
+Överväg 1--2 ägare för verksamhetskontinuitet, några samordnare för olika projekt och utförare för alla andra.
+
+## Vanliga frågor
+
+### Kan en person ha olika roller i olika företag?
+
+Ja. Din roll tilldelas per företag. Du kan vara ägare av ditt eget företag och utförare i ett annat.
+
+### Kan ett företag ha flera ägare?
+
+Ja. Du kan tilldela ägarrollen till mer än en person vid behov.
+
+### Vad händer om jag behöver en roll som kombinerar samordnare och utförare?
+
+Samordnare inkluderar redan alla utförarbehörigheter plus ytterligare hanterings- och godkännandebehörigheter.
+
+### Kan jag ändra någons roll efter att de har blivit inbjudna?
+
+Ja. Ägare kan ändra valfri teammedlems roll från företagsinställningarna när som helst.
+
+
+<Info>Varje företag måste ha minst en ägare. Personen som skapar företaget blir automatiskt dess första ägare.</Info>
+
+<Tip>För ensamma frilansare behöver du bara ägarrollen (som du får automatiskt). Samordnare och utförare är till för när du arbetar med andra.</Tip>
+
+<Warning>Var försiktig med ägarrollen -- ägare har full åtkomst till fakturering, företagsinställningar och all data. Tilldela den bara till betrodda personer.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Kan en person ha olika roller i olika företag?">
+    Ja. Din roll tilldelas per företag. Du kan vara ägare av ditt eget företag och utförare i ett annat.
+  </Accordion>
+  <Accordion title="Kan ett företag ha flera ägare?">
+    Ja. Du kan tilldela ägarrollen till mer än en person vid behov.
+  </Accordion>
+  <Accordion title="Vad händer om jag behöver en roll som kombinerar samordnare och utförare?">
+    Samordnare inkluderar redan möjligheten att registrera tid och utlägg (utförarfunktioner) plus ytterligare hanterings- och godkännandebehörigheter.
+  </Accordion>
+  <Accordion title="Kan jag ändra någons roll efter att de har blivit inbjudna?">
+    Ja. Ägare kan ändra valfri teammedlems roll från företagsinställningarna när som helst.
+  </Accordion>
+</AccordionGroup>

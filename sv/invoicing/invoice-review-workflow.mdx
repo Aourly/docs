@@ -1,0 +1,120 @@
+---
+title: "Granskningsflöde för fakturor"
+description: "Förstå granskningsprocessen i flera steg för fakturor, inklusive granskning av tidposter, utlägg och fakturautkast innan utskick."
+---
+
+Innan du skickar en faktura till kunden är det viktigt att granska den noggrant. Felaktigheter på skickade fakturor kräver en kreditfaktura och en ny faktura för att korrigeras, vilket skapar merarbete och kan ge ett oprofessionellt intryck.
+
+Aourly behåller fakturor i statusen **Utkast** tills du uttryckligen skickar dem, vilket ger dig tid att granska varje detalj.
+
+## Granskningsprocessen
+
+Granskningsprocessen har tre huvudsakliga fokusområden: tidposter, utlägg och de övergripande fakturadetaljerna.
+
+### Steg 1: Granska tidposter
+
+Kontrollera följande för varje tidsbaserad fakturarad:
+
+- **Timmarna stämmer** -- jämför med godkända tidrapporter. Se till att inga timmar saknas eller har dubblerats.
+- **Timpriset matchar överenskommelsen** -- om du har olika priser för olika typer av arbete (t.ex. utveckling kontra konsulting), kontrollera att varje rad använder rätt pris.
+- **Beskrivningarna är tydliga** -- fakturaradens beskrivningar bör vara begripliga för kunden. Vaga beskrivningar som "arbete" kan leda till frågor eller försenad betalning.
+
+### Steg 2: Granska utlägg
+
+Kontrollera följande för utläggsrader:
+
+- **Beloppen stämmer** -- verifiera att varje utläggsbelopp matchar den faktiska kostnaden.
+- **Beskrivningarna förklarar utlägget** -- kunden ska kunna förstå vad varje utlägg avser (t.ex. "Tågbiljett Stockholm-Göteborg" snarare än "Resa").
+- **Kvitton finns bifogade** -- om kunden eller din bokföring kräver kvitton, se till att de är bifogade till motsvarande utlägg.
+
+### Steg 3: Redigera rader
+
+Medan fakturan har statusen Utkast är allt redigerbart. Du kan:
+
+- **Ändra antal** -- justera timmar eller antal.
+- **Ändra enhetspris** -- uppdatera priset per enhet.
+- **Redigera beskrivningar** -- skriv om fakturaradens namn för tydlighetens skull.
+- **Justera momssatser** -- ändra momsprocenten på enskilda rader.
+- **Lägga till rabatter** -- lägg till eller ändra rabatter på specifika rader.
+- **Lägga till rader** -- inkludera ytterligare poster som inte hämtats från tidrapporter.
+- **Ta bort rader** -- radera poster som inte ska vara med på fakturan.
+
+Fakturans summor räknas om automatiskt när du gör ändringar.
+
+### Steg 4: Kontrollera summor och moms
+
+Granska fakturans sammanfattning:
+
+- **Delsumma** -- summan av alla rader före moms.
+- **Momsfördelning** -- visar momsbeloppet grupperat per sats (t.ex. 25 %, 12 %, 6 %).
+- **Totalsumma** -- det slutliga beloppet kunden ska betala, inklusive moms.
+- **Momshantering** -- bekräfta att rätt läge är inställt:
+  - **Standard** för normal svensk inrikeshandel.
+  - **Omvänd skattskyldighet** för B2B-tjänster där köparen redovisar momsen.
+  - **Momsfritt** för tjänster som inte är momspliktiga.
+  - **EU-intern** för gränsöverskridande EU-leveranser.
+
+### Steg 5: Kontrollera betalvillkor och datum
+
+Verifiera viktiga datum och villkor:
+
+- **Fakturadatum** -- normalt dagens datum, men kan justeras.
+- **Leveransdatum** -- när arbetet slutfördes eller varorna levererades.
+- **Förfallodatum** -- beräknas utifrån betalvillkoren. Se till att det ger kunden tillräcklig tid att hantera betalningen.
+- **Betalvillkor** -- det avtalade antalet dagar (t.ex. 15, 30 eller 60 dagar).
+
+### Steg 6: Skicka eller spara
+
+När du är nöjd med granskningen:
+
+- **Skicka fakturan** om den är redo. Se guiden [Skicka och betalning](sending-and-payment).
+- **Stäng sidan** om du behöver mer tid. Utkastet bevaras och du kan återkomma till det senare.
+
+## Vanliga granskningsmisstag att undvika
+
+- **Fel momssats** -- att använda 25 % moms på en tjänst som borde hanteras med omvänd skattskyldighet är ett vanligt fel, särskilt vid internationella kunder.
+- **Inaktuella timpriser** -- om ditt timpris nyligen ändrats kan äldre tidposter fortfarande använda det tidigare priset.
+- **Saknade utlägg** -- det är lätt att glömma att inkludera godkända utlägg. Gå igenom utläggslistan innan du färdigställer fakturan.
+- **Felaktiga kunduppgifter** -- om kunden nyligen ändrat företagsnamn eller adress, uppdatera kundprofilen innan du skapar fakturan.
+
+## Efter granskning: Nästa steg
+
+När granskningen är klar är nästa steg att skicka fakturan. När du skickar den:
+
+- Statusen ändras från **Utkast** till **Skickad**.
+- Fakturan låses och kan inte längre redigeras.
+- En PDF genereras.
+
+Om du upptäcker ett fel efter utskick måste du utfärda en kreditfaktura och skapa en ny faktura. Se guiden [Kreditfakturor](credit-notes).
+
+## Vanliga frågor
+
+**Kan jag spara mina ändringar och återkomma senare?**
+Ja. Utkastfakturor finns kvar tills du antingen skickar eller tar bort dem.
+
+**Vad händer om jag hittar ett fel efter att fakturan skickats?**
+Du kan inte redigera en skickad faktura. Du behöver skapa en kreditfaktura för att reversera den och sedan skapa en ny korrekt faktura.
+
+**Vem kan granska och redigera fakturor?**
+Användare med rollen Ägare eller Koordinator har åtkomst att granska och redigera fakturautkast.
+
+
+<Warning>När en faktura har skickats kan den inte längre redigeras. Slutför alltid granskningen noggrant innan du skickar.</Warning>
+
+<Tip>Om du upptäcker ett fel efter utskick behöver du skapa en kreditfaktura och utfärda en ny korrekt faktura.</Tip>
+
+<Info>Granskningsprocessen är densamma oavsett om du fakturerar tid, utlägg eller en kombination av båda.</Info>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Kan jag spara mina ändringar och återkomma senare?">
+    Ja. Utkastfakturor sparas automatiskt och kan besökas när som helst innan de skickas.
+  </Accordion>
+  <Accordion title="Vad händer om jag hittar ett fel efter att fakturan skickats?">
+    Du kan inte redigera en skickad faktura. Istället skapar du en kreditfaktura mot originalfakturan och skapar sedan en ny korrekt faktura. Se guiden Kreditfakturor.
+  </Accordion>
+  <Accordion title="Vem kan granska fakturor?">
+    Användare med rollen Ägare eller Koordinator kan granska och redigera fakturautkast.
+  </Accordion>
+</AccordionGroup>

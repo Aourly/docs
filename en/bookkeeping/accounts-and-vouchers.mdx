@@ -1,0 +1,151 @@
+---
+title: "Accounts and Vouchers"
+description: "Understand the BAS chart of accounts, how vouchers work, and how Aourly creates accounting records from your invoices."
+---
+
+Accounts and vouchers are the building blocks of bookkeeping. If you have never worked with accounting before, this guide will help you understand what these concepts mean and how Aourly handles them for you.
+
+## The BAS Chart of Accounts
+
+The **BAS chart of accounts** (BAS-kontoplanen) is the Swedish standard for organising financial accounts. Nearly every Swedish business uses it, which makes it easy to share data with accountants, tax authorities, and other systems.
+
+### Viewing Your Accounts
+
+Navigate to **Bookkeeping** and click the **Accounts** tab. You will see a list of accounts, each with a number, name, and type.
+
+### Account Categories
+
+Accounts are grouped into series by their first digit:
+
+| Series | Category | Swedish Term | Examples |
+|--------|----------|-------------|----------|
+| **1000** | Assets | Tillgångar | Bank accounts (1930), Accounts receivable (1510), Equipment (1220) |
+| **2000** | Liabilities and Equity | Skulder och eget kapital | Accounts payable (2440), VAT liability (2610), Owner equity (2010) |
+| **3000** | Revenue | Intäkter | Consulting revenue (3010), Other revenue (3900) |
+| **4000-7000** | Expenses | Kostnader | Materials (4010), Rent (5010), Travel (5800), Phone (6210) |
+| **8000** | Financial items | Finansiella poster | Interest income (8310), Interest expense (8410) |
+
+You do not need to use all accounts. For a typical freelancer, the most relevant accounts are:
+
+- **1510** -- Accounts receivable (kundfordringar): money clients owe you
+- **1930** -- Bank account (företagskonto): your business bank balance
+- **2610** -- Outgoing VAT (utgående moms, 25%)
+- **3010** -- Revenue from services (försäljning tjänster)
+
+### VAT Accounts
+
+VAT is tracked through dedicated accounts in the 2600 series:
+
+- **2610** -- Outgoing VAT 25% (utgående moms)
+- **2620** -- Outgoing VAT 12%
+- **2630** -- Outgoing VAT 6%
+- **2640** -- Incoming VAT (ingående moms, for deductible expenses)
+- **2650** -- VAT to pay/reclaim (redovisningskonto för moms)
+
+## Understanding Vouchers
+
+A **voucher** (verifikation) is an accounting record that documents a financial transaction. Every time money changes hands -- whether you send an invoice, receive a payment, or issue a credit note -- there should be a corresponding voucher in your books.
+
+### How Vouchers Work
+
+Each voucher contains:
+
+- **Voucher number** -- a sequential number within a voucher series.
+- **Date** -- when the transaction occurred.
+- **Description** -- what the transaction is about (e.g., "Invoice #1042 to Client AB").
+- **Rows** -- one or more lines with debit and credit entries to specific accounts.
+
+### The Golden Rule: Debits Equal Credits
+
+Every voucher must **balance**. This is the fundamental principle of double-entry bookkeeping: for every debit, there must be an equal credit. The total of all debit entries on a voucher must equal the total of all credit entries.
+
+### Example: Sending an Invoice
+
+When you send an invoice for 10,000 SEK plus 25% VAT (2,500 SEK), Aourly creates a voucher like this:
+
+| Account | Debit | Credit |
+|---------|-------|--------|
+| 1510 Accounts receivable | 12,500 | |
+| 3010 Revenue | | 10,000 |
+| 2610 Outgoing VAT 25% | | 2,500 |
+
+The client now owes you 12,500 SEK (debit to receivables). You have earned 10,000 SEK in revenue (credit) and owe 2,500 SEK in VAT to Skatteverket (credit).
+
+### Example: Receiving Payment
+
+When the client pays the 12,500 SEK:
+
+| Account | Debit | Credit |
+|---------|-------|--------|
+| 1930 Bank account | 12,500 | |
+| 1510 Accounts receivable | | 12,500 |
+
+Money arrives in your bank (debit) and the receivable is cleared (credit). The client no longer owes you.
+
+## Viewing Vouchers
+
+Navigate to **Bookkeeping** and click the **Vouchers** tab. The list shows all vouchers with their number, date, description, and total amount.
+
+Click on any voucher to see its full details, including all debit and credit rows.
+
+### Voucher Series
+
+Vouchers are organised into series to keep different types of transactions separate. For example:
+
+- Invoice vouchers
+- Payment vouchers
+- Credit note vouchers
+
+Each series has its own numbering sequence (e.g., A1, A2, A3 for one series and B1, B2, B3 for another).
+
+## Automatic Voucher Creation
+
+Aourly creates vouchers automatically for your invoicing activities:
+
+- **When you send an invoice** -- a voucher records the revenue and VAT.
+- **When you register a payment** -- a voucher records the bank receipt and clears the receivable.
+- **When you issue a credit note** -- a voucher reverses the original invoice entries.
+
+You do not need to create these vouchers manually. Aourly handles it based on the account mappings you configured during setup.
+
+## Backfilling Vouchers
+
+If you started using Aourly for invoicing before setting up the bookkeeping feature, your older invoices will not have vouchers. The **backfill** action solves this:
+
+1. Go to the **Vouchers** tab.
+2. Use the **backfill** action.
+3. Aourly will create vouchers for all existing invoices that do not have one.
+
+This is especially useful when:
+
+- You are migrating to Aourly from manual bookkeeping.
+- You recently enabled the bookkeeping feature.
+- You want a complete set of records for a financial year.
+
+## Tips for Working with Accounts and Vouchers
+
+- **Let Aourly do the work** -- for routine invoicing, the automated voucher creation is all you need.
+- **Check your vouchers periodically** -- a quick glance at the voucher list helps you spot missing entries or anomalies.
+- **Export to SIE4** -- if your accountant needs your data, export it as a SIE4 file. See the [SIE4 Import and Export](sie4-import-export) guide.
+- **Do not modify vouchers unless necessary** -- incorrect manual edits can throw your books out of balance.
+
+## Frequently Asked Questions
+
+**What is the BAS chart of accounts?**
+It is the Swedish standard for organising bookkeeping accounts. Account numbers are standardised so that all Swedish businesses use the same structure.
+
+**Do I need to create vouchers manually?**
+Not for normal invoicing. Aourly creates them automatically. You would only create manual vouchers for transactions outside the invoicing flow (e.g., a manual expense or adjustment).
+
+**What does it mean for a voucher to balance?**
+The total debits must equal the total credits. This is the foundation of double-entry bookkeeping and ensures your books are mathematically correct.
+
+**What is the backfill action?**
+It retroactively creates vouchers for invoices that were sent before bookkeeping was enabled, so your records are complete.
+
+
+<Info>Aourly creates vouchers automatically when you send invoices, register payments, and issue credit notes. You do not need to create them manually for routine invoicing.</Info>
+
+<Tip>Each voucher series (e.g., invoice vouchers, payment vouchers) has its own numbering sequence for easy reference.</Tip>
+
+<Warning>Do not modify voucher entries unless you understand double-entry bookkeeping. Incorrect entries can cause your books to be out of balance.</Warning>

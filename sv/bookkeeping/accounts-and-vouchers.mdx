@@ -1,0 +1,168 @@
+---
+title: "Konton och verifikationer"
+description: "Förstå BAS-kontoplanen, hur verifikationer fungerar och hur Aourly skapar bokföringsposter från dina fakturor."
+---
+
+Konton och verifikationer är byggstenarna i bokföring. Om du aldrig arbetat med redovisning tidigare hjälper den här guiden dig att förstå vad dessa begrepp innebär och hur Aourly hanterar dem åt dig.
+
+## BAS-kontoplanen
+
+**BAS-kontoplanen** är den svenska standarden för att organisera bokföringskonton. Nästan alla svenska företag använder den, vilket gör det enkelt att dela data med revisorer, skattemyndigheter och andra system.
+
+### Visa dina konton
+
+Navigera till **Bokföring** och klicka på fliken **Konton**. Du ser en lista med konton, var och ett med nummer, namn och typ.
+
+### Kontokategorier
+
+Konton grupperas i serier efter sin första siffra:
+
+| Serie | Kategori | Exempel |
+|-------|----------|---------|
+| **1000** | Tillgångar | Bankkonton (1930), Kundfordringar (1510), Inventarier (1220) |
+| **2000** | Skulder och eget kapital | Leverantörsskulder (2440), Momsskuld (2610), Eget kapital (2010) |
+| **3000** | Intäkter | Konsultintäkter (3010), Övriga intäkter (3900) |
+| **4000-7000** | Kostnader | Material (4010), Hyra (5010), Resor (5800), Telefon (6210) |
+| **8000** | Finansiella poster | Ränteintäkter (8310), Räntekostnader (8410) |
+
+Du behöver inte använda alla konton. För en typisk frilansare är de mest relevanta kontona:
+
+- **1510** -- Kundfordringar: pengar som kunder är skyldiga dig
+- **1930** -- Företagskonto: saldot på ditt företagskonto
+- **2610** -- Utgående moms (25 %)
+- **3010** -- Försäljning tjänster
+
+### Momskonton
+
+Moms spåras genom dedikerade konton i 2600-serien:
+
+- **2610** -- Utgående moms 25 %
+- **2620** -- Utgående moms 12 %
+- **2630** -- Utgående moms 6 %
+- **2640** -- Ingående moms (avdragsgill moms på kostnader)
+- **2650** -- Redovisningskonto för moms
+
+## Förstå verifikationer
+
+En **verifikation** är en bokföringspost som dokumenterar en finansiell transaktion. Varje gång pengar byter händer -- oavsett om du skickar en faktura, tar emot en betalning eller utfärdar en kreditfaktura -- ska det finnas en motsvarande verifikation i dina räkenskaper.
+
+### Hur verifikationer fungerar
+
+Varje verifikation innehåller:
+
+- **Verifikationsnummer** -- ett sekventiellt nummer inom en verifikationsserie.
+- **Datum** -- när transaktionen inträffade.
+- **Beskrivning** -- vad transaktionen avser (t.ex. "Faktura #1042 till Kund AB").
+- **Rader** -- en eller flera rader med debet- och kreditposter till specifika konton.
+
+### Grundregeln: Debet lika med kredit
+
+Varje verifikation måste **balansera**. Det är den grundläggande principen i dubbel bokföring: för varje debitering måste det finnas en lika stor kreditering. Summan av alla debetposter på en verifikation måste vara lika med summan av alla kreditposter.
+
+### Exempel: Skicka en faktura
+
+När du skickar en faktura på 10 000 kr plus 25 % moms (2 500 kr) skapar Aourly en verifikation som ser ut så här:
+
+| Konto | Debet | Kredit |
+|-------|-------|--------|
+| 1510 Kundfordringar | 12 500 | |
+| 3010 Försäljning tjänster | | 10 000 |
+| 2610 Utgående moms 25 % | | 2 500 |
+
+Kunden är nu skyldig dig 12 500 kr (debet på kundfordringar). Du har tjänat 10 000 kr i intäkt (kredit) och är skyldig 2 500 kr i moms till Skatteverket (kredit).
+
+### Exempel: Ta emot betalning
+
+När kunden betalar 12 500 kr:
+
+| Konto | Debet | Kredit |
+|-------|-------|--------|
+| 1930 Företagskonto | 12 500 | |
+| 1510 Kundfordringar | | 12 500 |
+
+Pengarna inkommer på ditt bankkonto (debet) och kundfordran nollställs (kredit). Kunden är inte längre skyldig dig.
+
+## Visa verifikationer
+
+Navigera till **Bokföring** och klicka på fliken **Verifikationer**. Listan visar alla verifikationer med nummer, datum, beskrivning och totalbelopp.
+
+Klicka på valfri verifikation för att se dess fullständiga detaljer, inklusive alla debet- och kreditrader.
+
+### Verifikationsserier
+
+Verifikationer organiseras i serier för att hålla isär olika typer av transaktioner. Till exempel:
+
+- Fakturaverifikationer
+- Betalningsverifikationer
+- Kreditfakturaverifikationer
+
+Varje serie har sin egen nummerserie (t.ex. A1, A2, A3 för en serie och B1, B2, B3 för en annan).
+
+## Automatiskt skapande av verifikationer
+
+Aourly skapar verifikationer automatiskt för din faktureringsverksamhet:
+
+- **När du skickar en faktura** -- en verifikation registrerar intäkten och momsen.
+- **När du registrerar en betalning** -- en verifikation registrerar bankinbetalningen och nollställer kundfordran.
+- **När du utfärdar en kreditfaktura** -- en verifikation reverserar de ursprungliga fakturaposterna.
+
+Du behöver inte skapa dessa verifikationer manuellt. Aourly hanterar det baserat på de kontomappningar du konfigurerade vid inställningen.
+
+## Återskapa verifikationer
+
+Om du började använda Aourly för fakturering innan du konfigurerade bokföringsfunktionen saknar dina äldre fakturor verifikationer. Funktionen **Återskapa** löser detta:
+
+1. Gå till fliken **Verifikationer**.
+2. Använd åtgärden **Återskapa**.
+3. Aourly skapar verifikationer för alla befintliga fakturor som saknar sådana.
+
+Det är särskilt användbart när:
+
+- Du migrerar till Aourlys bokföring från manuella rutiner.
+- Du nyligen aktiverade bokföringsfunktionen.
+- Du vill ha en komplett uppsättning poster för ett räkenskapsår.
+
+## Tips för att arbeta med konton och verifikationer
+
+- **Låt Aourly göra jobbet** -- för rutinfakturering räcker det automatiska verifikationsskapandet.
+- **Kontrollera dina verifikationer regelbundet** -- en snabb titt på verifikationslistan hjälper dig att upptäcka saknade poster eller avvikelser.
+- **Exportera till SIE4** -- om din revisor behöver din data, exportera den som en SIE4-fil. Se guiden [SIE4 Import och Export](sie4-import-export).
+- **Ändra inte verifikationer om det inte är nödvändigt** -- felaktiga manuella ändringar kan orsaka att dina räkenskaper hamnar i obalans.
+
+## Vanliga frågor
+
+**Vad är BAS-kontoplanen?**
+Det är den svenska standarden för att organisera bokföringskonton. Kontonumren är standardiserade så att alla svenska företag använder samma struktur.
+
+**Behöver jag skapa verifikationer manuellt?**
+Inte för normal fakturering. Aourly skapar dem automatiskt. Manuella verifikationer behövs bara för transaktioner utanför faktureringsflödet (t.ex. en manuell kostnad eller justering).
+
+**Vad innebär det att en verifikation balanserar?**
+Totala debiteringar måste vara lika med totala krediteringar. Det är grunden i dubbel bokföring och säkerställer att dina räkenskaper är matematiskt korrekta.
+
+**Vad är återskapandefunktionen?**
+Den skapar retroaktivt verifikationer för fakturor som skickades innan bokföring aktiverades, så att dina bokföringsposter blir kompletta.
+
+
+<Info>Aourly skapar verifikationer automatiskt när du skickar fakturor, registrerar betalningar och utfärdar kreditfakturor. Du behöver inte skapa dem manuellt för rutinfakturering.</Info>
+
+<Tip>Varje verifikationsserie (t.ex. fakturaverifikationer, betalningsverifikationer) har sin egen nummerserie för enkel referens.</Tip>
+
+<Warning>Ändra inte verifikationsposter om du inte förstår dubbel bokföring. Felaktiga poster kan orsaka att dina räkenskaper hamnar i obalans.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Vad är BAS-kontoplanen?">
+    BAS-kontoplanen är den svenska standardkontoplanen som används av i princip alla svenska företag. Den definierar standardiserade kontonummer och kategorier för enhetlig bokföring.
+  </Accordion>
+  <Accordion title="Behöver jag skapa verifikationer manuellt?">
+    Nej. Aourly skapar verifikationer automatiskt från din faktureringsaktivitet. Manuellt skapande behövs bara för transaktioner utanför det normala faktureringsflödet.
+  </Accordion>
+  <Accordion title="Vad innebär det att en verifikation balanserar?">
+    I dubbel bokföring har varje transaktion lika stora debiteringar och krediteringar. En verifikation balanserar när summan av alla debetposter är lika med summan av alla kreditposter.
+  </Accordion>
+  <Accordion title="Vad är återskapandefunktionen?">
+    Återskapande skapar verifikationer från fakturor som skickades innan bokföring konfigurerades, så att du retroaktivt kan fylla i dina bokföringsposter.
+  </Accordion>
+</AccordionGroup>

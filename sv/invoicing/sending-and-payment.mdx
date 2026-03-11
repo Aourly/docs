@@ -1,0 +1,149 @@
+---
+title: "Skicka fakturor och hantera betalning"
+description: "Lär dig hur du skickar fakturor, förstår fakturastatusar, registrerar betalningar och laddar ner faktura-PDF:er."
+---
+
+När du har granskat din faktura och allt ser korrekt ut är nästa steg att skicka den till kunden. Den här guiden täcker utskicksprocessen, vad som händer bakom kulisserna, de olika fakturastatusarna och hur du registrerar betalningar.
+
+## Skicka en faktura
+
+### Så skickar du
+
+1. Öppna fakturan du vill skicka från **Fakturor**-listan.
+2. Klicka på åtgärdsknappen **Skicka**.
+3. Granska bekräftelsesammanfattningen.
+4. Bekräfta utskicket.
+
+När du bekräftar händer flera saker automatiskt:
+
+- Fakturans status ändras från **Utkast** till **Skickad**.
+- Fakturan **låses** och kan inte längre redigeras.
+- En **PDF** genereras med dina företagsuppgifter, kunduppgifter, fakturarader, summor och betalningsinformation.
+- Om kunden har e-postleverans konfigurerad får de en avisering med fakturan.
+
+### Ladda ner fakturans PDF
+
+Efter utskick kan du ladda ner eller förhandsgranska fakturans PDF när som helst från fakturans detaljsida. PDF:en innehåller:
+
+- Ditt företagsnamn, adress och organisationsnummer
+- Kundens faktureringsuppgifter
+- Alla fakturarader med beskrivningar, antal, priser och belopp
+- Momsfördelning
+- Totalt belopp att betala
+- Betalningsuppgifter: bankkonto, bankgiro, OCR-nummer och förfallodatum
+
+Du kan dela denna PDF manuellt via e-post eller annan kanal vid behov.
+
+## Fakturastatusar förklarade
+
+Varje faktura i Aourly har en status som återspeglar var den befinner sig i sin livscykel:
+
+| Status | Beskrivning |
+|--------|-------------|
+| **Utkast** | Fakturan förbereds. Den är fullt redigerbar. Ingen utanför ditt företag kan se den. |
+| **Väntar på godkännande** | Fakturan inväntar godkännande från en Worknode-granskare. Denna status gäller bara för företag som använder Worknode-funktionen. |
+| **Godkänd** | Fakturan har godkänts av Worknode och är redo att skickas. Gäller bara för Worknode-användare. |
+| **Skickad** | Fakturan har levererats till kunden. Den är låst och kan inte redigeras. |
+| **Betald** | Betalning har mottagits och registrerats. Fakturan är klar. |
+| **Förfallen** | Fakturan har passerat sitt förfallodatum utan att betalning registrerats. |
+| **Krediterad** | Fakturan har reverserats med en kreditfaktura. Det ursprungliga beloppet är inte längre skuld. |
+
+### Statusflöde
+
+Den typiska livscykeln för en faktura är:
+
+```
+Utkast --> Skickad --> Betald
+```
+
+För Worknode-användare inkluderar flödet ett godkännandesteg:
+
+```
+Utkast --> Väntar på godkännande --> Godkänd --> Skickad --> Betald
+```
+
+Om något går fel:
+
+```
+Skickad --> Krediterad (via kreditfaktura)
+Skickad --> Förfallen (passerat förfallodatum)
+```
+
+## Registrera betalningar
+
+När kunden betalar en faktura behöver du registrera betalningen i Aourly för att dina uppgifter ska vara korrekta.
+
+### Så registrerar du en betalning
+
+1. Öppna den skickade fakturan från **Fakturor**-listan.
+2. Klicka på åtgärden **Registrera betalning**.
+3. Bekräfta registreringen.
+
+Fakturans status ändras från **Skickad** (eller **Förfallen**) till **Betald**.
+
+### När du bör registrera betalningar
+
+Registrera en betalning när:
+
+- Du ser betalningen på ditt bankkonto.
+- Kunden bekräftar att de har betalat.
+- Du får bekräftelse från din betaltjänstleverantör.
+
+Snabb registrering av betalningar håller din dashboard, intäktsrapporter och bokföring uppdaterade.
+
+## Förfallna fakturor
+
+Fakturor som passerar sitt förfallodatum utan registrerad betalning markeras automatiskt som **Förfallen**. Detta hjälper dig att snabbt identifiera vilka kunder som är skyldiga dig pengar.
+
+När du ser förfallna fakturor:
+
+- Följ upp med kunden för att påminna om betalningen.
+- När betalningen kommer, registrera den som vanligt -- statusen ändras från Förfallen till Betald.
+
+## Tips för smidig fakturering
+
+- **Dubbelkolla innan du skickar** -- granskningen är din sista chans att göra ändringar. Guiden [Granskningsflöde](invoice-review-workflow) beskriver vad du bör kontrollera.
+- **Håll bankuppgifterna aktuella** -- fakturans PDF hämtar betalningsinformation från dina bankkontoinställningar. Se till att IBAN, bankgiro och Swish-uppgifter är uppdaterade.
+- **Använd tydliga betalvillkor** -- lämpliga betalvillkor (t.ex. 15 eller 30 dagar) hjälper till att sätta förväntningar med kunden.
+- **Registrera betalningar snabbt** -- det håller din ekonomiska översikt korrekt och underlättar bokföringen.
+
+## Vanliga frågor
+
+**Vad händer när jag skickar en faktura?**
+Statusen ändras till Skickad, en PDF genereras och fakturan låses. Om e-post är konfigurerat får kunden en avisering.
+
+**Kan jag skicka om en faktura till kunden?**
+Du kan ladda ner PDF:en och skicka den manuellt till kunden igen, till exempel genom att bifoga den i ett e-postmeddelande.
+
+**Kan jag ångra att jag skickat en faktura?**
+Nej. När en faktura har skickats kan den inte återställas till Utkast. Om du behöver korrigera den, skapa en kreditfaktura mot originalet och utfärda en ny faktura. Se guiden [Kreditfakturor](credit-notes).
+
+**Vad betyder Väntar på godkännande?**
+Denna status gäller bara för Worknode-användare. Det innebär att fakturan väntar på att en Worknode-granskare ska godkänna den innan den kan skickas till kunden.
+
+**Hur flaggas förfallna fakturor?**
+Aourly markerar automatiskt fakturor som Förfallna när dagens datum passerar förfallodatumet och ingen betalning har registrerats.
+
+
+<Warning>En skickad faktura kan inte redigeras. Om du behöver göra korrigeringar måste du skapa en kreditfaktura och utfärda en ny faktura.</Warning>
+
+<Info>Fakturor som passerar sitt förfallodatum utan registrerad betalning markeras automatiskt som Förfallen.</Info>
+
+<Tip>Håll dina bankkontouppgifter uppdaterade så att fakturans PDF alltid visar korrekt betalningsinformation.</Tip>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Vad händer när jag skickar en faktura?">
+    Fakturans status ändras till Skickad, en PDF genereras och fakturan låses. Om e-post är konfigurerat får kunden en avisering.
+  </Accordion>
+  <Accordion title="Kan jag skicka om en faktura?">
+    Du kan ladda ner PDF:en och skicka den manuellt till kunden igen, till exempel via e-post.
+  </Accordion>
+  <Accordion title="Vad händer om kunden betalar delvis?">
+    Aourly hanterar full betalning. Registrera betalningen när hela beloppet har mottagits.
+  </Accordion>
+  <Accordion title="Vad betyder Väntar på godkännande?">
+    Denna status gäller bara för Worknode-användare. Det innebär att fakturan väntar på godkännande från en Worknode-granskare innan den kan skickas.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,160 @@
+---
+title: "Fakturagodkännande"
+description: "Förstå hur fakturagodkännandeprocessen fungerar för Worknode-användare, inklusive det extra godkännandesteget innan fakturor skickas till kunder."
+---
+
+När du använder Worknode går dina fakturor igenom ett extra godkännandesteg innan de skickas till kunder. Det beror på att Worknode är den formella arbetsgivaren och den juridiska avsändaren av fakturan. De behöver verifiera att allt är korrekt innan fakturan skickas ut.
+
+## Standardflöde vs. Worknode-flöde
+
+### Standardflöde i Aourly (eget företag)
+
+Utkast --> Skickad --> Betald
+
+När du driver eget företag i Aourly skapar du en faktura och skickar den direkt till din kund. Pengarna går till ditt eget bankkonto.
+
+### Worknode-flöde
+
+Utkast --> Väntar på godkännande --> Godkänd --> Skickad --> Betald
+
+Med Worknode finns ett extra steg mellan att skapa fakturan och skicka den. När du klickar på Skicka får fakturan status Väntar på godkännande istället för att gå direkt till kunden. Worknodes personal granskar den innan den skickas.
+
+Om fakturan nekas kan den korrigeras och skickas in igen:
+
+Utkast --> Väntar på godkännande --> Nekad --> (redigera) --> Väntar på godkännande --> Godkänd --> Skickad --> Betald
+
+## Varför godkännande behövs
+
+Worknode är din formella arbetsgivare enligt svensk lag. När en faktura skickas går den ut från Worknode som juridisk enhet. Det innebär:
+
+- Worknodes organisationsnummer och momsregistreringsnummer visas på fakturan
+- Worknodes bankuppgifter anges för betalning (eftersom de tar emot pengarna först via sitt klientmedelskonto)
+- Worknode ansvarar för att fakturan uppfyller svenska faktureringsregler
+
+Godkännandesteget säkerställer att fakturor är korrekta, regelriktiga och representerar legitimt arbete innan de skickas till kunder för Worknodes räkning.
+
+## Steg-för-steg-process
+
+### 1. Skapa din faktura
+
+Skapa en faktura i Aourly precis som du skulle göra med ett vanligt företag:
+
+- Välj kund
+- Lägg till radposter (arbetade timmar, fasta avgifter, utlägg)
+- Ange fakturadatum och förfallodatum
+- Granska totalbelopp och moms
+
+Fakturan startar med status **Utkast**. Du kan redigera den fritt i detta steg.
+
+### 2. Skicka till godkännande
+
+När fakturan är redo klickar du på **Skicka**. Istället för att skickas direkt till kunden får fakturan status **Väntar på godkännande** och hamnar i Worknodes granskningskö.
+
+Innan du skickar in, dubbelkolla:
+
+- Kundnamn och uppgifter är korrekta
+- Radposterna beskriver utfört arbete korrekt
+- Beloppen är rimliga och stämmer med dina uppdragspriser
+- Momsen hanteras korrekt (vanligtvis 25 % för de flesta tjänster i Sverige)
+
+> **Tips:** Dubbelkolla alla fakturadetaljer innan du skickar till godkännande för att undvika förseningar. Korrekta fakturor godkänns snabbare.
+
+### 3. Worknode granskar fakturan
+
+Worknodes personal granskar fakturan. De kontrollerar:
+
+| Kontroll              | Vad de verifierar                                             |
+|-----------------------|---------------------------------------------------------------|
+| Kunduppgifter         | Korrekt företagsnamn, organisationsnummer, adress             |
+| Radposter             | Tydliga beskrivningar, rimliga belopp                         |
+| Momshantering         | Rätt momssats tillämpad                                       |
+| Regelefterlevnad      | Fakturan uppfyller svenska lagkrav                            |
+
+> **Info:** Fakturor granskas vanligtvis inom 1 arbetsdag. Komplexa fakturor eller de som skickas in under högtrafik kan ta något längre tid.
+
+### 4. Godkänd eller nekad
+
+**Om godkänd**: Fakturan skickas automatiskt till din kund. Worknodes betalningsuppgifter (bankgiro eller klientmedelskonto) inkluderas så att kunden vet vart betalningen ska göras.
+
+**Om nekad**: Du ser anledningen till nekandet i Aourly. Vanliga orsaker inkluderar:
+
+- Felaktiga eller saknade kunduppgifter
+- Otydliga radpostbeskrivningar
+- Fel i momsberäkning
+- Saknad obligatorisk information
+
+Vid nekande korrigerar du problemen och skickar in fakturan igen. Den hamnar då tillbaka i granskningskön.
+
+### 5. Kunden betalar
+
+När fakturan har skickats betalar kunden till Worknodes bankkonto. Du kan följa betalningsstatusen i Aourly precis som med vilken annan faktura som helst.
+
+### 6. Du får din lön
+
+Efter att kunden betalat behandlar Worknode betalningen och betalar din nettolön efter avdrag för avgifter, skatter och bidrag. Se guiden [Lön och utbetalning](salary-and-payout) för en detaljerad uppdelning.
+
+## Fakturastatusar för Worknode-användare
+
+| Status                | Betydelse                                                     |
+|-----------------------|---------------------------------------------------------------|
+| Utkast                | Fakturan håller på att skapas, inte ännu inskickad            |
+| Väntar på godkännande | Inskickad till Worknode, väntar på granskning                 |
+| Godkänd               | Worknode godkände, fakturan skickas till kunden               |
+| Nekad                 | Worknode nekade, korrigeringar behövs innan ny inskickning    |
+| Skickad               | Fakturan har skickats till kunden                             |
+| Betald                | Kunden har betalat fakturan                                   |
+
+> **Varning:** Fakturabetalningsuppgifterna visar Worknodes bankkonto, inte ditt. Det är normalt -- Worknode tar emot betalningen och betalar sedan din lön.
+
+## Tips för snabbare godkännande
+
+- **Var noggrann med kunduppgifter.** Inkludera kundens fullständiga företagsnamn, organisationsnummer och korrekta adress.
+- **Skriv tydliga radpostbeskrivningar.** "Webbutveckling, mars 2026, 40 timmar" är bättre än "Utfört arbete."
+- **Verifiera moms innan inskickning.** De flesta tjänster i Sverige har 25 % moms, men vissa kategorier har reducerade satser.
+- **Skicka in tidigt i veckan.** Fakturor som skickas in måndag till onsdag granskas normalt snabbare än de som skickas in sent på fredagen.
+
+## Vanliga frågor
+
+**Varför nekades min faktura?**
+Vanliga orsaker inkluderar: felaktig momssats, saknade kunduppgifter, otydliga radpostbeskrivningar eller beloppsavvikelser. Nekandeanledningen visas på fakturan så att du kan göra korrigeringar.
+
+**Kan jag redigera en faktura efter inskickning?**
+Om den nekats, ja -- du kan redigera och skicka in igen. Om den redan godkänts eller skickats, nej -- då behöver du istället skapa en kreditfaktura.
+
+**Hur snabbt granskas fakturor?**
+Vanligtvis inom 1 arbetsdag.
+
+**Vems bankuppgifter står på fakturan?**
+Worknodes bankuppgifter (bankgiro eller klientmedelskonto), eftersom de tar emot betalningen först. Din nettolön betalas till ditt personliga bankkonto efter avdrag.
+
+**Kan jag avbryta en faktura som har skickats till godkännande?**
+Kontrollera fakturasidan för tillgängliga åtgärder. Du kan eventuellt dra tillbaka inskickningen, göra ändringar och skicka in igen.
+
+
+<Info>Fakturor granskas vanligtvis inom 1 arbetsdag. Komplexa fakturor eller de som skickas in under högtrafik kan ta något längre tid.</Info>
+
+<Warning>Fakturabetalningsuppgifterna visar Worknodes bankkonto, inte ditt. Det är normalt -- Worknode tar emot betalningen och betalar sedan din lön.</Warning>
+
+<Tip>Dubbelkolla alla fakturadetaljer innan du skickar till godkännande för att undvika förseningar. Korrekta fakturor godkänns snabbare.</Tip>
+
+<Info>Godkännandesteget finns för att Worknode är den juridiska avsändaren av fakturan. Som din arbetsgivare måste de verifiera att fakturor uppfyller lagliga och affärsmässiga krav.</Info>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Varför nekades min faktura?">
+    Vanliga orsaker inkluderar: felaktig momssats, saknade kunduppgifter, otydliga radpostbeskrivningar eller beloppsavvikelser. Nekandeanledningen visas på fakturan så att du kan göra korrigeringar.
+  </Accordion>
+  <Accordion title="Kan jag redigera en faktura efter inlämning?">
+    Om den nekats, ja -- du kan redigera och skicka in igen. Om den redan godkänts eller skickats, nej -- då behöver du istället skapa en kreditfaktura.
+  </Accordion>
+  <Accordion title="Hur snabbt granskas fakturor?">
+    Vanligtvis inom 1 arbetsdag. Fakturor som skickas in tidigt i veckan granskas normalt snabbare än de som skickas in sent på fredagen.
+  </Accordion>
+  <Accordion title="Vems bankuppgifter visas på fakturan?">
+    Worknodes bankuppgifter (bankgiro eller klientmedelskonto), eftersom de tar emot betalningen först. Din nettolön betalas till ditt personliga bankkonto efter avdrag.
+  </Accordion>
+  <Accordion title="Vad kontrollerar Worknode vid granskningen?">
+    De verifierar korrekta kunduppgifter, rimliga belopp för det beskrivna arbetet, korrekt momshantering och överensstämmelse med svenska faktureringsregler.
+  </Accordion>
+</AccordionGroup>

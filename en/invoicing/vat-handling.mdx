@@ -1,0 +1,144 @@
+---
+title: "VAT Handling on Invoices"
+description: "Understand the four VAT handling modes in Aourly, how to set VAT per invoice row, and how VAT affects invoice totals."
+---
+
+VAT (Value Added Tax), known as **moms** in Swedish, is a critical part of invoicing in Sweden. Getting VAT right on your invoices is not just about correct billing -- it is a legal requirement. Aourly supports four VAT handling modes to cover the most common invoicing scenarios for freelancers and sole proprietors.
+
+## The Four VAT Handling Modes
+
+### Standard VAT
+
+Standard VAT is the default mode for domestic invoicing in Sweden. You charge VAT on your services and remit it to Skatteverket (the Swedish Tax Agency).
+
+Swedish VAT rates:
+
+| Rate | Applies To |
+|------|-----------|
+| **25%** | Most goods and services, including consulting, software development, design, and professional services |
+| **12%** | Food and beverages, hotel accommodation, restaurant services |
+| **6%** | Books, newspapers, public transport, cultural events, sporting events |
+
+As a freelancer providing professional services, you will most commonly use the **25% rate**.
+
+Each line item on your invoice can have a different VAT rate. For example, if you invoice for both consulting (25%) and a book you authored (6%), each row carries its own rate.
+
+### Reverse Charge
+
+Reverse Charge (omvänd skattskyldighet) shifts the responsibility for reporting VAT from the seller to the buyer. When you invoice with Reverse Charge:
+
+- You do **not** charge VAT on the invoice.
+- The invoice total is the net amount only.
+- The buyer is responsible for reporting and paying the VAT in their country.
+
+**When to use Reverse Charge:**
+
+- **EU B2B services** -- when you sell services to a VAT-registered business in another EU country.
+- **Domestic construction** -- certain construction services in Sweden use domestic reverse charge rules.
+
+The invoice must include the text "Omvänd skattskyldighet" (Reverse Charge) and the buyer's VAT identification number.
+
+### VAT Exempt
+
+Some services are exempt from VAT entirely. When you invoice with VAT Exempt handling:
+
+- No VAT is charged.
+- The invoice shows only the net amount.
+
+**Common VAT-exempt services include:**
+
+- Healthcare and medical services
+- Educational services
+- Financial services (banking, insurance)
+- Social welfare services
+
+If your primary business activity falls under a VAT exemption, you may not need to register for VAT at all. Consult Skatteverket or your accountant to determine your obligations.
+
+### Intra-EU Supply
+
+Intra-EU handling is used for cross-border supplies of goods within the EU. This is distinct from Reverse Charge (which covers services) and applies specific EU trade rules.
+
+When invoicing with Intra-EU handling:
+
+- VAT is not charged on the invoice.
+- Both your Swedish VAT number and the buyer's EU VAT number must appear on the invoice.
+- The transaction must be reported in your EC Sales List (periodisk sammanställning) to Skatteverket.
+
+## Setting VAT on Your Invoices
+
+### Choosing the Mode
+
+When creating or editing a draft invoice, select the VAT handling mode from the dropdown. The mode applies to the entire invoice and determines how VAT is calculated and displayed.
+
+Choosing the correct mode depends on:
+
+- **Where your client is located** -- domestic (Sweden), EU, or outside EU.
+- **Whether the client is VAT-registered** -- B2B vs. B2C matters for EU transactions.
+- **What type of service you provide** -- some services have special rules.
+
+### Setting VAT Rates Per Row
+
+For Standard VAT invoices, each line item has a VAT rate field. Set the appropriate rate (25%, 12%, or 6%) for each row based on the type of good or service.
+
+For Reverse Charge, VAT Exempt, and Intra-EU invoices, the VAT amount is zero on all rows.
+
+### Reviewing the VAT Summary
+
+The invoice summary shows:
+
+- **Subtotal** -- sum of all line items excluding VAT.
+- **VAT breakdown** -- VAT amount grouped by rate (e.g., "VAT 25%: 5,000 SEK").
+- **Total** -- grand total including VAT.
+
+Review this carefully before sending. Incorrect VAT can lead to issues with your VAT return (momsdeklaration).
+
+## Self-Billing Invoices
+
+A self-billing invoice (självfaktura) is a special arrangement where the **buyer** creates the invoice on behalf of the seller. This is common in:
+
+- Staffing and subcontracting relationships
+- Situations where the buyer has better information about quantities delivered
+- Ongoing service agreements with pre-agreed rates
+
+Both parties must have a written agreement allowing self-billing. The self-billing invoice must meet the same legal requirements as a regular invoice.
+
+Aourly supports self-billing invoices. When configured, the buyer generates the invoice and both parties receive copies.
+
+## VAT and Credit Notes
+
+When you issue a credit note against an invoice, the VAT is also reversed. This means:
+
+- The VAT you reported on the original invoice is offset by the credit note.
+- Your next VAT return will reflect the net VAT after the credit.
+- The credit note clearly shows the reversed VAT amounts.
+
+## Common Mistakes to Avoid
+
+- **Charging VAT to an EU B2B client** -- if the client is VAT-registered in another EU country, you should typically use Reverse Charge for services.
+- **Using the wrong VAT rate** -- most professional services are 25%. Double-check if you are unsure.
+- **Missing regulatory text** -- Reverse Charge invoices must include "Omvänd skattskyldighet". Aourly adds this automatically when you select the Reverse Charge mode.
+- **Not including VAT numbers** -- EU cross-border invoices require both your and the buyer's VAT numbers.
+
+## Frequently Asked Questions
+
+**What VAT rate should I use for my consulting work?**
+Most consulting, software development, design, and professional services in Sweden use the standard 25% rate.
+
+**When should I use Reverse Charge?**
+Use it for B2B services to VAT-registered businesses in other EU countries, and for certain domestic construction services.
+
+**Can I mix VAT rates on one invoice?**
+Yes. Each line item can have its own VAT rate. The invoice summary will show a breakdown by rate.
+
+**What is a self-billing invoice?**
+It is an invoice created by the buyer on behalf of the seller, based on a prior agreement between both parties. It is common in staffing relationships.
+
+**I am not sure which VAT mode to use. What should I do?**
+When in doubt, consult your accountant or contact Skatteverket. Using the wrong VAT handling can result in penalties.
+
+
+<Warning>Applying the wrong VAT handling mode can cause issues with Skatteverket (Swedish Tax Agency). When in doubt, consult your accountant.</Warning>
+
+<Info>Self-billing invoices (självfaktura) are used when the buyer creates the invoice on behalf of the seller. This is common in certain contractor relationships.</Info>
+
+<Tip>If you frequently invoice the same type of client, check that the default VAT handling is set correctly on the client profile to save time.</Tip>

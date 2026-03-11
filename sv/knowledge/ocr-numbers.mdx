@@ -1,0 +1,107 @@
+---
+title: "OCR-nummer"
+description: "Hur OCR-referensnummer fungerar i det svenska banksystemet och varför de är viktiga för automatisk betalningsavstämning."
+---
+
+<Warning>
+  Denna information är endast avsedd som allmän vägledning. Regler kan ändras.
+  Rådfråga alltid Skatteverket eller en auktoriserad revisor för råd specifika för din situation.
+</Warning>
+
+> **Ansvarsfriskrivning:** Denna information är avsedd som allmän vägledning. Regler kan ändras. Rådgör alltid med Skatteverket eller en auktoriserad revisor för råd specifika för din situation.
+
+# OCR-nummer
+
+Om du skickar fakturor i Sverige har du med stor sannolikhet stött på OCR-nummer. Det är en referens som gör det möjligt för banker att automatiskt matcha inkommande betalningar mot rätt faktura. Den här guiden förklarar vad OCR-nummer är, hur de fungerar och varför de är viktiga.
+
+## Vad är ett OCR-nummer?
+
+OCR står för "Optical Character Recognition" och är ett strukturerat referensnummer som används i det svenska Bankgirosystemet. När en kund betalar en faktura via Bankgiro anger de OCR-numret som referens. Banken läser av numret automatiskt och matchar betalningen mot rätt faktura.
+
+Utan OCR-nummer måste du manuellt granska varje inkommande betalning och koppla den till rätt faktura -- en tidskrävande och felbenägen process.
+
+## Hur OCR-nummer fungerar
+
+### Koppling till Bankgiro
+
+OCR-nummer används tillsammans med Bankgiro, som är det vanligaste systemet för företagsbetalningar i Sverige. Så här ser flödet ut:
+
+1. Du skapar en faktura med ett unikt OCR-nummer
+2. Kunden betalar via sin bank och anger ditt Bankgironummer och OCR-numret
+3. Bankgirot läser OCR-numret och vidarebefordrar betalningsinformation till din bank
+4. Din bank matchar betalningen mot fakturan automatiskt
+
+### Modulus 10 -- kontrollsiffran
+
+OCR-nummer innehåller en **kontrollsiffra** som beräknas med **Modulus 10-algoritmen** (även kallad Luhn-algoritmen). Kontrollsiffran är den sista siffran i OCR-numret och fungerar som en säkerhetskontroll.
+
+Så fungerar det:
+
+1. Utgå från ditt basnummer (ofta fakturanumret), t.ex. **12345**
+2. Tillämpa Modulus 10-algoritmen på siffrorna
+3. Resultatet ger en kontrollsiffra, t.ex. **1**
+4. OCR-numret blir **123451**
+
+Om en kund råkar skriva in ett felaktigt nummer upptäcker bankens system det tack vare kontrollsiffran och avvisar betalningen. Det förhindrar att betalningar hamnar fel.
+
+### Längd och format
+
+- OCR-nummer är mellan **2 och 25 siffror** långt
+- Det får bara innehålla siffror (inga bokstäver eller specialtecken)
+- Den sista siffran är alltid kontrollsiffran
+
+## Varför OCR-nummer är viktiga
+
+### Automatisk avstämning
+
+Den största fördelen är att betalningar matchas automatiskt mot fakturor. Du slipper manuellt söka igenom kontoutdrag för att ta reda på vilken betalning som hör till vilken faktura.
+
+### Tidsbesparing
+
+För företag som hanterar många fakturor sparar automatisk matchning avsevärd tid. Istället för att spendera timmar på manuell avstämning sköts det av systemet.
+
+### Färre fel
+
+Manuell matchning av betalningar leder oundvikligen till misstag. OCR-nummer eliminerar den mänskliga felkällan i avstämningsprocessen.
+
+### Snabbare uppföljning
+
+När betalningar matchas automatiskt ser du omedelbart vilka fakturor som är betalda och vilka som fortfarande är utestående. Det gör det enklare att följa upp sena betalningar.
+
+## OCR-nummer i Aourly
+
+Aourly kan generera OCR-nummer automatiskt för dina fakturor. Numret baseras vanligtvis på fakturanumret med en tillagd kontrollsiffra enligt Modulus 10. Du behöver inte beräkna det manuellt.
+
+När din kund betalar och anger OCR-numret korrekt matchas betalningen automatiskt, och fakturans status uppdateras i Aourly.
+
+## Vanliga frågor om OCR
+
+### Behöver alla fakturor ett OCR-nummer?
+
+Nej. OCR-nummer är bara relevant om du tar emot betalningar via Bankgiro. Om du använder ett vanligt bankkontonummer eller andra betalningsmetoder (Swish, internationell överföring etc.) är OCR inte tillämpligt.
+
+### Vad händer om kunden inte anger OCR-numret?
+
+Betalningen går igenom till ditt konto, men den matchas inte automatiskt. Du måste manuellt identifiera vilken faktura betalningen avser.
+
+### Kan OCR-numret vara samma som fakturanumret?
+
+Inte rakt av, eftersom OCR-numret behöver en kontrollsiffra. Men det baseras vanligtvis på fakturanumret, så om ditt fakturanummer är 1001 kan OCR-numret bli exempelvis 10012 (med kontrollsiffran tillagd).
+
+## Sammanfattning
+
+- OCR-nummer är strukturerade referensnummer som används med Bankgiro i Sverige
+- De möjliggör automatisk matchning av betalningar mot fakturor
+- Kontrollsiffran beräknas med Modulus 10-algoritmen och förhindrar felinmatningar
+- Aourly genererar OCR-nummer automatiskt för dina fakturor
+- OCR-nummer är bara relevanta för Bankgirobetalningar
+- Automatisk avstämning sparar tid, minskar fel och ger bättre överblick över utestående fakturor
+
+
+<Info>OCR-nummer används bara med Bankgirobetalningar. Om du använder ett vanligt bankkontonummer för betalningar är OCR inte tillämpligt.</Info>
+
+<Tip>Aourly kan generera OCR-nummer automatiskt för dina fakturor, så slipper du beräkna dem manuellt.</Tip>
+
+<Note>
+  **Källor:** [Bankgirot](https://www.bankgirot.se)
+</Note>

@@ -1,68 +1,301 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "AOURLY",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0092EE",
+    "light": "#33ADFF",
+    "dark": "#0070CC"
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "navigation": {
     "tabs": [
       {
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "en/getting-started/registration",
+              "en/getting-started/login",
+              "en/getting-started/password-reset",
+              "en/getting-started/email-verification",
+              "en/getting-started/onboarding"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Company",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "en/company/creating-a-company",
+              "en/company/company-profile",
+              "en/company/switching-companies",
+              "en/company/roles-and-permissions",
+              "en/company/subscription"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Dashboard",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "en/dashboard/overview"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Clients",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "en/clients/managing-clients",
+              "en/clients/client-details"
+            ]
+          },
+          {
+            "group": "Assignments",
+            "pages": [
+              "en/assignments/creating-assignments",
+              "en/assignments/assignment-types",
+              "en/assignments/assignment-workflow",
+              "en/assignments/performers-and-workloads"
+            ]
+          },
+          {
+            "group": "Time Tracking",
+            "pages": [
+              "en/time-tracking/logging-time",
+              "en/time-tracking/timesheets",
+              "en/time-tracking/time-approval"
+            ]
+          },
+          {
+            "group": "Expenses",
+            "pages": [
+              "en/expenses/creating-expenses",
+              "en/expenses/expense-types-and-categories",
+              "en/expenses/receipts-and-approval"
+            ]
+          },
+          {
+            "group": "Invoicing",
+            "pages": [
+              "en/invoicing/creating-invoices",
+              "en/invoicing/invoice-review-workflow",
+              "en/invoicing/sending-and-payment",
+              "en/invoicing/credit-notes",
+              "en/invoicing/vat-handling"
+            ]
+          },
+          {
+            "group": "Banking",
+            "pages": [
+              "en/banking/bank-accounts",
+              "en/banking/transactions"
+            ]
+          },
+          {
+            "group": "Bookkeeping",
+            "pages": [
+              "en/bookkeeping/overview",
+              "en/bookkeeping/integration-setup",
+              "en/bookkeeping/accounts-and-vouchers",
+              "en/bookkeeping/sie4-import-export"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "en/integrations/fortnox",
+              "en/integrations/visma"
+            ]
+          },
+          {
+            "group": "Todos",
+            "pages": [
+              "en/todos/task-management"
+            ]
+          },
+          {
+            "group": "Settings",
+            "pages": [
+              "en/settings/user-profile",
+              "en/settings/notifications",
+              "en/settings/company-settings"
+            ]
+          },
+          {
+            "group": "Worknode",
+            "pages": [
+              "en/worknode/what-is-worknode",
+              "en/worknode/registration-bankid",
+              "en/worknode/profile-setup",
+              "en/worknode/invoice-approval",
+              "en/worknode/errands",
+              "en/worknode/salary-and-payout"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Knowledge Base",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Knowledge Base",
             "pages": [
-              "api-reference/introduction"
+              "en/knowledge/invoicing-basics",
+              "en/knowledge/vat-moms",
+              "en/knowledge/expenses-and-deductions",
+              "en/knowledge/bookkeeping-basics",
+              "en/knowledge/accounting-integrations",
+              "en/knowledge/time-tracking-best-practices",
+              "en/knowledge/client-management-tips",
+              "en/knowledge/swedish-business-rules",
+              "en/knowledge/credit-notes-explained",
+              "en/knowledge/ocr-numbers",
+              "en/knowledge/reverse-charge-vat",
+              "en/knowledge/self-billing"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Guider",
+        "groups": [
+          {
+            "group": "Kom igång",
+            "pages": [
+              "sv/getting-started/registration",
+              "sv/getting-started/login",
+              "sv/getting-started/password-reset",
+              "sv/getting-started/email-verification",
+              "sv/getting-started/onboarding"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Företag",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "sv/company/creating-a-company",
+              "sv/company/company-profile",
+              "sv/company/switching-companies",
+              "sv/company/roles-and-permissions",
+              "sv/company/subscription"
+            ]
+          },
+          {
+            "group": "Översikt",
+            "pages": [
+              "sv/dashboard/overview"
+            ]
+          },
+          {
+            "group": "Kunder",
+            "pages": [
+              "sv/clients/managing-clients",
+              "sv/clients/client-details"
+            ]
+          },
+          {
+            "group": "Uppdrag",
+            "pages": [
+              "sv/assignments/creating-assignments",
+              "sv/assignments/assignment-types",
+              "sv/assignments/assignment-workflow",
+              "sv/assignments/performers-and-workloads"
+            ]
+          },
+          {
+            "group": "Tidrapportering",
+            "pages": [
+              "sv/time-tracking/logging-time",
+              "sv/time-tracking/timesheets",
+              "sv/time-tracking/time-approval"
+            ]
+          },
+          {
+            "group": "Utlägg",
+            "pages": [
+              "sv/expenses/creating-expenses",
+              "sv/expenses/expense-types-and-categories",
+              "sv/expenses/receipts-and-approval"
+            ]
+          },
+          {
+            "group": "Fakturering",
+            "pages": [
+              "sv/invoicing/creating-invoices",
+              "sv/invoicing/invoice-review-workflow",
+              "sv/invoicing/sending-and-payment",
+              "sv/invoicing/credit-notes",
+              "sv/invoicing/vat-handling"
+            ]
+          },
+          {
+            "group": "Bank",
+            "pages": [
+              "sv/banking/bank-accounts",
+              "sv/banking/transactions"
+            ]
+          },
+          {
+            "group": "Bokföring",
+            "pages": [
+              "sv/bookkeeping/overview",
+              "sv/bookkeeping/integration-setup",
+              "sv/bookkeeping/accounts-and-vouchers",
+              "sv/bookkeeping/sie4-import-export"
+            ]
+          },
+          {
+            "group": "Integrationer",
+            "pages": [
+              "sv/integrations/fortnox",
+              "sv/integrations/visma"
+            ]
+          },
+          {
+            "group": "Att göra",
+            "pages": [
+              "sv/todos/task-management"
+            ]
+          },
+          {
+            "group": "Inställningar",
+            "pages": [
+              "sv/settings/user-profile",
+              "sv/settings/notifications",
+              "sv/settings/company-settings"
+            ]
+          },
+          {
+            "group": "Worknode",
+            "pages": [
+              "sv/worknode/what-is-worknode",
+              "sv/worknode/registration-bankid",
+              "sv/worknode/profile-setup",
+              "sv/worknode/invoice-approval",
+              "sv/worknode/errands",
+              "sv/worknode/salary-and-payout"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Kunskapsbank",
+        "groups": [
+          {
+            "group": "Kunskapsbank",
+            "pages": [
+              "sv/knowledge/invoicing-basics",
+              "sv/knowledge/vat-moms",
+              "sv/knowledge/expenses-and-deductions",
+              "sv/knowledge/bookkeeping-basics",
+              "sv/knowledge/accounting-integrations",
+              "sv/knowledge/time-tracking-best-practices",
+              "sv/knowledge/client-management-tips",
+              "sv/knowledge/swedish-business-rules",
+              "sv/knowledge/credit-notes-explained",
+              "sv/knowledge/ocr-numbers",
+              "sv/knowledge/reverse-charge-vat",
+              "sv/knowledge/self-billing"
             ]
           }
         ]
@@ -71,52 +304,29 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Aourly",
+          "href": "https://aourly.com",
+          "icon": "globe"
         }
       ]
     }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@aourly.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Go to Aourly",
+      "href": "https://app.aourly.com"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://linkedin.com/company/aourly"
     }
   }
 }

@@ -1,0 +1,184 @@
+---
+title: "Client Details"
+description: "In-depth guide to every client field in Aourly, including billing settings, VAT handling, and markup configuration."
+---
+
+Every client in Aourly has a set of fields that control how they are identified, billed, and managed. This guide walks through each field, explains when it matters, and helps you configure clients correctly for smooth invoicing.
+
+## Accessing Client Details
+
+1. Navigate to **Clients** in the sidebar
+2. Click on the client you want to review or configure
+3. The client detail page shows all settings organized into logical sections
+
+## Client Identity Fields
+
+### Name
+
+The client's company name or individual name. This is the primary identifier and appears on all invoices, in the client list, and throughout Aourly wherever the client is referenced.
+
+### Email
+
+The client's primary email address, used for general communication. If no invoice email is set, invoices are also sent here.
+
+### Invoice Email
+
+A separate email address specifically for receiving invoices. Many Swedish companies have a dedicated invoicing address such as `faktura@company.se` or `accounting@company.com`. When set, invoices are sent to this address instead of the primary email.
+
+> **Tip:** Always ask your client if they have a dedicated invoice email. Sending invoices to the wrong address is a common cause of delayed payments.
+
+### Organization Number (Organisationsnummer)
+
+The client's Swedish business registration number (e.g., 556123-4567). This appears on invoices and is important for B2B transactions in Sweden. For international clients, enter their equivalent business registration number.
+
+### VAT Number (Momsnummer)
+
+The client's VAT registration number. This field is especially important for:
+
+- **EU clients outside Sweden** -- Entering a valid EU VAT number enables reverse charge VAT. This means you do not charge VAT on the invoice, and the client accounts for it in their own country.
+- **Verifying VAT registration** -- For Swedish clients, having the VAT number on file is useful for your own records and bookkeeping.
+
+> **Tip:** For EU reverse charge to apply, both the country (set to an EU country other than Sweden) and a valid VAT number must be present.
+
+### Customer Number
+
+An auto-generated sequential identifier assigned when the client is created. The customer number:
+
+- Appears on invoices for reference
+- Is unique within your company
+- Cannot be changed manually
+- Is used in bookkeeping integrations (Fortnox, Visma)
+
+### Country Code
+
+The client's country. This is one of the most important fields because it determines VAT treatment:
+
+| Country | VAT Treatment |
+|---------|---------------|
+| **Sweden** | Standard Swedish VAT (moms) at 25% |
+| **EU country (with VAT number)** | Reverse charge -- no VAT on invoice |
+| **EU country (without VAT number)** | Swedish VAT may apply |
+| **Non-EU country** | No VAT charged (export) |
+
+### Address, Postal Code, City
+
+The client's billing address. This appears on invoices and should match the client's official business address for compliance purposes.
+
+### Phone
+
+The client's phone number. Stored for reference and does not appear on invoices by default.
+
+### Contact Person
+
+The name of the individual you work with at the client company. Useful when the client is a larger organization with multiple departments. The contact person name can be included on invoices.
+
+## Billing and Financial Settings
+
+### Payment Terms
+
+Payment terms define how many days the client has to pay an invoice from the date it is issued. This is the **betalningsvillkor** that appears on every invoice.
+
+Common payment terms in Sweden:
+
+| Terms | Meaning | Common Use |
+|-------|---------|------------|
+| 10 days | Quick payment | Small businesses, known contacts |
+| 15 days | Short terms | Common in some industries |
+| 30 days | Standard | Most B2B work in Sweden (30 dagar netto) |
+| 45-60 days | Extended | Large corporations |
+
+Payment terms set on the client become the default for new invoices. You can override them on individual invoices when needed.
+
+> **Tip:** Agree on payment terms with your client before starting work. Having clear terms prevents awkward conversations when the invoice is due.
+
+### Currency
+
+If you invoice a client in a currency different from your company's base currency, set the client's currency here. When a client's currency differs from your company currency:
+
+- Invoice amounts are displayed in the client's currency
+- Exchange rates are applied at the time of invoice creation
+- Bookkeeping entries are recorded in your company's base currency
+
+### Currency Markup %
+
+A percentage added on top of the exchange rate when invoicing in a foreign currency. This compensates for:
+
+- Exchange rate fluctuations between invoice creation and payment
+- Bank fees for currency conversion
+- Administrative overhead of handling foreign currency
+
+A markup of **2-5%** is common in Swedish consulting. For example, with a 3% currency markup, if the actual exchange rate gives a line item of 10,000 NOK, the invoiced amount would be 10,300 NOK.
+
+### General Markup %
+
+The general markup is applied to **expenses** when they are included on invoices for this client. It allows you to charge a profit margin on out-of-pocket costs you incur on behalf of the client.
+
+**How it works:** If you set a 10% general markup and add a 500 SEK travel expense to an invoice, the client sees a line item of 550 SEK for that expense.
+
+Common settings:
+
+- **0%** -- Pass expenses through at cost
+- **5-10%** -- Standard for most consulting relationships
+- **10-20%** -- Common for materials or subcontractor costs
+- **Leave blank** -- Falls back to the company-level default markup
+
+## How Client Settings Cascade
+
+Client settings work as defaults that flow down to invoices:
+
+1. **Company defaults** -- Set on the company profile
+2. **Client overrides** -- Set on the client detail page (payment terms, currency, markup)
+3. **Invoice overrides** -- Set on individual invoices (can override any client default)
+
+This hierarchy means you can set sensible defaults at the company and client level, and only make adjustments on specific invoices when needed.
+
+## Settings and Existing Invoices
+
+Changes to client settings only affect **future** invoices. Already-created invoices retain the settings they were generated with. This ensures your sent invoices remain accurate and consistent with what the client received.
+
+If you need to correct settings on an existing invoice that has not been sent yet, edit the invoice directly rather than changing client settings.
+
+## Best Practices
+
+### Keep VAT information accurate
+
+Incorrect VAT settings can lead to compliance issues. If a client is in the EU, always verify their VAT number. The European Commission provides a VIES VAT validation tool for this purpose.
+
+### Set currency markup for international clients
+
+If you invoice in a currency other than SEK, always consider setting a currency markup. Even a small markup (2-3%) protects you against exchange rate movements during the payment period.
+
+### Use invoice email consistently
+
+If a client provides a dedicated invoice email, always use it. This ensures invoices enter the client's accounts payable system directly, leading to faster payments.
+
+### Review settings before the first invoice
+
+Before creating the first invoice for a new client, review all their settings: payment terms, currency, VAT number, country, and markup percentages. Getting these right from the start avoids corrections later.
+
+
+<Info>Client-level settings serve as defaults for new invoices. You can override payment terms, currency, and markup on individual invoices.</Info>
+
+<Tip>For international clients, always set both the country and VAT number. This ensures correct VAT treatment on invoices.</Tip>
+
+<Warning>Changing client settings only affects future invoices. Existing invoices retain the terms they were created with.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="What is currency markup?">
+    Currency markup is a percentage added on top of the exchange rate when invoicing in a foreign currency. It compensates for exchange rate fluctuations and conversion costs. For example, a 3% markup on a USD invoice means the converted amount is increased by 3%.
+  </Accordion>
+  <Accordion title="What is general markup?">
+    General markup is a percentage added on top of expenses (such as travel costs or materials) when they are included on invoices. It allows you to charge a profit margin on out-of-pocket costs you incur for the client.
+  </Accordion>
+  <Accordion title="When does the VAT number matter?">
+    The VAT number is critical for EU clients outside Sweden. When a valid VAT number is present and the client is in another EU country, Aourly can apply reverse charge VAT, meaning VAT is not charged on the invoice and the client accounts for it in their own country.
+  </Accordion>
+  <Accordion title="What is the invoice email used for?">
+    The invoice email is a separate email address specifically for receiving invoices. Many companies have dedicated invoicing departments (e.g., faktura@company.se). When set, invoices are sent to this address instead of the primary email.
+  </Accordion>
+  <Accordion title="Can different assignments for the same client have different rates?">
+    Yes. Rates are set per performer per assignment, not per client. You can have one client with multiple assignments at different hourly rates.
+  </Accordion>
+</AccordionGroup>

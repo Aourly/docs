@@ -1,0 +1,142 @@
+---
+title: "SIE4 Import and Export"
+description: "Learn how to import and export SIE4 files for migrating accounting data, sharing with your accountant, or annual reporting."
+---
+
+SIE4 is the Swedish standard file format for exchanging accounting data between systems. Whether you are migrating to Aourly from another accounting tool, sharing data with your accountant, or preparing for your annual report, SIE4 is the way to move accounting data in and out of Aourly.
+
+## What Is SIE4?
+
+SIE (Standard Import Export) is a file format developed by SIE-gruppen in Sweden. It has been the industry standard for decades and is supported by virtually every Swedish accounting application, including Fortnox, Visma, Bokio, and many others.
+
+A SIE4 file contains:
+
+- **Company information** -- organisation number, company name, financial year dates.
+- **Chart of accounts** -- all account numbers and names.
+- **Opening balances** -- account balances at the start of the financial year.
+- **Vouchers** -- all accounting transactions with their debit and credit entries.
+- **Closing balances** -- account balances at the end of the financial year.
+
+The file is plain text with a specific structure, but you do not need to understand the format -- Aourly handles the reading and writing for you.
+
+## Importing SIE4 Files
+
+### When to Import
+
+Import a SIE4 file when:
+
+- **Migrating from another system** -- you are switching from Fortnox, Visma, or another tool to Aourly's built-in bookkeeping and want to bring your historical data.
+- **Starting a new financial year with opening balances** -- your accountant provides a SIE4 file with closing balances from the previous year.
+- **Restoring data** -- you need to restore previously exported accounting records.
+
+### How to Import
+
+1. Navigate to **Bookkeeping** and click the **Imports** tab.
+2. Click **Import SIE4**.
+3. Select the SIE4 file from your computer (typically a `.se` or `.si` file).
+4. Aourly parses the file and imports the data.
+
+### Reviewing the Import
+
+After importing, Aourly shows a summary:
+
+- Number of accounts imported or updated.
+- Number of vouchers imported.
+- Number of transactions processed.
+- Any warnings (e.g., accounts that do not match the BAS standard).
+- Any errors (e.g., malformed data in the file).
+
+The import history is preserved on the Imports tab so you can review past imports at any time.
+
+### Import Tips
+
+- **Check the financial year** -- make sure the SIE4 file covers the correct period before importing.
+- **Avoid duplicates** -- if you import the same file twice, you may get duplicate vouchers. Only import a file once per financial year.
+- **Verify after import** -- check the Accounts and Vouchers tabs to confirm the data looks correct.
+
+## Exporting SIE4 Files
+
+### When to Export
+
+Export a SIE4 file when:
+
+- **Sharing with your accountant** -- your accountant can import the file into their system for year-end closing, tax filing, or review.
+- **Migrating to another system** -- if you move away from Aourly, export your data to bring it with you.
+- **Annual reporting** -- some annual report preparation tools accept SIE4 files.
+- **Backup** -- export at the end of each financial year as a permanent record of your accounting data.
+
+### How to Export
+
+1. Navigate to **Bookkeeping**.
+2. Use the **Export SIE4** action.
+3. Select the **financial year** you want to export.
+4. Aourly generates the SIE4 file.
+5. Download the file to your computer.
+
+The exported file includes your full chart of accounts, all vouchers for the selected financial year, and opening and closing balances.
+
+### Export Tips
+
+- **Export regularly** -- a good practice is to export at the end of each month or quarter as a running backup.
+- **Label your files** -- rename the downloaded file with the company name and period (e.g., `MinFirma_2025.se`) for easy identification.
+- **Share securely** -- SIE4 files contain sensitive financial data. Use secure methods (encrypted email, shared drives with access control) when sending to your accountant.
+
+## Financial Years
+
+SIE4 import and export are tied to financial years (räkenskapsår). Before importing or exporting, make sure your financial years are correctly defined.
+
+### Managing Financial Years
+
+Navigate to **Bookkeeping** and click the **Financial Years** tab. Here you can:
+
+- View existing financial years with their start and end dates.
+- Create new financial years for upcoming periods.
+- See which years have accounting data.
+
+Most sole proprietors use the calendar year (January 1 to December 31). If your financial year differs, make sure it is configured correctly before importing or exporting.
+
+## Common Workflows
+
+### Migrating to Aourly
+
+1. Export a SIE4 file from your current accounting system.
+2. Import it into Aourly.
+3. Verify the imported data.
+4. Continue your bookkeeping in Aourly going forward.
+
+### Year-End with Your Accountant
+
+1. Export SIE4 for the completed financial year.
+2. Send it to your accountant.
+3. Your accountant prepares the year-end closing and annual report.
+4. If they provide updated closing balances in a SIE4 file, import it as opening balances for the new year.
+
+### Backup
+
+1. At the end of each financial year, export SIE4.
+2. Store the file in a secure location.
+3. Swedish law requires you to keep accounting records for seven years.
+
+## Frequently Asked Questions
+
+**What is SIE4?**
+SIE4 is the Swedish standard file format for accounting data exchange. It contains your chart of accounts, vouchers, and balances in a format that all Swedish accounting software can read.
+
+**When should I import a SIE4 file?**
+When migrating from another system, restoring data, or loading opening balances from your accountant.
+
+**When should I export a SIE4 file?**
+When sharing data with your accountant, migrating away from Aourly, preparing annual reports, or creating backups.
+
+**Can I import multiple SIE4 files?**
+Yes, but be careful not to import overlapping data. Each import is tracked on the Imports tab.
+
+**How long should I keep my SIE4 exports?**
+Swedish law (bokföringslagen) requires accounting records to be kept for seven years. Store your SIE4 exports in a secure, backed-up location.
+
+
+<Info>SIE4 is the Swedish standard file format for exchanging accounting data between systems. It is supported by virtually all Swedish accounting software.</Info>
+
+<Tip>Export a SIE4 file at the end of each financial year as a backup of your accounting records.</Tip>
+
+<Warning>Importing a SIE4 file adds data to your bookkeeping. Make sure you are importing the correct file for the correct financial year to avoid duplicates.</Warning>

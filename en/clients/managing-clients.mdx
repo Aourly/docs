@@ -1,0 +1,158 @@
+---
+title: "Managing Clients"
+description: "How to create, edit, and manage your client database in Aourly for streamlined invoicing and project tracking."
+---
+
+Clients are the foundation of your work in Aourly. Every assignment, time entry, and invoice connects to a client. Setting up your client database properly from the start ensures smooth invoicing and clean financial records.
+
+## Before You Begin
+
+There are no prerequisites for creating clients. However, it is recommended to have your company profile set up so that invoice-related defaults (currency, payment terms) are in place.
+
+## Accessing the Client List
+
+There are two ways to get to clients:
+
+- **Sidebar navigation** -- Click **Clients** in the sidebar menu
+- **Dashboard quick action** -- Click **Create Client** in the top bar for immediate creation
+
+The client list page shows all your clients with search functionality, making it easy to find and manage your client database as it grows.
+
+## Step-by-Step: Creating a New Client
+
+### 1. Navigate to the Clients Page
+
+From the sidebar, click **Clients**. This opens the client list where you can see all your current clients.
+
+### 2. Start Client Creation
+
+Click the **New Client** button (or use the dashboard quick action). This opens the client creation form.
+
+### 3. Enter Client Details
+
+Fill in the following information:
+
+- **Name** -- The client's company name or individual name. This appears on invoices and throughout Aourly.
+- **Email** -- The client's primary email address for general communication.
+- **Invoice Email** -- A separate email for receiving invoices (e.g., faktura@client.se). When left blank, invoices are sent to the primary email.
+- **Organization Number** (organisationsnummer) -- The client's Swedish business registration number. Appears on invoices.
+- **VAT Number** (momsnummer) -- The client's VAT registration number. Important for EU reverse charge invoicing.
+- **Country** -- The client's country. Affects VAT rules on invoices.
+- **Address** -- Street address, postal code, and city. Appears on invoices as the billing address.
+- **Phone** -- The client's phone number for reference.
+- **Contact Person** -- The individual you work with at the client company.
+
+### 4. Set Payment Terms and Currency
+
+- **Payment Terms** -- The number of days the client has to pay an invoice (e.g., 30 days). This default applies to all invoices for this client.
+- **Currency** -- The invoicing currency for this client (defaults to SEK).
+- **Currency Markup %** -- An optional percentage added to cover exchange rate fluctuations when invoicing in a foreign currency.
+- **General Markup %** -- An optional percentage added on top of expenses for profit margin.
+
+### 5. Save
+
+Click **Create** to save the client. Aourly automatically assigns a **customer number** -- a sequential identifier used on invoices and for internal reference.
+
+## The Client List
+
+The client list page displays all your clients in a searchable table. You can:
+
+- **Search** -- Type in the search bar to filter by client name, email, or organization number
+- **Sort** -- Click column headers to sort by name, customer number, or other fields
+- **Click to edit** -- Click any client to open their detail page
+- **Delete** -- Remove clients that have no associated assignments or invoices
+
+## Editing a Client
+
+To update a client's information:
+
+1. Click the client's name in the client list
+2. Edit any fields on the detail page
+3. Click **Save** to apply changes
+
+> **Tip:** Changes to client details affect future invoices. Previously sent invoices retain the client details they were created with.
+
+## Client Data on Invoices
+
+The following client information appears on invoices:
+
+- Company name
+- Organization number
+- VAT number (if provided)
+- Address (street, postal code, city)
+- Country
+- Contact person (if set)
+- Customer number
+
+Make sure this information is accurate before generating invoices. Incorrect client details on invoices can delay payments or create compliance issues.
+
+## Auto-Generated Customer Number
+
+When you create a client, Aourly automatically assigns a sequential **customer number**. This number:
+
+- Appears on invoices for reference
+- Is unique within your company
+- Cannot be changed manually
+- Increments with each new client
+
+The customer number helps with bookkeeping and makes it easy to reference clients in correspondence.
+
+## Fortnox and Visma Integration
+
+If you have connected Fortnox or Visma as your bookkeeping integration, clients sync between the systems. Creating a client in Fortnox will make it available in Aourly, and vice versa. This eliminates the need for manual data entry across systems.
+
+## Best Practices
+
+### Set up clients before assignments
+
+Create your client records first, then build assignments linked to them. This ensures a clean hierarchy: Client -> Assignment -> Time/Expenses -> Invoice.
+
+### Use invoice email when appropriate
+
+Many companies have dedicated invoicing departments or email addresses (e.g., faktura@company.se). Using the invoice email field ensures invoices reach the right people without changing your primary contact email.
+
+### Keep details current
+
+When clients change their address, organization number, or contact information, update their record in Aourly. This keeps future invoices accurate.
+
+### Add organization numbers for Swedish clients
+
+For B2B transactions in Sweden, having the client's organization number on invoices is standard practice and sometimes legally required. Always request it when onboarding a new client.
+
+### Set the correct country for international clients
+
+Setting the correct country is critical for VAT handling:
+
+- **Sweden** -- Standard Swedish VAT (moms) applies
+- **EU countries** -- Reverse charge VAT may apply when the client has a valid VAT number
+- **Non-EU countries** -- VAT is typically not charged on exports
+
+## Who Can Manage Clients
+
+- **Owners** -- Full access to create, edit, and manage all clients
+- **Coordinators** -- Can create and edit clients
+- **Performers** -- Cannot access the client management section (they see client names on their assignments but cannot modify client records)
+
+
+<Info>Customer numbers are auto-generated by Aourly. You do not need to manage numbering manually.</Info>
+
+<Tip>Set up all your clients before creating assignments. This way, you can quickly link assignments to the right client.</Tip>
+
+<Tip>Use the invoice email field when your client's accounting or invoicing department has a different email than your day-to-day contact.</Tip>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Can I have clients in different countries?">
+    Yes. Aourly supports multi-currency invoicing. Set the client's country and preferred currency, and invoices will be generated accordingly. VAT rules also adapt based on country (domestic, EU reverse charge, or export).
+  </Accordion>
+  <Accordion title="Can I import clients?">
+    There is no manual bulk import feature currently. However, if you connect Fortnox as your bookkeeping integration, clients will sync automatically between the systems.
+  </Accordion>
+  <Accordion title="Can I delete a client?">
+    Clients with associated assignments or invoices cannot be deleted to preserve data integrity. You can archive or deactivate them instead.
+  </Accordion>
+  <Accordion title="Can Performers see the client list?">
+    No. Only Owners and Coordinators can view and manage clients. Performers see client names on their assigned work but cannot access the client management section.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,123 @@
+---
+title: "Kreditfakturor"
+description: "Lär dig vad kreditfakturor är, när de ska användas och hur du skapar en för att reversera eller korrigera en skickad faktura."
+---
+
+Ibland behöver en faktura korrigeras efter att den har skickats. Kanske fakturerade du fel belopp, kunden avbeställde en del av arbetet, eller ni kom överens om en rabatt efter att fakturan redan levererats. Eftersom skickade fakturor inte kan redigeras i Aourly är lösningen att utfärda en **kreditfaktura**.
+
+## Vad är en kreditfaktura?
+
+En kreditfaktura är ett officiellt dokument som reverserar beloppet på en originalfaktura. Det är en standardpraxis inom svensk affärsredovisning och ett lagstadgat krav enligt bokföringslagen när du behöver korrigera en redan utfärdad faktura.
+
+Kreditfakturor:
+
+- Är kopplade till den originalfaktura de reverserar.
+- Har ett eget sekventiellt fakturanummer.
+- Är tydligt markerade som **Kredit**-typ (till skillnad från den normala **Debet**-typen).
+- Reverserar momsen som redovisats på originalfakturan.
+
+## När ska du utfärda en kreditfaktura?
+
+Vanliga anledningar till att utfärda en kreditfaktura:
+
+- **Faktureringsfel** -- du fakturerade fel belopp, fel pris eller fel antal timmar.
+- **Inställt arbete** -- kunden avbeställde ett projekt eller en del av uppdraget efter att du redan fakturerat.
+- **Rabatt efter fakturering** -- du och kunden kom överens om en rabatt efter att fakturan skickats.
+- **Returnerade varor** -- om tillämpligt, varor returnerades och behöver krediteras.
+- **Dubblettfakturering** -- du fakturerade samma arbete två gånger av misstag.
+
+## Så skapar du en kreditfaktura
+
+### Steg 1: Öppna originalfakturan
+
+Navigera till **Fakturor** och hitta fakturan du behöver kreditera. Klicka för att öppna den. Fakturan måste ha statusen **Skickad** eller **Betald** -- du kan inte kreditera en utkastfaktura (redigera eller radera den istället).
+
+### Steg 2: Klicka på Skicka kreditfaktura
+
+Klicka på åtgärdsknappen **Skicka kreditfaktura**. Denna åtgärd är tillgänglig på skickade och betalda fakturor.
+
+### Steg 3: Bekräfta
+
+Granska kreditfakturans detaljer och bekräfta. Aourly kommer att:
+
+- Skapa ett nytt kreditfakturadokument kopplat till originalfakturan.
+- Tilldela kreditfakturan ett eget fakturanummer.
+- Ändra originalfakturans status till **Krediterad**.
+- Generera en PDF för kreditfakturan.
+
+### Steg 4: Utfärda en korrigerad faktura (vid behov)
+
+Om krediteringen berodde på ett fel och kunden fortfarande är skyldig dig pengar, skapa en ny faktura med korrekta uppgifter:
+
+1. Gå igenom den normala processen för att [Skapa fakturor](creating-invoices).
+2. Referera till originalfakturans nummer i kommentarsfältet så att kunden förstår korrigeringskedjan.
+3. Granska och skicka den nya fakturan som vanligt.
+
+## Korrigeringsflödet
+
+Det fullständiga korrigeringsflödet när du behöver rätta ett fel på en skickad faktura:
+
+```
+Originalfaktura (Skickad) --> Kreditfaktura (krediterar originalet) --> Ny faktura (med korrigeringar)
+```
+
+Denna trestegsprocess säkerställer en ren verifikationskedja som uppfyller svenska bokföringskrav. Varje transaktion är dokumenterad och spårbar.
+
+## Viktigt att veta
+
+### Du kan inte redigera skickade fakturor
+
+Detta är en grundläggande regel i Aourly och i svensk bokföring. När en faktura har skickats blir den en del av din redovisning. Det enda sättet att korrigera den är genom krediterings- och nyutfärdandeprocessen.
+
+### Kreditfakturor påverkar din bokföring
+
+Om du använder en bokföringsintegration (Fortnox eller Visma) exporteras kreditfakturan automatiskt till ditt bokföringsprogram. Motsvarande verifikationsposter reverserar intäkten och momsen från originalfakturan.
+
+### Kreditfakturor visas i fakturalistan
+
+Kreditfakturor syns i fakturalistan tillsammans med vanliga fakturor. De identifieras av sin **Kredit**-typmarkering. Du kan filtrera fakturalistan efter typ för att bara visa kreditfakturor vid behov.
+
+### Sekventiell numrering bibehålls
+
+Kreditfakturor tilldelas fakturanummer från samma sekventiella serie som vanliga fakturor. Detta upprätthåller en obruten nummerserie enligt svenska regelverk.
+
+## Vanliga frågor
+
+**Vad är skillnaden mellan en kreditfaktura och att ta bort en faktura?**
+Du kan bara ta bort utkastfakturor. När en faktura har skickats kan den inte raderas -- den måste krediteras. Detta krävs av bokföringslagen för att upprätthålla en verifikationskedja.
+
+**Kan jag delkreditera en faktura?**
+Åtgärden Skicka kreditfaktura krediterar hela beloppet. Om du bara behöver korrigera en del av fakturan, kreditera hela fakturan och skapa sedan en ny faktura med det korrekta beloppet.
+
+**Får kunden kreditfakturan?**
+Kreditfakturans PDF genereras och är tillgänglig för nedladdning. Om e-postleverans är konfigurerad får kunden en avisering.
+
+**Får kreditfakturan ett eget nummer?**
+Ja. Kreditfakturor tilldelas ett eget sekventiellt fakturanummer och identifieras tydligt som Kredit-typ.
+
+**Vad händer med originalfakturan efter kreditering?**
+Originalfakturans status ändras till **Krediterad**. Den finns kvar i fakturalistan som referens och för revisionsändamål, men beloppet betraktas inte längre som en fordran.
+
+
+<Warning>Du kan inte redigera en skickad faktura. Kreditering och nyutfärdande är det enda sättet att korrigera fel efter utskick.</Warning>
+
+<Info>Kreditfakturor är kopplade till originalfakturan och visas som en separat post i fakturalistan med typen Kredit.</Info>
+
+<Tip>Om du använder en bokföringsintegration exporteras kreditfakturan automatiskt till ditt bokföringsprogram.</Tip>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Vad är en kreditfaktura?">
+    En kreditfaktura är ett dokument som reverserar en faktura, antingen helt eller delvis. Den upphäver det skuldsatta beloppet på originalfakturan.
+  </Accordion>
+  <Accordion title="När ska jag utfärda en kreditfaktura?">
+    Utfärda en kreditfaktura när du behöver korrigera ett faktureringsfel, reversera en faktura för inställt arbete, tillämpa en rabatt som överenskommits efter fakturering eller hantera returnerade varor.
+  </Accordion>
+  <Accordion title="Kan jag delkreditera en faktura?">
+    Åtgärden Skicka kreditfaktura krediterar hela fakturan. För delkorrigeringar, kreditera hela fakturan och skapa en ny med det korrekta beloppet.
+  </Accordion>
+  <Accordion title="Får kreditfakturan ett eget nummer?">
+    Ja, kreditfakturor tilldelas ett eget sekventiellt fakturanummer och är tydligt markerade som Kredit-typ.
+  </Accordion>
+</AccordionGroup>

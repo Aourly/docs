@@ -1,0 +1,164 @@
+---
+title: "Momshantering på fakturor"
+description: "Förstå de fyra momshanteringslägena i Aourly, hur du ställer in moms per fakturarad och hur momsen påverkar fakturans summor."
+---
+
+Moms (mervärdesskatt) är en viktig del av fakturering i Sverige. Att hantera momsen korrekt på dina fakturor handlar inte bara om rätt fakturering -- det är ett lagkrav. Aourly stöder fyra momshanteringslägen för att täcka de vanligaste faktureringssituationerna för frilansare och enskilda näringsidkare.
+
+## De fyra momshanteringslägena
+
+### Standard moms
+
+Standard moms är standardläget för inrikes fakturering i Sverige. Du debiterar moms på dina tjänster och redovisar den till Skatteverket.
+
+Svenska momssatser:
+
+| Sats | Gäller för |
+|------|-----------|
+| **25 %** | De flesta varor och tjänster, inklusive konsulting, mjukvaruutveckling, design och yrkesmässiga tjänster |
+| **12 %** | Livsmedel, hotellövernattning, restaurangtjänster |
+| **6 %** | Böcker, tidningar, kollektivtrafik, kulturevenemang, sportevenemang |
+
+Som frilansare med yrkesmässiga tjänster kommer du oftast att använda **25 %-satsen**.
+
+Varje fakturarad kan ha en egen momssats. Om du till exempel fakturerar för både konsulting (25 %) och en bok du skrivit (6 %), har varje rad sin egen sats.
+
+### Omvänd skattskyldighet
+
+Omvänd skattskyldighet innebär att ansvaret för att redovisa moms flyttas från säljaren till köparen. När du fakturerar med omvänd skattskyldighet:
+
+- Du debiterar **ingen** moms på fakturan.
+- Fakturans totalsumma är enbart nettobeloppet.
+- Köparen ansvarar för att redovisa och betala momsen i sitt land.
+
+**När du ska använda omvänd skattskyldighet:**
+
+- **EU B2B-tjänster** -- när du säljer tjänster till ett momsregistrerat företag i ett annat EU-land.
+- **Inhemska byggtjänster** -- vissa byggtjänster i Sverige omfattas av regler om inhemsk omvänd skattskyldighet.
+
+Fakturan måste innehålla texten "Omvänd skattskyldighet" och köparens momsregistreringsnummer.
+
+### Momsfritt
+
+Vissa tjänster är helt undantagna från moms. När du fakturerar med momshanteringen Momsfritt:
+
+- Ingen moms debiteras.
+- Fakturan visar enbart nettobeloppet.
+
+**Vanliga momsfria tjänster inkluderar:**
+
+- Sjukvård och medicinska tjänster
+- Utbildningstjänster
+- Finansiella tjänster (bank, försäkring)
+- Sociala välfärdstjänster
+
+Om din huvudsakliga verksamhet faller under ett momsundantag behöver du eventuellt inte momsregistrera dig alls. Rådgör med Skatteverket eller din revisor för att avgöra dina skyldigheter.
+
+### Gemenskapsintern leverans
+
+Gemenskapsintern hantering används vid gränsöverskridande varuförsäljning inom EU. Detta skiljer sig från omvänd skattskyldighet (som gäller tjänster) och tillämpar specifika EU-handelsregler.
+
+Vid fakturering med gemenskapsintern hantering:
+
+- Moms debiteras inte på fakturan.
+- Både ditt svenska momsregistreringsnummer och köparens EU-momsregistreringsnummer måste framgå på fakturan.
+- Transaktionen ska rapporteras i din periodiska sammanställning till Skatteverket.
+
+## Ställa in moms på dina fakturor
+
+### Välja rätt läge
+
+När du skapar eller redigerar ett fakturautkast väljer du momshanteringsläge i rullgardinsmenyn. Läget gäller hela fakturan och avgör hur moms beräknas och visas.
+
+Valet av korrekt läge beror på:
+
+- **Var din kund befinner sig** -- inrikes (Sverige), EU eller utanför EU.
+- **Om kunden är momsregistrerad** -- B2B kontra B2C spelar roll vid EU-transaktioner.
+- **Vilken typ av tjänst du tillhandahåller** -- vissa tjänster har särskilda regler.
+
+### Ange momssats per rad
+
+För fakturor med standard moms har varje fakturarad ett fält för momssats. Ange lämplig sats (25 %, 12 % eller 6 %) för varje rad baserat på typen av vara eller tjänst.
+
+För fakturor med omvänd skattskyldighet, momsfritt eller gemenskapsintern hantering är momsbeloppet noll på alla rader.
+
+### Granska momssammanfattningen
+
+Fakturans sammanfattning visar:
+
+- **Delsumma** -- summan av alla rader exklusive moms.
+- **Momsfördelning** -- momsbelopp grupperat per sats (t.ex. "Moms 25 %: 5 000 kr").
+- **Totalsumma** -- slutsumman inklusive moms.
+
+Granska detta noggrant innan du skickar. Felaktig moms kan leda till problem med din momsdeklaration.
+
+## Självfakturor
+
+En självfaktura är ett särskilt arrangemang där **köparen** utfärdar fakturan å säljarens vägnar. Detta är vanligt vid:
+
+- Bemannings- och underentreprenadsrelationer
+- Situationer där köparen har bättre information om levererade kvantiteter
+- Löpande tjänsteavtal med förutbestämda priser
+
+Båda parter måste ha ett skriftligt avtal som tillåter självfakturering. Självfakturan måste uppfylla samma lagkrav som en vanlig faktura.
+
+Aourly stöder självfakturor. När det är konfigurerat genererar köparen fakturan och båda parter erhåller kopior.
+
+## Moms och kreditfakturor
+
+När du utfärdar en kreditfaktura mot en faktura reverseras även momsen. Det innebär:
+
+- Momsen som du redovisade på originalfakturan kvittas av kreditfakturan.
+- Din nästa momsdeklaration återspeglar nettomomsen efter krediteringen.
+- Kreditfakturan visar tydligt de reverserade momsbeloppen.
+
+## Vanliga misstag att undvika
+
+- **Debitera moms till en EU B2B-kund** -- om kunden är momsregistrerad i ett annat EU-land bör du normalt använda omvänd skattskyldighet för tjänster.
+- **Använda fel momssats** -- de flesta yrkestjänster har 25 %. Dubbelkolla om du är osäker.
+- **Saknad lagstadgad text** -- fakturor med omvänd skattskyldighet måste innehålla texten "Omvänd skattskyldighet". Aourly lägger till detta automatiskt när du väljer läget.
+- **Saknade momsregistreringsnummer** -- EU-gränsöverskridande fakturor kräver att både ditt och köparens momsregistreringsnummer anges.
+
+## Vanliga frågor
+
+**Vilken momssats ska jag använda för mitt konsultarbete?**
+De flesta konsult-, mjukvaruutvecklings-, design- och yrkestjänster i Sverige använder standardsatsen 25 %.
+
+**När ska jag använda omvänd skattskyldighet?**
+Använd det för B2B-tjänster till momsregistrerade företag i andra EU-länder och för vissa inhemska byggtjänster.
+
+**Kan jag blanda momssatser på en faktura?**
+Ja. Varje fakturarad kan ha sin egen momssats. Fakturans sammanfattning visar en fördelning per sats.
+
+**Vad är en självfaktura?**
+Det är en faktura som skapas av köparen å säljarens vägnar, baserat på en tidigare överenskommelse mellan parterna. Det är vanligt inom bemanningsrelationer.
+
+**Jag är osäker på vilket momsläge jag ska använda. Vad ska jag göra?**
+Rådgör med din revisor eller kontakta Skatteverket om du är osäker. Fel momshantering kan leda till sanktioner.
+
+
+<Warning>Fel momshanteringsläge kan orsaka problem med Skatteverket. Rådgör med din revisor om du är osäker.</Warning>
+
+<Info>Självfakturor används när köparen skapar fakturan å säljarens vägnar. Detta är vanligt i vissa uppdragsrelationer.</Info>
+
+<Tip>Om du regelbundet fakturerar samma typ av kund, kontrollera att standardmomshanteringen är korrekt inställd på kundprofilen för att spara tid.</Tip>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Vilken momssats ska jag använda för konsulttjänster?">
+    De flesta konsult- och yrkestjänster i Sverige använder standardsatsen 25 %.
+  </Accordion>
+  <Accordion title="När ska jag använda omvänd skattskyldighet?">
+    Använd omvänd skattskyldighet vid försäljning av B2B-tjänster till kunder i andra EU-länder, eller för vissa inhemska byggtjänster.
+  </Accordion>
+  <Accordion title="Vad är en självfaktura?">
+    En självfaktura är när köparen utfärdar fakturan å säljarens vägnar. Båda parter måste ha en överenskommelse om detta. Det är vanligt inom bemanning och underentreprenad.
+  </Accordion>
+  <Accordion title="Kan olika rader ha olika momssatser?">
+    Ja. Varje fakturarad kan ha sin egen momssats. Det är användbart när en faktura innehåller både tjänster med standardmoms och poster med reducerad sats.
+  </Accordion>
+  <Accordion title="Vad händer med momsen när jag krediterar en faktura?">
+    Kreditfakturan reverserar momsen från originalfakturan. Din momsredovisning kommer att återspegla nettoeffekten.
+  </Accordion>
+</AccordionGroup>

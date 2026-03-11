@@ -1,0 +1,114 @@
+---
+title: "Hantera bankkonton"
+description: "Lär dig hur du lägger till och hanterar företagets bankkonton i Aourly, ställer in ett primärt konto och konfigurerar betalningsuppgifter."
+---
+
+Dina bankkontouppgifter är avgörande för att du ska få betalt. De visas på dina faktura-PDF:er så att kunder vet vart de ska skicka sin betalning. I Aourly kan du hantera ett eller flera bankkonton och ange ett primärt konto för fakturering.
+
+## Komma åt bankkonton
+
+Öppna **Kontextmenyn** (ditt företagsnamn i sidomenyn) och klicka på **Bankkonton**. Här ser du alla bankkonton du har registrerat för ditt företag.
+
+## Skapa ett bankkonto
+
+Klicka på **Skapa bankkonto** och fyll i följande fält:
+
+| Fält | Beskrivning |
+|------|-------------|
+| **Kontonamn** | En etikett för din egen referens (t.ex. "Huvudkonto företag", "EUR-konto"). |
+| **Banknamn** | Namnet på din bank (t.ex. "Nordea", "SEB", "Handelsbanken"). |
+| **IBAN** | Ditt internationella bankkontonummer. Krävs för internationella överföringar. |
+| **BIC/SWIFT** | Din banks identifieringskod. Krävs för internationella överföringar. |
+| **Bankgironummer** | Ditt bankgironummer för svenska inrikesbetalningar. Standard för B2B-betalningar i Sverige. |
+| **Swish-nummer** | Ditt Swish-nummer om du accepterar Swish-betalningar. Valfritt. |
+| **Valuta** | Kontots valuta (t.ex. SEK, EUR, USD). |
+
+Du hittar ditt IBAN och BIC/SWIFT i din internetbank, på dina kontoutdrag eller genom att kontakta din bank.
+
+## Ange ett primärt konto
+
+Ditt **primära** bankkonto är det vars uppgifter visas på dina faktura-PDF:er. När kunder får din faktura ser de:
+
+- Banknamn
+- IBAN
+- BIC/SWIFT-kod
+- Bankgironummer
+- Swish-nummer (om angivet)
+
+För att ange ett konto som primärt, aktivera alternativet för primärt konto när du skapar eller redigerar kontot. Bara ett konto kan vara primärt åt gången.
+
+Om du byter primärt konto kommer nya fakturor att använda de uppdaterade uppgifterna. Fakturor som redan skickats behåller de bankuppgifter som gällde vid utskickstillfället.
+
+## Flera bankkonton
+
+Du kan registrera flera bankkonton i Aourly. Det är användbart om du:
+
+- **Arbetar med flera valutor** -- ha ett SEK-konto för svenska kunder och ett EUR-konto för europeiska kunder.
+- **Har konton hos olika banker** -- vissa kunder kan ha preferenser eller lägre avgifter hos vissa banker.
+- **Separerar olika ändamål** -- till exempel ett huvudkonto för verksamheten och ett skattesparkonto.
+
+Även med flera konton visas bara det primära kontot på fakturor. Du kan byta primärt konto när som helst.
+
+## Koppling till bokföringskonton
+
+Om du använder Aourlys bokföringsfunktion kan du koppla varje bankkonto till ett motsvarande konto i BAS-kontoplanen. Till exempel:
+
+- **1930** -- Företagskonto
+- **1940** -- Bankkonto i utländsk valuta
+
+Denna koppling gör att Aourly kan skapa korrekta bokföringsverifikationer när du registrerar betalningar mot fakturor. Betalningen bokförs som en debitering till rätt bankkonto.
+
+Det här steget är valfritt men rekommenderas om du hanterar din bokföring i Aourly eller exporterar data till ett bokföringsprogram.
+
+## Viktigt att tänka på
+
+- **Bara Ägare kan hantera bankkonton.** Koordinatorer och Utförare har inte åtkomst till bankkontoinställningar.
+- **Håll uppgifterna uppdaterade.** Om du byter bank eller dina kontouppgifter ändras, uppdatera dem i Aourly innan du skickar nya fakturor.
+- **Dubbelkolla ditt IBAN.** Ett felaktigt IBAN på en faktura kan orsaka betalningsförseningar om kunden försöker göra en internationell överföring.
+
+## Vanliga frågor
+
+**Kan jag ha flera bankkonton?**
+Ja. Lägg till så många du behöver. Bara det primära kontot visas på fakturor.
+
+**Vad är ett bankgironummer?**
+Bankgiro är ett svenskt betalningsnätverk som vanligen används för B2B-betalningar. Ditt bankgironummer gör det möjligt för kunder att betala dig via detta system. De flesta svenska företag använder Bankgiro för fakturabetalningar.
+
+**Behöver jag lägga till ett Swish-nummer?**
+Swish är valfritt. Det är smidigt för att ta emot mindre betalningar eller betalningar från privatpersoner, men de flesta B2B-fakturabetalningar i Sverige går via Bankgiro eller banköverföring.
+
+**Vad händer om jag byter primärt bankkonto?**
+Nya fakturor visar de uppdaterade bankuppgifterna. Tidigare skickade fakturor behåller de uppgifter de hade vid utskick.
+
+**Vad är BIC?**
+BIC (Bank Identifier Code), även kallad SWIFT-kod, är en internationell kod som identifierar din bank. Den behövs vid internationella överföringar så att den avsändande banken kan dirigera betalningen korrekt. Du hittar ditt BIC i din internetbank eller på dina kontoutdrag.
+
+**Var hittar jag mitt IBAN och BIC/SWIFT?**
+Kontrollera din internetbank, dina kontoutdrag eller kontakta din bank direkt. I Sverige börjar IBAN med "SE" följt av 22 siffror.
+
+
+<Info>Ditt primära bankkontos uppgifter visas på varje faktura-PDF. Se till att de är korrekta innan du skickar fakturor.</Info>
+
+<Tip>Om du arbetar med internationella kunder, överväg att lägga till ett separat bankkonto med lämplig valuta för att undvika förvirring vid valutaomräkning.</Tip>
+
+<Warning>Bara företagets Ägare kan hantera bankkonton. Koordinatorer och Utförare har inte åtkomst till denna inställning.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Kan jag ha flera bankkonton?">
+    Ja. Du kan lägga till så många bankkonton du behöver, till exempel ett för SEK och ett för EUR. Bara det primära kontot visas på fakturor.
+  </Accordion>
+  <Accordion title="Vad är ett bankgironummer?">
+    Bankgiro är ett svenskt betalningssystem. Ditt bankgironummer gör det möjligt för kunder att betala dig via Bankgiro-nätverket, vilket är standard för B2B-betalningar i Sverige.
+  </Accordion>
+  <Accordion title="Behöver jag lägga till ett Swish-nummer?">
+    Swish är valfritt. Det är mest användbart om du tar emot betalningar från privatpersoner eller småföretag som föredrar Swish framför banköverföring.
+  </Accordion>
+  <Accordion title="Vad händer om jag byter primärt bankkonto?">
+    Nya fakturor kommer att använda de uppdaterade bankuppgifterna. Redan skickade fakturor behåller de bankuppgifter som gällde när de skickades.
+  </Accordion>
+  <Accordion title="Vad är BIC?">
+    BIC (Bank Identifier Code), även kallad SWIFT-kod, är en internationell kod som identifierar din bank. Den behövs vid internationella överföringar så att den avsändande banken kan dirigera betalningen korrekt.
+  </Accordion>
+</AccordionGroup>

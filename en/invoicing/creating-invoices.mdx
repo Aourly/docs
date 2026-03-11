@@ -1,0 +1,122 @@
+---
+title: "Creating Invoices"
+description: "Learn how to create invoices from approved timesheets and expenses, configure invoice fields, and manage line items."
+---
+
+Invoicing is at the heart of getting paid for your work. Aourly lets you create invoices directly from your approved timesheets and expenses, so you spend less time on paperwork and more time on billable work.
+
+This guide walks you through the full invoice creation process, from selecting a client to saving a draft ready for review.
+
+## Before You Start
+
+Before creating an invoice, make sure:
+
+- You have at least one **client** set up with correct billing details (name, address, organisation number).
+- The **time entries** you want to invoice have been submitted and **approved**.
+- Any **expenses** you want to include have been registered and approved.
+
+## Step-by-Step: Creating an Invoice
+
+### 1. Navigate to Invoices
+
+Open the main sidebar and click **Invoices**. You will see a list of all your invoices with their current status (Draft, Sent, Paid, etc.).
+
+### 2. Click Create Invoice
+
+Click the **Create Invoice** button in the top-right corner to open the invoice creation form.
+
+### 3. Select a Client
+
+Choose the client you are billing. When you select a client, their billing details are automatically populated from their profile, including:
+
+- Company name
+- Billing address
+- Organisation number (organisationsnummer)
+- VAT number (if applicable)
+
+Make sure these details are correct before proceeding. If anything needs updating, edit the client profile first.
+
+### 4. Select Timesheets and Expenses
+
+Choose which approved timesheets and expenses to include. Only **approved** entries are available for invoicing. Each selected item becomes a line item on the invoice.
+
+You can include entries from multiple assignments for the same client on a single invoice.
+
+### 5. Configure Invoice Fields
+
+Review and adjust the header fields on the invoice:
+
+| Field | Description |
+|-------|-------------|
+| **Invoice number** | Auto-generated sequentially. Cannot be changed manually. |
+| **Invoice date** | The date the invoice is issued. Defaults to today. |
+| **Delivery date** | The date the work was delivered or completed. |
+| **Due date** | When payment is expected. Calculated from payment terms. |
+| **OCR number** | Auto-generated reference number for Swedish bank payments. |
+| **Payment terms** | Number of days until payment is due (e.g., 30 days). |
+| **Comments** | Optional free-text that appears on the printed invoice. |
+
+### 6. Review and Edit Line Items
+
+Each invoice row contains:
+
+- **Name** -- a description of the work performed or expense incurred.
+- **Quantity** -- the number of units (e.g., hours worked).
+- **Unit** -- the unit type: Hours, Pieces, or Expense.
+- **Unit cost** -- the price per unit.
+- **VAT rate** -- the applicable VAT percentage.
+- **Discount** -- an optional discount on the line item.
+
+You can freely add, remove, or modify rows. The invoice total updates automatically as you make changes.
+
+### 7. Save as Draft
+
+Click **Create** to save the invoice. It will be saved with **Draft** status, which means it is fully editable. You can return to it at any time to make changes before sending.
+
+## Invoice Numbering and OCR
+
+Aourly automatically manages invoice numbering and OCR number generation:
+
+- **Invoice numbers** are sequential and cannot be edited. This ensures compliance with Swedish bookkeeping regulations (bokföringslagen), which require unbroken number sequences.
+- **OCR numbers** are generated using a standard algorithm that Swedish banks recognise. When your client pays using the OCR number, it makes payment matching straightforward.
+
+## Currency Handling
+
+If you work with international clients, Aourly supports invoicing in foreign currencies. The currency is determined by the client's profile settings. When invoicing in a foreign currency:
+
+- Line item amounts are displayed in the client's currency.
+- The invoice PDF will show the correct currency symbol and formatting.
+- For bookkeeping purposes, amounts may need to be converted to SEK at the applicable exchange rate.
+
+## Units Explained
+
+Aourly provides three unit types for invoice rows:
+
+- **Hours (h)** -- used for time-based billing. This is the most common unit for freelancers billing by the hour.
+- **Pieces (st)** -- used for fixed deliverables, milestones, or item-based billing.
+- **Expense** -- used for pass-through expenses like travel, software licenses, or materials.
+
+## What Happens Next
+
+After saving a draft invoice, the next step is to **review** it carefully before sending. See the [Invoice Review Workflow](invoice-review-workflow) guide for details on the review process, and [Sending and Payment](sending-and-payment) for how to send the invoice to your client.
+
+## Frequently Asked Questions
+
+**Can I invoice time entries from multiple assignments on one invoice?**
+Yes. You can include entries from different assignments for the same client. Each will appear as separate line items on the invoice.
+
+**What units are available for invoice rows?**
+Hours, Pieces, and Expense.
+
+**Can I change the invoice number?**
+No. Invoice numbers are auto-generated sequentially to comply with Swedish bookkeeping rules. Gaps in the sequence could cause issues during an audit.
+
+**What if I do not see my time entries when creating an invoice?**
+Only approved time entries are available for invoicing. Check that the entries have been submitted and approved by navigating to the time approval section.
+
+
+<Info>Invoice numbers and OCR numbers are generated automatically by Aourly. You do not need to manage numbering manually.</Info>
+
+<Tip>If you invoice in a foreign currency, Aourly will handle the currency display on the invoice. Make sure the client's currency is correctly set on their profile.</Tip>
+
+<Warning>Only approved time entries can be added to an invoice. If you do not see expected entries, check that they have been approved first.</Warning>

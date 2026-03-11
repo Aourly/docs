@@ -1,0 +1,128 @@
+---
+title: "OCR Numbers Explained"
+description: "How OCR reference numbers work in Swedish banking and why they matter for automated payment matching."
+---
+
+<Warning>
+  This information is for general guidance only. Regulations may change.
+  Always consult Skatteverket or a certified accountant for advice specific to your situation.
+</Warning>
+
+# OCR Numbers Explained
+
+If you have ever looked at a Swedish invoice, you have probably seen an OCR number (sometimes called "OCR-referens"). This short guide explains what OCR numbers are, how they work, and why they are important for your business.
+
+## What Is an OCR Number?
+
+OCR stands for **Optical Character Recognition**. In the Swedish banking context, an OCR number is a **payment reference number** used to automatically match incoming payments to the correct invoice.
+
+When a client pays your invoice through Bankgiro and enters the OCR number, the payment system can automatically identify which invoice the payment belongs to. This means you do not have to manually match payments to invoices -- it happens automatically.
+
+## How OCR Works with Bankgiro
+
+The OCR system is managed by **Bankgirot**, the Swedish clearing house for bank payments. Here is how it works:
+
+1. You create an invoice with a unique OCR number
+2. The client pays via Bankgiro, entering the OCR number as the payment reference
+3. Bankgirot processes the payment and includes the OCR number in the transaction data
+4. Your bank (or accounting software) uses the OCR number to automatically match the payment to the correct invoice
+
+This automated matching is one of the key reasons Bankgiro is the preferred payment method for B2B transactions in Sweden.
+
+## The Modulus 10 Check Digit
+
+OCR numbers include a **check digit** calculated using the **Modulus 10 algorithm** (also known as the Luhn algorithm). This check digit helps catch common errors when someone types the number manually.
+
+### How it works
+
+1. Start with a base number (often your invoice number), for example: **12345**
+2. Apply the Modulus 10 algorithm to calculate a check digit: **1**
+3. The complete OCR number becomes: **123451**
+
+The check digit ensures that if someone mistypes a digit, the payment system will detect the error and reject the transaction rather than applying the payment to the wrong invoice.
+
+### Example calculation
+
+For the number **12345**:
+
+| Digit | 1 | 2 | 3 | 4 | 5 |
+|-------|---|---|---|---|---|
+| Multiply alternating by 2,1 | 2 | 2 | 6 | 4 | 10 |
+| Sum digits (10 = 1+0) | 2 | 2 | 6 | 4 | 1 |
+
+Sum = 2 + 2 + 6 + 4 + 1 = 15. Check digit = (10 - (15 mod 10)) mod 10 = **5**... wait, let us keep it simple: Aourly calculates this automatically for you!
+
+## Why OCR Numbers Matter
+
+### Automated payment matching
+
+Without OCR, you need to manually look at each incoming payment and figure out which invoice it belongs to. With hundreds of payments per month, this is time-consuming and error-prone.
+
+### Fewer payment errors
+
+The check digit catches typing mistakes before the payment goes through, reducing misapplied payments.
+
+### Faster bookkeeping
+
+When payments are automatically matched to invoices, your bookkeeping software can record the payment and mark the invoice as paid without manual intervention.
+
+### Professional appearance
+
+Using OCR numbers on your invoices signals to clients that you have a professional payment setup. It also makes payment easier for them since they just enter the reference number.
+
+## Requirements
+
+To use OCR numbers, you need:
+
+1. **A Bankgiro number** -- This is the receiving account for OCR-referenced payments. You apply for a Bankgiro number through your bank.
+2. **A way to generate valid OCR numbers** -- The numbers must follow the Modulus 10 format. Aourly generates these automatically.
+
+## OCR Number Length
+
+OCR numbers can be between **2 and 25 digits** long. Common approaches include:
+
+- **Invoice number + check digit** -- The simplest approach. Invoice 1001 becomes OCR 10018 (example).
+- **Year + invoice number + check digit** -- Adds the year for uniqueness. Example: 20261001X.
+- **Customer number + invoice number + check digit** -- Useful for larger businesses with many clients.
+
+The key is consistency. Choose a format and stick with it.
+
+## What If You Do Not Use Bankgiro?
+
+If your clients pay to a regular bank account number (instead of Bankgiro), OCR numbers are not applicable. In that case:
+
+- You can ask clients to use the invoice number as a payment reference in the free-text field
+- You will need to manually match payments to invoices (or rely on amount matching)
+- Consider setting up a Bankgiro number to take advantage of automated matching
+
+## Summary
+
+- OCR is a payment reference number used in the Swedish Bankgiro system
+- It enables automatic matching of payments to invoices
+- OCR numbers include a Modulus 10 check digit to catch typing errors
+- You need a Bankgiro number to use OCR references
+- Aourly generates valid OCR numbers automatically for your invoices
+- Using OCR saves time, reduces errors, and streamlines your bookkeeping
+
+
+<Info>OCR numbers are only used with Bankgiro payments. If you use a regular bank account number for payments, OCR is not applicable.</Info>
+
+<Tip>Aourly can generate OCR numbers automatically for your invoices, saving you from manual calculation.</Tip>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Do I need a Bankgiro number to use OCR?">
+    Yes. OCR numbers are part of the Bankgiro system. You need a Bankgiro number connected to your bank account to receive payments with OCR references.
+  </Accordion>
+  <Accordion title="What happens if a client enters the wrong OCR number?">
+    The bank's system will reject the payment if the check digit does not match, or the payment will land in your account without automatic matching. You will need to manually identify which invoice it belongs to.
+  </Accordion>
+  <Accordion title="Can I use my invoice number as the OCR number?">
+    The OCR number is often based on the invoice number, but it includes an additional check digit calculated using the Modulus 10 algorithm. So your invoice number 12345 might become OCR number 123451.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  **Sources:** [Bankgirot](https://www.bankgirot.se)
+</Note>

@@ -1,0 +1,171 @@
+---
+title: "Tidsgodkännande"
+description: "Granska och godkänn tidposter innan fakturering."
+---
+
+Tidsgodkännande är steget mellan att registrera tid och att fakturera den. Genom att granska och godkänna tidposter bekräftar du att timmarna stämmer, att priserna är korrekta och att arbetet är redo att faktureras. Denna guide beskriver godkännandeflödet, vem som kan godkänna och bästa praxis.
+
+## Varför godkänna tid?
+
+Godkännande fyller flera syften:
+- **Kvalitetskontroll**: Fånga fel (fel datum, felaktiga timmar, saknade kommentarer) innan de hamnar på en faktura.
+- **Faktureringsnoggranhet**: Endast godkända poster kan faktureras, vilket förhindrar oavsiktlig fakturering av utkast eller felaktiga poster.
+- **Revisionsspår**: Varje godkännande registrerar vem som godkände och när, vilket ger en tydlig dokumentationskedja.
+- **Kundförtroende**: Granskade och verifierade tidposter leder till rena, tvistfria fakturor.
+
+## Tidpostens statusflöde
+
+Att förstå statusflödet hjälper dig veta var varje post befinner sig i processen:
+
+```
+Föreslagen
+    |
+    v
+Väntar på godkännande
+    |
+    v
+Godkänd
+    |
+    v
+Fakturerad
+    |
+    v
+Betald
+```
+
+### Föreslagen
+
+Den initiala statusen. Poster är antingen:
+- Skapade manuellt av en utförare
+- Autogenererade av den automatiska tidrapporteringsfunktionen
+
+Föreslagna poster kan fritt redigeras eller raderas. De ingår ännu inte i faktureringskedjan.
+
+### Väntar på godkännande
+
+Posten har skickats för granskning. En utförare kan skicka in sina poster, eller så kan systemet flagga dem som redo för godkännande. Dessa poster väntar på att en ägare eller samordnare ska granska dem.
+
+### Godkänd
+
+Posten har granskats och godkänts. Den är nu:
+- Låst mot ytterligare redigeringar
+- Tillgänglig för inkludering på en faktura
+- Registrerad med godkännarens identitet och tidsstämpel
+
+### Fakturerad
+
+Posten har lagts till på en faktura. Den är kopplad till en specifik fakturarad och kan inte flyttas till en annan faktura.
+
+### Betald
+
+Fakturan har betalats av kunden. Faktureringscykeln för denna post är avslutad.
+
+## Vem kan godkänna?
+
+Godkännande styrs av roll:
+
+| Roll | Kan registrera tid | Kan godkänna |
+|------|-------------------|--------------|
+| **Ägare** | Ja | Ja -- alla utförare |
+| **Samordnare** | Ja | Ja -- alla utförare |
+| **Utförare** | Ja | Nej (om inte även ägare/samordnare) |
+
+Som enskild företagare är du vanligtvis både ägare och utförare, så du godkänner din egen tid. I teamuppsättningar granskar och godkänner samordnare tid som registrerats av utförare.
+
+## Hur du godkänner tid
+
+### Godkänna enskild post
+
+1. Gå till **Tid**-sidan
+2. Hitta den post du vill godkänna
+3. Granska detaljerna (datum, timmar, pris, kommentar)
+4. Klicka **Godkänn**
+
+Posten flyttas från Föreslagen/Väntar på godkännande till Godkänd. Systemet registrerar ditt användar-ID och aktuell tidsstämpel.
+
+### Massgodkännande av tidrapport
+
+För effektivitet kan du godkänna en hel tidrapport på en gång:
+
+1. Gå till **Tid**-sidan
+2. Hitta tidrapporten för den period du vill godkänna
+3. Klicka **Godkänn tidrapport**
+4. Alla ogodkända poster i tidrapporten godkänns samtidigt
+
+Tidrapporten registrerar totalt antal godkända timmar, godkännaren och tidsstämpeln för godkännandet.
+
+### Vad du bör kontrollera innan godkännande
+
+Innan du klickar godkänn, verifiera:
+
+- **Timmar är rimliga**: Stämmer dagtotalen? 12 timmar en dag som borde ha varit 8 är värt att ifrågasätta.
+- **Datum stämmer**: Är posten på rätt dag? Retroaktiva poster har ibland felaktiga datum.
+- **Pris stämmer**: Timpriset ska överensstämma med det avtalade utförarpriset för uppdraget.
+- **Kommentarer är meningsfulla**: Kommentarer visas på fakturor. Se till att de korrekt beskriver det utförda arbetet.
+- **Uppgift stämmer**: Om uppdraget använder uppgifter, kontrollera att poster är kopplade till rätt uppgift.
+- **Inga dubbletter**: Kontrollera att det inte finns poster som täcker samma tidsperiod, vilket kan tyda på oavsiktlig dubbelregistrering.
+
+## Påminnelser för tidgranskning
+
+Varje uppdrag har en inställning för **påminnelsefrekvens för tidgranskning**. Du kan konfigurera den för att få notifikationer med jämna mellanrum (till exempel veckovis, månadsvis) om att granska och godkänna utestående tidposter.
+
+Detta är särskilt användbart när:
+- Du har flera uppdrag med olika tidslinjer
+- Du arbetar med utförare som registrerar tid på egen hand
+- Du vill upprätthålla en konsekvent godkännanderutin
+
+## Koppling mellan godkännande och fakturering
+
+Godkännande är porten till fakturering. Endast poster med status Godkänd visas när en faktura skapas. Denna design säkerställer att:
+
+1. Du aldrig oavsiktligt fakturerar ogodkänd tid
+2. Varje fakturerad timme har uttryckligen granskats
+3. Det finns en tydlig kedja: registrerad -> godkänd -> fakturerad -> betald
+
+Om du ser godkända poster som inte har fakturerats visas de som "ofakturerade godkända timmar" i dina rapporter. Detta hjälper dig spåra intäkter som är intjänade men ännu inte fakturerade.
+
+## Vanliga scenarier
+
+### Ensam frilansare
+
+Som enskild företagare registrerar och godkänner du din egen tid. Ett typiskt arbetsflöde:
+1. Registrera tid dagligen allt eftersom du arbetar
+2. I slutet av varje vecka eller månad, granska alla poster
+3. Godkänn dem i bulk genom massgodkännande av tidrapporten
+4. Skapa fakturan
+
+### Team med utförare
+
+När du arbetar med teammedlemmar:
+1. Utförare registrerar sin egen tid dagligen
+2. I slutet av perioden granskar du (som ägare/samordnare) varje utförares tidrapport
+3. Godkänn korrekta poster, flagga problem för korrigering
+4. När alla poster är godkända, skapa fakturan
+
+### Hantera fel efter godkännande
+
+Om du upptäcker ett fel i en godkänd post:
+- Godkända poster är generellt låsta för att bevara faktureringsunderlaget
+- Skapa en ny korrigerande post med negativt antal timmar eller korrekt belopp
+- Lägg till en tydlig kommentar som förklarar korrigeringen (till exempel "Korrigering: ursprunglig post hade felaktiga timmar")
+
+## Bästa praxis
+
+- **Godkänn regelbundet**: Låt inte veckor av ogodkänd tid ackumuleras. Veckogodkännande är idealt.
+- **Granska innan massgodkännande**: Gå igenom alla poster innan du använder massgodkännande. Det tar mindre tid än att lösa faktureringstvister i efterhand.
+- **Använd påminnelser**: Ställ in påminnelser för tidgranskning på varje uppdrag för att bygga en konsekvent rutin.
+- **Kommunicera med utförare**: Om du hittar problem i en utförares tidposter, diskutera dem omgående. Feedback hjälper till att förbättra registreringsnoggrannheten över tid.
+- **Godkänn innan fakturering**: Säkerställ alltid att alla poster för en period är godkända innan du skapar fakturan. Delvis fakturering (blandning av godkända och ogodkända perioder) skapar förvirring.
+
+
+<Tip>Granska tidposter regelbundet för att undvika flaskhalsar inför fakturering.</Tip>
+
+<Info>Godkända tidposter blir tillgängliga för fakturering.</Info>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Vad händer med avvisade tidposter?">
+    Utföraren kan redigera och skicka in dem igen.
+  </Accordion>
+</AccordionGroup>

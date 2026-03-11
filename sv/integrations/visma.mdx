@@ -1,0 +1,127 @@
+---
+title: "Visma-integration"
+description: "Anslut Aourly till Visma eEkonomi för att synkronisera fakturor, kunder och bokföringsdata mellan plattformarna."
+---
+
+Anslut Aourly till Visma eEkonomi och håll din fakturering och bokföring synkroniserad automatiskt. Ingen mer dubbel registrering -- det du skapar i Aourly flödar direkt in i ditt Visma-konto.
+
+## Vad är Visma?
+
+Visma är en av Skandinaviens största leverantörer av affärsprogramvara. Deras molnbaserade bokföringsprodukt, Visma eEkonomi, är populär bland svenska frilansare och småföretagare. Den hanterar bokföring, fakturering och finansiell rapportering.
+
+## Varför ansluta Aourly till Visma?
+
+Integrationen tar bort det manuella steget att registrera data på två ställen. När du arbetar i Aourly skickas relevant data automatiskt till eller hämtas från Visma:
+
+- **Fakturor** skapade i Aourly skickas till Visma
+- **Kunder** synkroniseras för att hålla din kunddatabas konsekvent
+- **Verifikationer** synkas för korrekta bokföringsposter
+- **Konton** och **räkenskapsår** hämtas från Visma så att Aourly använder samma kontoplan
+
+Det sparar tid, minskar fel och håller din bokföring uppdaterad.
+
+## Förutsättningar
+
+Innan du börjar, se till att du har:
+
+- Ett aktivt Visma eEkonomi-konto
+- Ägarbehörighet till ditt Aourly-företag
+- Dina Visma-inloggningsuppgifter redo
+
+## Ansluta Visma
+
+### Steg 1: Öppna sidan Integrationer
+
+I Aourlys sidomeny klickar du på ditt företagsnamn för att öppna företagsmenyn och väljer **Integrationer**. Sidan är bara synlig för företagsägare.
+
+### Steg 2: Starta anslutningen
+
+Klicka på knappen **Anslut Visma** på Visma-kortet. Aourly omdirigerar dig till Visma för att auktorisera anslutningen.
+
+### Steg 3: Auktorisera Aourly i Visma
+
+På Vismas webbplats loggar du in om du ombeds. Granska listan över behörigheter som Aourly begär och klicka på **Bevilja åtkomst** för att godkänna.
+
+### Steg 4: Återvänd till Aourly
+
+Visma omdirigerar dig tillbaka till Aourly automatiskt. En bekräftelse visar att integrationen är aktiv.
+
+### Steg 5: Konfigurera kontomappning
+
+När anslutningen är klar importerar Aourly din kontoplan och dina räkenskapsår från Visma. Gå igenom kontomappningen för att verifiera att intäktskonton, momskonton och andra viktiga konton är korrekt kopplade.
+
+Om du är osäker på kontomappningen, kontakta din revisor innan du gör ändringar.
+
+### Steg 6: Verifiera anslutningen
+
+Sidan Integrationer visar nu din Visma-status som **Ansluten**. Du kan se när den senaste synkroniseringen skedde och trigga en manuell synk vid behov.
+
+## Vad som synkroniseras
+
+| Datatyp          | Riktning           | Beskrivning                                          |
+|------------------|--------------------|------------------------------------------------------|
+| Fakturor         | Aourly till Visma  | Fakturor skapade i Aourly skickas till Visma         |
+| Kunder           | Aourly till Visma  | Kundposter synkroniseras till Visma                  |
+| Verifikationer   | Båda riktningarna  | Bokföringsverifikationer synkas mellan systemen      |
+| Konton           | Visma till Aourly  | Kontoplanen importeras till Aourly                   |
+| Räkenskapsår     | Visma till Aourly  | Räkenskapsårsperioder hämtas från Visma              |
+
+## Hantera anslutningen
+
+### Visa anslutningsstatus
+
+Sidan Integrationer visar aktuell status för din Visma-anslutning, inklusive senaste lyckade synkronisering.
+
+### Koppla bort
+
+Klicka på **Koppla bort** på Visma-kortet om du behöver ta bort integrationen. Data som redan har synkroniserats finns kvar i båda systemen. Ingen ny data synkroniseras efter bortkoppling.
+
+### Återansluta efter att auktoriseringen löpt ut
+
+Vismas auktoriseringstoken kan löpa ut. Om det händer visar Aourly en varning på sidan Integrationer. Klicka på **Återanslut** för att auktorisera igen. Dina kontomappningar och tidigare synkroniserad data bevaras.
+
+## Felsökning
+
+**Auktoriseringen har löpt ut**: Klicka på Återanslut på sidan Integrationer för att auktorisera på nytt. Du behöver inte konfigurera om dina kontomappningar.
+
+**Synkroniseringsfel**: Om en faktura inte synkroniseras, kontrollera att kunden finns i båda systemen och att din kontomappning är komplett. Aourly försöker automatiskt synkronisera misslyckade synkroniseringar igen.
+
+**Saknade konton**: Om du nyligen lagt till nya konton i Visma, trigga en manuell synk från sidan Integrationer för att importera den senaste kontoplanen.
+
+## Vanliga frågor
+
+**Vilka Visma-produkter fungerar med Aourly?**
+Aourly integrerar med Visma eEkonomi, den molnbaserade bokföringsplattformen. Om du använder skrivbordsversionen (Visma Administration), kontakta Aourlys support för att kontrollera kompatibiliteten.
+
+**Kan jag använda både Visma och Fortnox?**
+Du bör bara ansluta ett bokföringssystem per företag för att undvika dubbla poster. Koppla bort den ena integrationen innan du ansluter den andra.
+
+**Kan samordnare eller utförare konfigurera integrationen?**
+Nej. Bara företagsägaren har tillgång till sidan Integrationer.
+
+**Försvinner min data om jag kopplar bort?**
+Nej. Bortkoppling stoppar bara framtida synkronisering. All tidigare synkroniserad data finns kvar i både Aourly och Visma.
+
+
+<Info>Visma är en av Skandinaviens största leverantörer av affärsprogramvara. Visma eEkonomi (tidigare Visma Spcs) är deras molnbaserade bokföringslösning som används flitigt av svenska småföretagare och frilansare.</Info>
+
+<Tip>Efter anslutningen importeras konton och räkenskapsår automatiskt från Visma. Nya fakturor och kunder i Aourly skickas till Visma vid synkronisering.</Tip>
+
+<Warning>Bara företagsägaren kan hantera integrationer. Samordnare och utförare har inte tillgång till sidan Integrationer.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Vilken data synkroniseras mellan Aourly och Visma?">
+    Fakturor, kunder och verifikationer skickas från Aourly till Visma. Konton och räkenskapsår hämtas från Visma till Aourly, vilket håller båda systemen konsekventa.
+  </Accordion>
+  <Accordion title="Vilka Visma-produkter stöder Aourly?">
+    Aourly integrerar med Visma eEkonomi (den molnbaserade bokföringsplattformen). Om du använder Visma Administration (skrivbordsversionen), kontakta Aourlys support för att kontrollera kompatibiliteten.
+  </Accordion>
+  <Accordion title="Vad händer om Visma-auktoriseringen löper ut?">
+    Du ser en varning på sidan Integrationer. Klicka på Återanslut för att gå igenom auktoriseringsflödet igen. Dina kontomappningar och tidigare synkroniserad data bevaras.
+  </Accordion>
+  <Accordion title="Kan jag använda både Fortnox och Visma samtidigt?">
+    Nej. Du bör bara ansluta ett bokföringssystem per företag för att undvika dubbla poster och motstridiga data. Koppla bort det ena innan du ansluter det andra.
+  </Accordion>
+</AccordionGroup>

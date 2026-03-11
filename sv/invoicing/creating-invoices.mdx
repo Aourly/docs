@@ -1,0 +1,136 @@
+---
+title: "Skapa fakturor"
+description: "Lär dig hur du skapar fakturor från godkända tidrapporter och utlägg, konfigurerar fakturafält och hanterar fakturarader."
+---
+
+Fakturering är kärnan i att få betalt för ditt arbete. Med Aourly kan du skapa fakturor direkt från godkända tidrapporter och utlägg, så att du lägger mindre tid på administration och mer tid på fakturerbart arbete.
+
+Den här guiden går igenom hela processen för att skapa en faktura, från att välja kund till att spara ett utkast redo för granskning.
+
+## Innan du börjar
+
+Innan du skapar en faktura, se till att:
+
+- Du har minst en **kund** registrerad med korrekta faktureringsuppgifter (namn, adress, organisationsnummer).
+- De **tidposter** du vill fakturera har rapporterats och **godkänts**.
+- Eventuella **utlägg** du vill inkludera har registrerats och godkänts.
+
+## Steg för steg: Skapa en faktura
+
+### 1. Navigera till Fakturor
+
+Öppna sidomenyn och klicka på **Fakturor**. Du ser en lista över alla dina fakturor med deras aktuella status (Utkast, Skickad, Betald m.m.).
+
+### 2. Klicka på Skapa faktura
+
+Klicka på knappen **Skapa faktura** i det övre högra hörnet för att öppna formuläret.
+
+### 3. Välj kund
+
+Välj den kund du vill fakturera. När du väljer en kund fylls faktureringsuppgifterna i automatiskt från kundprofilen:
+
+- Företagsnamn
+- Faktureringsadress
+- Organisationsnummer
+- Momsregistreringsnummer (om tillämpligt)
+
+Se till att uppgifterna stämmer innan du går vidare. Om något behöver uppdateras, redigera kundprofilen först.
+
+### 4. Välj tidrapporter och utlägg
+
+Välj vilka godkända tidrapporter och utlägg som ska ingå. Endast **godkända** poster är tillgängliga för fakturering. Varje vald post blir en rad på fakturan.
+
+Du kan inkludera poster från flera uppdrag för samma kund på en enda faktura.
+
+### 5. Konfigurera fakturafält
+
+Granska och justera rubrikfälten på fakturan:
+
+| Fält | Beskrivning |
+|------|-------------|
+| **Fakturanummer** | Genereras automatiskt i sekvens. Kan inte ändras manuellt. |
+| **Fakturadatum** | Datumet fakturan utfärdas. Standardvärde är dagens datum. |
+| **Leveransdatum** | Datumet arbetet levererades eller slutfördes. |
+| **Förfallodatum** | När betalning förväntas. Beräknas utifrån betalvillkor. |
+| **OCR-nummer** | Automatiskt genererat referensnummer för svenska bankbetalningar. |
+| **Betalvillkor** | Antal dagar till förfallodatum (t.ex. 30 dagar). |
+| **Kommentarer** | Valfri fritext som visas på den utskrivna fakturan. |
+
+### 6. Granska och redigera fakturarader
+
+Varje fakturarad innehåller:
+
+- **Namn** -- en beskrivning av utfört arbete eller utlägg.
+- **Antal** -- antal enheter (t.ex. arbetade timmar).
+- **Enhet** -- enhetstyp: Timmar, Styck eller Utlägg.
+- **Enhetspris** -- pris per enhet.
+- **Momssats** -- tillämplig momsprocent.
+- **Rabatt** -- valfri rabatt på fakturaraden.
+
+Du kan fritt lägga till, ta bort eller ändra rader. Fakturans totalsumma uppdateras automatiskt när du gör ändringar.
+
+### 7. Spara som utkast
+
+Klicka på **Skapa** för att spara fakturan. Den sparas med statusen **Utkast**, vilket innebär att den är fullt redigerbar. Du kan återkomma till den när som helst för att göra ändringar innan du skickar den.
+
+## Fakturanummer och OCR
+
+Aourly hanterar automatiskt fakturanumrering och generering av OCR-nummer:
+
+- **Fakturanummer** är sekventiella och kan inte redigeras. Detta säkerställer efterlevnad av bokföringslagen, som kräver obruten nummerserie.
+- **OCR-nummer** genereras med en standardalgoritm som svenska banker känner igen. När kunden betalar med OCR-numret underlättas matchning av betalningen avsevärt.
+
+## Valutahantering
+
+Om du arbetar med internationella kunder stöder Aourly fakturering i utländsk valuta. Valutan bestäms av kundens profilinställningar. Vid fakturering i utländsk valuta:
+
+- Fakturarader visas i kundens valuta.
+- Faktura-PDF:en visar korrekt valutasymbol och formatering.
+- För bokföringsändamål kan belopp behöva omräknas till SEK vid tillämplig växelkurs.
+
+## Enheter förklarade
+
+Aourly erbjuder tre enhetstyper för fakturarader:
+
+- **Timmar (h)** -- används för tidsbaserad fakturering. Detta är den vanligaste enheten för frilansare som fakturerar per timme.
+- **Styck (st)** -- används för fasta leveranser, milstolpar eller artikelbaserad fakturering.
+- **Utlägg** -- används för vidarefakturerade kostnader som resor, programvarulicenser eller material.
+
+## Nästa steg
+
+Efter att du sparat ett fakturautkast är nästa steg att **granska** det noggrant innan du skickar det. Se guiden [Granskningsflöde](invoice-review-workflow) för detaljer om granskningsprocessen, och [Skicka och betalning](sending-and-payment) för hur du skickar fakturan till kunden.
+
+## Vanliga frågor
+
+**Kan jag fakturera tidposter från flera uppdrag på en faktura?**
+Ja. Du kan inkludera poster från olika uppdrag för samma kund. Varje post visas som en separat fakturarad.
+
+**Vilka enheter finns tillgängliga för fakturarader?**
+Timmar, Styck och Utlägg.
+
+**Kan jag ändra fakturanumret?**
+Nej. Fakturanummer genereras automatiskt i sekvens för att följa svenska bokföringsregler. Luckor i serien kan orsaka problem vid revision.
+
+**Varför ser jag inte mina tidposter när jag skapar en faktura?**
+Endast godkända tidposter är tillgängliga för fakturering. Kontrollera att posterna har rapporterats och godkänts genom att navigera till tidgodkännande.
+
+
+<Info>Fakturanummer och OCR-nummer genereras automatiskt av Aourly. Du behöver inte hantera numreringen manuellt.</Info>
+
+<Tip>Om du fakturerar i utländsk valuta hanterar Aourly valutavisningen på fakturan. Se till att kundens valuta är korrekt inställd på kundprofilen.</Tip>
+
+<Warning>Endast godkända tidposter kan läggas till på en faktura. Om du inte ser förväntade poster, kontrollera att de har godkänts först.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Kan jag fakturera tidposter från flera uppdrag på en faktura?">
+    Ja, du kan inkludera tidposter från olika uppdrag för samma kund på en enda faktura. Varje post visas som en separat fakturarad.
+  </Accordion>
+  <Accordion title="Vilka enheter finns tillgängliga för fakturarader?">
+    Aourly stöder Timmar, Styck och Utlägg som enhetstyper för fakturarader.
+  </Accordion>
+  <Accordion title="Kan jag ändra fakturanumret?">
+    Fakturanummer genereras automatiskt i sekvens för att säkerställa efterlevnad av svenska bokföringsregler. De kan inte ändras manuellt.
+  </Accordion>
+</AccordionGroup>

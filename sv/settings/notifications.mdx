@@ -1,0 +1,116 @@
+---
+title: "Notifieringsinställningar"
+description: "Konfigurera vilka notifieringar du får och hur de levereras, inklusive e-post- och push-notifieringar."
+---
+
+Aourly skickar notifieringar för att hålla dig informerad om viktiga händelser i din verksamhet: mottagna betalningar, skickade fakturor, godkännanden som behövs och mer. Du styr vilka notifieringar du får och hur de levereras.
+
+## Komma åt notifieringsinställningar
+
+Klicka på ditt namn eller din avatar i det övre högra hörnet för att öppna användarmenyn. Navigera till dina notifieringsinställningar, som kan finnas under **Profil** eller en dedikerad **Notifieringar**-sektion.
+
+## Notifieringstyper
+
+Aourly grupperar notifieringar i kategorier. Du kan aktivera eller inaktivera varje typ oberoende av de andra:
+
+| Notifieringstyp           | Vad som utlöser den                                      |
+|---------------------------|-----------------------------------------------------------|
+| Faktura skickad           | En faktura har skickats till en kund                      |
+| Betalning mottagen        | En kundbetalning har registrerats för en faktura          |
+| Tidrapport väntar         | En tidrapport väntar på din granskning                    |
+| Godkännandeförfrågningar  | Ett uppdrag eller en faktura behöver ditt godkännande     |
+| Förseningspåminnelser     | En faktura har passerat sitt förfallodatum utan betalning |
+| Systemuppdateringar       | Viktiga plattformsuppdateringar och underhållsmeddelanden |
+
+## Notifieringskanaler
+
+### E-postnotifieringar
+
+E-postnotifieringar skickas till din registrerade e-postadress. De innehåller en sammanfattning av händelsen och en länk till relevant sida i Aourly.
+
+E-post är den mest tillförlitliga kanalen för notifieringar du inte har råd att missa, eftersom meddelanden finns kvar i din inkorg tills du läser dem.
+
+Så konfigurerar du e-postnotifieringar:
+
+1. Öppna dina notifieringsinställningar
+2. Hitta varje notifieringstyp
+3. Slå på eller av e-postalternativet
+4. Spara dina ändringar
+
+### Push-notifieringar
+
+Push-notifieringar levererar aviseringar i realtid direkt till din webbläsare eller mobila enhet. De visas som popup-aviseringar även när du inte aktivt använder Aourly.
+
+Aourly använder Firebase Cloud Messaging för att leverera push-notifieringar. Så konfigurerar du dem:
+
+1. Öppna dina notifieringsinställningar
+2. Slå på push-notifieringsalternativet för önskade notifieringstyper
+3. När din webbläsare eller enhet ber om det, klicka på **Tillåt** för att ge notifieringsbehörighet
+4. Spara dina ändringar
+
+Du kan registrera flera enheter. Varje enhet som har gett tillstånd tar emot push-notifieringar.
+
+## Rekommenderade inställningar
+
+Överväg som minimum att hålla dessa notifieringar aktiverade:
+
+- **Betalning mottagen** -- vet omedelbart när en kund betalar
+- **Godkännandeförfrågningar** -- låt inte kollegor eller kunder vänta
+- **Förseningspåminnelser** -- följ upp sena betalningar snabbt
+
+Om du är utförare och främst rapporterar tid hjälper notifieringen **Tidrapport väntar** dig att hålla koll på granskningsdeadlines.
+
+## Felsöka push-notifieringar
+
+**Webbläsaren visar inte notifieringsuppmaningar:**
+Kontrollera dina webbläsarinställningar för att säkerställa att notifieringar inte är blockerade för Aourlys domän. I de flesta webbläsare hittar du detta under Inställningar > Sekretess > Notifieringar.
+
+**Notifieringar har slutat fungera:**
+Din enhetsregistrering kan ha löpt ut. Öppna dina notifieringsinställningar och återaktivera push-notifieringar. Din webbläsare bör uppmana dig igen.
+
+**Stör ej är aktiverat:**
+När din enhet eller ditt operativsystem har Stör ej aktiverat tystas push-notifieringar. De visas när du inaktiverar Stör ej.
+
+**Använder flera webbläsare eller enheter:**
+Varje webbläsare och enhet behöver registreras separat. Om du byter till en ny enhet, aktivera push-notifieringar där också.
+
+## Vanliga frågor
+
+**Vilka notifieringstyper finns tillgängliga?**
+Faktura skickad, betalning mottagen, tidrapport väntar på granskning, godkännandeförfrågningar, påminnelser om försenade fakturor och systemuppdateringar.
+
+**Kan jag få push-notifieringar på min telefon?**
+Ja. Öppna Aourly i din mobila webbläsare och aktivera push-notifieringar. Din telefon uppmanar dig att tillåta dem.
+
+**Kan jag ha olika inställningar för olika företag?**
+Notifieringsinställningar gäller för tillfället för alla företag du tillhör. Du får notifieringar för händelser i alla dina anslutna företag.
+
+**Ser jag fortfarande notifieringar i appen om jag stänger av e-post och push?**
+Ja. Aourly visar alltid notifieringar i själva applikationen. E-post och push är ytterligare kanaler för när du inte aktivt använder plattformen.
+
+**Kan jag avregistrera mig från systemuppdateringsmeddelanden?**
+Systemuppdateringsnotifieringar är viktiga för plattformsunderhåll och säkerhet. Du kan inaktivera dem, men det rekommenderas att hålla dem aktiverade.
+
+
+<Tip>Håll som minimum e-postnotifieringar aktiverade för mottagen betalning, godkännandeförfrågningar och påminnelser om försenade fakturor. Dessa är de mest tidskänsliga händelserna.</Tip>
+
+<Info>Push-notifieringar använder Firebase Cloud Messaging och levereras i realtid till registrerade enheter. Du kan registrera flera enheter.</Info>
+
+<Warning>Att inaktivera alla notifieringar innebär att du inte aviseras om viktiga händelser som försenade fakturor eller väntande godkännanden. Använd med försiktighet.</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Vilka notifieringstyper finns tillgängliga?">
+    Aourly kan notifiera dig om: skickade fakturor, tidrapporter som väntar på granskning, mottagna betalningar, godkännandeförfrågningar, påminnelser om försenade fakturor och systemuppdateringar.
+  </Accordion>
+  <Accordion title="Kan jag få push-notifieringar på min telefon?">
+    Ja. Aourly stöder push-notifieringar via Firebase Cloud Messaging. När du aktiverar push-notifieringar uppmanar din webbläsare eller enhet dig att tillåta dem.
+  </Accordion>
+  <Accordion title="Varför får jag inga push-notifieringar?">
+    Kontrollera att din webbläsare eller enhet tillåter notifieringar från Aourly, att Stör ej-läget är avstängt och att du har registrerat enheten i dina notifieringsinställningar.
+  </Accordion>
+  <Accordion title="Kan jag ha olika notifieringsinställningar för olika företag?">
+    Notifieringsinställningar gäller för tillfället för ditt konto i alla företag. Du får notifieringar för alla företag du tillhör.
+  </Accordion>
+</AccordionGroup>

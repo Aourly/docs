@@ -1,0 +1,132 @@
+---
+title: "Sending Invoices and Tracking Payment"
+description: "Learn how to send invoices, understand invoice statuses, register payments, and download invoice PDFs."
+---
+
+Once you have reviewed your invoice and everything looks correct, the next step is to send it to your client. This guide covers the sending process, what happens behind the scenes, the different invoice statuses, and how to register payments.
+
+## Sending an Invoice
+
+### How to Send
+
+1. Open the invoice you want to send from the **Invoices** list.
+2. Click the **Send** action button.
+3. Review the confirmation summary.
+4. Confirm to send the invoice.
+
+When you confirm, several things happen automatically:
+
+- The invoice status changes from **Draft** to **Sent**.
+- The invoice becomes **locked** and can no longer be edited.
+- A **PDF** is generated with your company details, client details, line items, totals, and payment information.
+- If the client has email delivery configured, they receive a notification with the invoice.
+
+### Downloading the Invoice PDF
+
+After sending, you can download or preview the invoice PDF at any time from the invoice detail page. The PDF includes:
+
+- Your company name, address, and organisation number
+- Client billing details
+- All line items with descriptions, quantities, rates, and amounts
+- VAT breakdown
+- Total amount due
+- Payment details: bank account, Bankgiro, OCR number, and due date
+
+You can share this PDF manually via email or any other channel if needed.
+
+## Invoice Statuses Explained
+
+Every invoice in Aourly has a status that reflects where it is in its lifecycle:
+
+| Status | Description |
+|--------|-------------|
+| **Draft** | The invoice is being prepared. It is fully editable. No one outside your company can see it. |
+| **Pending Approval** | The invoice is awaiting approval from a Worknode reviewer. This status only applies to companies using the Worknode feature. |
+| **Approved** | The invoice has been approved by Worknode and is ready to be sent. Only applies to Worknode users. |
+| **Sent** | The invoice has been delivered to the client. It is locked and cannot be edited. |
+| **Paid** | Payment has been received and registered. The invoice is complete. |
+| **Overdue** | The invoice has passed its due date without payment being registered. |
+| **Credited** | The invoice has been reversed by a credit note. The original amount is no longer owed. |
+
+### Status Flow
+
+The typical lifecycle of an invoice is:
+
+```
+Draft --> Sent --> Paid
+```
+
+For Worknode users, the flow includes an approval step:
+
+```
+Draft --> Pending Approval --> Approved --> Sent --> Paid
+```
+
+If something goes wrong:
+
+```
+Sent --> Credited (via credit note)
+Sent --> Overdue (past due date)
+```
+
+## Registering Payments
+
+When your client pays an invoice, you need to register the payment in Aourly so that your records are accurate.
+
+### How to Register a Payment
+
+1. Open the sent invoice from the **Invoices** list.
+2. Click the **Register Payment** action.
+3. Confirm the payment registration.
+
+The invoice status changes from **Sent** (or **Overdue**) to **Paid**.
+
+### When to Register Payments
+
+Register a payment when:
+
+- You see the payment in your bank account.
+- Your client confirms they have paid.
+- You receive confirmation from your payment provider.
+
+Registering payments promptly keeps your dashboard statistics, revenue reports, and bookkeeping up to date.
+
+## Overdue Invoices
+
+Invoices that pass their due date without a registered payment are automatically marked as **Overdue**. This helps you quickly identify which clients owe you money.
+
+When you see overdue invoices:
+
+- Follow up with your client to remind them about the payment.
+- Once paid, register the payment as normal -- the status will change from Overdue to Paid.
+
+## Tips for Smooth Invoicing
+
+- **Double-check before sending** -- review is your last chance to make edits. The [Invoice Review Workflow](invoice-review-workflow) guide covers what to check.
+- **Keep bank details current** -- your invoice PDF pulls payment information from your bank account settings. Make sure your IBAN, Bankgiro, and Swish details are up to date.
+- **Use clear payment terms** -- setting appropriate payment terms (e.g., 15 or 30 days) helps set expectations with your client.
+- **Register payments quickly** -- this keeps your financial overview accurate and helps with bookkeeping.
+
+## Frequently Asked Questions
+
+**What happens when I send an invoice?**
+The status changes to Sent, a PDF is generated, and the invoice is locked. If email is configured, the client receives a notification.
+
+**Can I resend an invoice to a client?**
+You can download the PDF and send it to the client again manually, for example by attaching it to an email.
+
+**Can I undo sending an invoice?**
+No. Once sent, an invoice cannot be reverted to Draft. If you need to correct it, create a credit note against the original and issue a new invoice. See the [Credit Notes](credit-notes) guide.
+
+**What does Pending Approval mean?**
+This status only applies to Worknode users. It means the invoice is waiting for a Worknode reviewer to approve it before it can be sent to the client.
+
+**How do overdue invoices get flagged?**
+Aourly automatically marks invoices as Overdue when the current date passes the due date and no payment has been registered.
+
+
+<Warning>A sent invoice cannot be edited. If you need to make corrections, you must create a credit note and issue a new invoice.</Warning>
+
+<Info>Invoices that pass their due date without payment are automatically marked as Overdue.</Info>
+
+<Tip>Keep your bank account details up to date so that your invoice PDF always shows the correct payment information.</Tip>
