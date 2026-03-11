@@ -51,12 +51,12 @@
             ]
           },
           {
-            "group": "Assignments",
+            "group": "Gigs",
             "pages": [
-              "en/assignments/creating-assignments",
-              "en/assignments/assignment-types",
-              "en/assignments/assignment-workflow",
-              "en/assignments/performers-and-workloads"
+              "en/gigs/creating-gigs",
+              "en/gigs/gig-types",
+              "en/gigs/gig-workflow",
+              "en/gigs/performers-and-workloads"
             ]
           },
           {
@@ -121,17 +121,6 @@
               "en/settings/notifications",
               "en/settings/company-settings"
             ]
-          },
-          {
-            "group": "Worknode",
-            "pages": [
-              "en/worknode/what-is-worknode",
-              "en/worknode/registration-bankid",
-              "en/worknode/profile-setup",
-              "en/worknode/invoice-approval",
-              "en/worknode/errands",
-              "en/worknode/salary-and-payout"
-            ]
           }
         ]
       },
@@ -152,7 +141,8 @@
               "en/knowledge/credit-notes-explained",
               "en/knowledge/ocr-numbers",
               "en/knowledge/reverse-charge-vat",
-              "en/knowledge/self-billing"
+              "en/knowledge/self-billing",
+              "en/knowledge/starting-an-aktiebolag"
             ]
           }
         ]
@@ -194,12 +184,12 @@
             ]
           },
           {
-            "group": "Uppdrag",
+            "group": "Gigs",
             "pages": [
-              "sv/assignments/creating-assignments",
-              "sv/assignments/assignment-types",
-              "sv/assignments/assignment-workflow",
-              "sv/assignments/performers-and-workloads"
+              "sv/gigs/creating-gigs",
+              "sv/gigs/gig-types",
+              "sv/gigs/gig-workflow",
+              "sv/gigs/performers-and-workloads"
             ]
           },
           {
@@ -264,17 +254,6 @@
               "sv/settings/notifications",
               "sv/settings/company-settings"
             ]
-          },
-          {
-            "group": "Worknode",
-            "pages": [
-              "sv/worknode/what-is-worknode",
-              "sv/worknode/registration-bankid",
-              "sv/worknode/profile-setup",
-              "sv/worknode/invoice-approval",
-              "sv/worknode/errands",
-              "sv/worknode/salary-and-payout"
-            ]
           }
         ]
       },
@@ -295,7 +274,8 @@
               "sv/knowledge/credit-notes-explained",
               "sv/knowledge/ocr-numbers",
               "sv/knowledge/reverse-charge-vat",
-              "sv/knowledge/self-billing"
+              "sv/knowledge/self-billing",
+              "sv/knowledge/starting-an-aktiebolag"
             ]
           }
         ]

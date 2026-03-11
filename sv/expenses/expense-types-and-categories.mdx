@@ -12,7 +12,7 @@ Alla utlägg är inte likadana. Vissa är kostnader du vidarefakturerar till en 
 Fakturerbara utlägg är kostnader du har i samband med att leverera arbete åt en kund, som du sedan debiterar kunden för. De kallas "externa" eftersom kostnaden flödar vidare till kunden.
 
 **Egenskaper:**
-- Kopplade till ett specifikt uppdrag
+- Kopplade till ett specifikt gig
 - Visas som rader på kundfakturor
 - Kan ha en marginal (påslag) tillagd
 - Exempel:
@@ -33,7 +33,7 @@ Fakturerbara utlägg är kostnader du har i samband med att leverera arbete åt 
 Icke-fakturerbara utlägg är allmänna företagskostnader som du själv bär. De är "interna" för din verksamhet och debiteras inte någon kund.
 
 **Egenskaper:**
-- Inte kopplade till ett specifikt uppdrag (valfri koppling för kostnadsuppföljning)
+- Inte kopplade till ett specifikt gig (valfri koppling för kostnadsuppföljning)
 - Visas aldrig på kundfakturor
 - Spåras för bokföring och skatteavdrag
 - Exempel:
@@ -101,29 +101,29 @@ När du har kostnader å en kunds vägnar kanske du vill lägga till ett påslag
 
 ### Hur marginalen fungerar
 
-1. Uppdraget har en **generell påslagsprocent** (till exempel 10%)
+1. Giget har en **generell påslagsprocent** (till exempel 10%)
 2. När du skapar ett fakturerbart utlägg beräknas marginalen från denna procent
 3. Fakturan visar totalen: ursprunglig kostnad + marginal
 
 **Exempel:**
 - Du köper projektmaterial för 8 000 kr
-- Uppdraget har 10% påslag
+- Giget har 10% påslag
 - Marginalen är 800 kr
 - Kunden faktureras 8 800 kr
 
 ### Ange påslaget
 
-Påslagsprocenten sätts på uppdraget, inte på enskilda utlägg. Detta säkerställer konsekvens för alla fakturerbara utlägg i projektet. Så här ändrar du:
+Påslagsprocenten sätts på giget, inte på enskilda utlägg. Detta säkerställer konsekvens för alla fakturerbara utlägg i projektet. Så här ändrar du:
 
-1. Öppna uppdraget
+1. Öppna giget
 2. Hitta fältet **Generellt påslag**
 3. Ange procenten (till exempel 10 för 10%)
 
 ### Bästa praxis för påslag
 
-- **Kom överens i förväg**: Diskutera påslaget med din kund innan arbetet påbörjas. Inkludera det i uppdragsvillkoren.
+- **Kom överens i förväg**: Diskutera påslaget med din kund innan arbetet påbörjas. Inkludera det i gigsvillkoren.
 - **Var rimlig**: Vanliga påslag för svenska frilansare ligger mellan 5% och 15%.
-- **Dokumentera det**: Den godkända ögonblicksbilden av uppdraget inkluderar påslagsprocenten, så båda parter har ett register över de överenskomna villkoren.
+- **Dokumentera det**: Den godkända ögonblicksbilden av giget inkluderar påslagsprocenten, så båda parter har ett register över de överenskomna villkoren.
 
 ## Hur typer påverkar fakturering
 
@@ -135,7 +135,7 @@ Utläggstypen avgör direkt om och hur ett utlägg visas på fakturor:
 | Internt (ej fakturerbart) | Aldrig | Inkluderas inte |
 
 När en faktura skapas:
-1. Bara hanterade fakturerbara utlägg kopplade till uppdraget är tillgängliga
+1. Bara hanterade fakturerbara utlägg kopplade till giget är tillgängliga
 2. Varje utlägg visas som en fakturarad med sin total (belopp + marginal)
 3. Utlägget kopplas sedan till fakturan, vilket förhindrar dubbelfakturering
 

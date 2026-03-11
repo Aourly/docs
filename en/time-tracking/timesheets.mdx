@@ -8,25 +8,25 @@ Timesheets are the bridge between individual time entries and invoices. They gro
 ## What Is a Timesheet?
 
 A timesheet is a collection of time entries that:
-- Belongs to a **single performer** on a **single assignment**
+- Belongs to a **single performer** on a **single gig**
 - Covers a **specific time period** (e.g., March 1-31, 2026)
 - Tracks **total hours** and **total cost** for that period
 - Can be **approved** and linked to an **invoice**
 
-Think of it as a summary sheet for a performer's work on one assignment during one period.
+Think of it as a summary sheet for a performer's work on one gig during one period.
 
 ## How Timesheets Are Created
 
 Timesheets are generated automatically. When you log a time entry, Aourly checks:
-1. Which assignment and performer the entry belongs to
+1. Which gig and performer the entry belongs to
 2. The date of the entry
-3. The assignment's timesheet frequency setting
+3. The gig's timesheet frequency setting
 
 Based on these, it either adds the entry to an existing timesheet for that period or creates a new one. You never need to create timesheets manually.
 
 ## Timesheet Periods
 
-The period length depends on the assignment's **timesheet frequency** setting:
+The period length depends on the gig's **timesheet frequency** setting:
 
 | Frequency | Period | Example |
 |-----------|--------|---------|
@@ -55,7 +55,7 @@ Use the period selector to switch between:
 
 When you view a timesheet's details, you see:
 - **Period**: The start and end dates
-- **Assignment**: Which job this timesheet is for
+- **Gig**: Which job this timesheet is for
 - **Performer**: Who the time belongs to
 - **Total hours**: Sum of all entry hours in the period
 - **Total cost**: Sum of all entry costs (hours x rate)
@@ -85,13 +85,13 @@ Approved timesheets (or their approved entries) can be included in an invoice. W
 
 When the client pays the invoice, the associated entries are marked as "Paid", completing the lifecycle.
 
-## One Performer, One Assignment, One Timesheet
+## One Performer, One Gig, One Timesheet
 
-An important concept: timesheets are scoped per performer per assignment per period. This means:
+An important concept: timesheets are scoped per performer per gig per period. This means:
 
-- If you have **two performers** on an assignment, each has their own timesheets
-- If you work on **three assignments**, you have separate timesheets for each
-- If you view a **monthly period**, you see one timesheet per assignment you worked on that month
+- If you have **two performers** on an gig, each has their own timesheets
+- If you work on **three gigs**, you have separate timesheets for each
+- If you view a **monthly period**, you see one timesheet per gig you worked on that month
 
 This separation makes it clear who worked on what, and allows independent approval and invoicing.
 
@@ -99,7 +99,7 @@ This separation makes it clear who worked on what, and allows independent approv
 
 The invoicing flow uses timesheets as the primary unit. When you create an invoice:
 
-1. Select an assignment
+1. Select an gig
 2. Choose the period or timesheets to include
 3. Aourly pulls in all approved entries from those timesheets
 4. The invoice is generated with line items reflecting the time worked
@@ -110,9 +110,9 @@ Approved timesheets that have not been invoiced represent earned but unbilled re
 
 ## Timesheets and the Dashboard
 
-The dashboard provides a high-level overview of your time data across all assignments. It pulls from your timesheets to show:
+The dashboard provides a high-level overview of your time data across all gigs. It pulls from your timesheets to show:
 - Total hours this week/month
-- Hours breakdown by assignment
+- Hours breakdown by gig
 - Unbilled hours (approved but not yet invoiced)
 - Comparison against workload targets
 
@@ -129,24 +129,24 @@ The dashboard provides a high-level overview of your time data across all assign
 
 <Tip>Review your timesheets at the end of each period to catch any missing entries before approval.</Tip>
 
-<Info>Each performer on an assignment has their own separate timesheets, even for the same period.</Info>
+<Info>Each performer on an gig has their own separate timesheets, even for the same period.</Info>
 
 ## Frequently Asked Questions
 
 <AccordionGroup>
   <Accordion title="Are timesheets created automatically?">
-    Yes. When you log a time entry, it is automatically assigned to the correct timesheet based on the assignment's timesheet frequency and the entry date. You never need to create timesheets manually.
+    Yes. When you log a time entry, it is automatically assigned to the correct timesheet based on the gig's timesheet frequency and the entry date. You never need to create timesheets manually.
   </Accordion>
-  <Accordion title="Can a timesheet span multiple assignments?">
-    No. Each timesheet belongs to a single performer on a single assignment. If you work on multiple assignments, you will have separate timesheets for each.
+  <Accordion title="Can a timesheet span multiple gigs?">
+    No. Each timesheet belongs to a single performer on a single gig. If you work on multiple gigs, you will have separate timesheets for each.
   </Accordion>
   <Accordion title="How does the timesheet period work?">
-    The period is determined by the assignment's timesheet frequency setting. For weekly timesheets, the period covers Monday to Sunday. For monthly timesheets, it covers one calendar month.
+    The period is determined by the gig's timesheet frequency setting. For weekly timesheets, the period covers Monday to Sunday. For monthly timesheets, it covers one calendar month.
   </Accordion>
   <Accordion title="What happens when a timesheet is linked to an invoice?">
     When an invoice is created from a timesheet, the timesheet is linked to the invoice and its entries are marked as Invoiced. This prevents the same time from being billed twice.
   </Accordion>
   <Accordion title="Can I see timesheets for all performers?">
-    Owners and coordinators can view timesheets for all performers on their assignments. Performers can only see their own timesheets.
+    Owners and coordinators can view timesheets for all performers on their gigs. Performers can only see their own timesheets.
   </Accordion>
 </AccordionGroup>

@@ -8,25 +8,25 @@ Tidrapporter är bryggan mellan enskilda tidposter och fakturor. De grupperar di
 ## Vad är en tidrapport?
 
 En tidrapport är en samling tidposter som:
-- Tillhör en **enskild utförare** på ett **enskilt uppdrag**
+- Tillhör en **enskild utförare** på ett **enskilt gig**
 - Täcker en **specifik tidsperiod** (till exempel 1-31 mars 2026)
 - Spårar **totalt antal timmar** och **totalkostnad** för den perioden
 - Kan **godkännas** och kopplas till en **faktura**
 
-Tänk på den som ett sammanfattningsblad för en utförares arbete på ett uppdrag under en period.
+Tänk på den som ett sammanfattningsblad för en utförares arbete på ett gig under en period.
 
 ## Hur tidrapporter skapas
 
 Tidrapporter genereras automatiskt. När du registrerar en tidpost kontrollerar Aourly:
-1. Vilket uppdrag och vilken utförare posten tillhör
+1. Vilket gig och vilken utförare posten tillhör
 2. Datumen för posten
-3. Uppdragets inställning för tidrapportfrekvens
+3. Gigets inställning för tidrapportfrekvens
 
 Baserat på detta läggs posten antingen till i en befintlig tidrapport för den perioden eller så skapas en ny. Du behöver aldrig skapa tidrapporter manuellt.
 
 ## Tidrapportperioder
 
-Periodens längd beror på uppdragets inställning för **tidrapportfrekvens**:
+Periodens längd beror på gigets inställning för **tidrapportfrekvens**:
 
 | Frekvens | Period | Exempel |
 |----------|--------|---------|
@@ -55,7 +55,7 @@ Använd periodväljaren för att växla mellan:
 
 När du visar en tidrapports detaljer ser du:
 - **Period**: Start- och slutdatum
-- **Uppdrag**: Vilket jobb tidrapporten gäller
+- **Gig**: Vilket jobb tidrapporten gäller
 - **Utförare**: Vem tiden tillhör
 - **Totalt antal timmar**: Summan av alla posters timmar under perioden
 - **Totalkostnad**: Summan av alla posters kostnader (timmar x pris)
@@ -85,13 +85,13 @@ Godkända tidrapporter (eller deras godkända poster) kan inkluderas på en fakt
 
 När kunden betalar fakturan markeras de associerade posterna som "Betald", vilket avslutar livscykeln.
 
-## En utförare, ett uppdrag, en tidrapport
+## En utförare, ett gig, en tidrapport
 
-Ett viktigt koncept: tidrapporter är avgränsade per utförare, per uppdrag och per period. Det innebär att:
+Ett viktigt koncept: tidrapporter är avgränsade per utförare, per gig och per period. Det innebär att:
 
-- Om du har **två utförare** på ett uppdrag har varje utförare sina egna tidrapporter
-- Om du arbetar på **tre uppdrag** har du separata tidrapporter för varje
-- Om du visar en **månadsperiod** ser du en tidrapport per uppdrag du arbetat på den månaden
+- Om du har **två utförare** på ett gig har varje utförare sina egna tidrapporter
+- Om du arbetar på **tre gig** har du separata tidrapporter för varje
+- Om du visar en **månadsperiod** ser du en tidrapport per gig du arbetat på den månaden
 
 Denna uppdelning gör det tydligt vem som arbetat med vad och möjliggör oberoende godkännande och fakturering.
 
@@ -99,7 +99,7 @@ Denna uppdelning gör det tydligt vem som arbetat med vad och möjliggör oberoe
 
 Faktureringsflödet använder tidrapporter som den primära enheten. När du skapar en faktura:
 
-1. Välj ett uppdrag
+1. Välj ett gig
 2. Välj den period eller de tidrapporter som ska inkluderas
 3. Aourly hämtar alla godkända poster från dessa tidrapporter
 4. Fakturan genereras med rader som speglar det utförda arbetet
@@ -110,9 +110,9 @@ Godkända tidrapporter som inte har fakturerats representerar intjänade men ofa
 
 ## Tidrapporter och översikten
 
-Översikten ger en överblick på hög nivå av din tiddata över alla uppdrag. Den hämtar från dina tidrapporter för att visa:
+Översikten ger en överblick på hög nivå av din tiddata över alla gig. Den hämtar från dina tidrapporter för att visa:
 - Totalt antal timmar denna vecka/månad
-- Timfördelning per uppdrag
+- Timfördelning per gig
 - Ofakturerade timmar (godkända men ännu inte fakturerade)
 - Jämförelse mot arbetsbelastningsmål
 
@@ -131,6 +131,6 @@ Godkända tidrapporter som inte har fakturerats representerar intjänade men ofa
 
 <AccordionGroup>
   <Accordion title="Vad är skillnaden mellan en tidpost och en tidrapport?">
-    En tidpost är en enskild tidsregistrering. En tidrapport är en samling tidposter grupperade per period (vecka/månad) och uppdrag.
+    En tidpost är en enskild tidsregistrering. En tidrapport är en samling tidposter grupperade per period (vecka/månad) och gig.
   </Accordion>
 </AccordionGroup>

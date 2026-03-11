@@ -12,7 +12,7 @@ Not all expenses are the same. Some are costs you pass on to a client, while oth
 Billable expenses are costs you incur as part of delivering work for a client, which you then charge back to them. They are "external" because the cost flows through to the client.
 
 **Characteristics:**
-- Linked to a specific assignment
+- Linked to a specific gig
 - Appear as line items on client invoices
 - Can have a margin (markup) applied
 - Examples include:
@@ -33,7 +33,7 @@ Billable expenses are costs you incur as part of delivering work for a client, w
 Non-billable expenses are general business costs that you bear yourself. They are "internal" to your business operations and are not charged to any client.
 
 **Characteristics:**
-- Not linked to a specific assignment (optional linking for cost tracking)
+- Not linked to a specific gig (optional linking for cost tracking)
 - Never appear on client invoices
 - Tracked for bookkeeping and tax deduction purposes
 - Examples include:
@@ -101,29 +101,29 @@ When you incur costs on behalf of a client, you may want to add a markup to cove
 
 ### How Margin Works
 
-1. The assignment has a **general markup percentage** (e.g., 10%)
+1. The gig has a **general markup percentage** (e.g., 10%)
 2. When you create a billable expense, the margin is calculated from this percentage
 3. The invoice shows the total: original cost + margin
 
 **Example:**
 - You buy project materials for 8,000 SEK
-- The assignment has a 10% markup
+- The gig has a 10% markup
 - The margin is 800 SEK
 - The client is invoiced 8,800 SEK
 
 ### Setting the Markup
 
-The markup percentage is set on the assignment, not on individual expenses. This ensures consistency across all billable expenses for that project. To change it:
+The markup percentage is set on the gig, not on individual expenses. This ensures consistency across all billable expenses for that project. To change it:
 
-1. Open the assignment
+1. Open the gig
 2. Find the **General Markup** field
 3. Enter the percentage (e.g., 10 for 10%)
 
 ### Markup Best Practices
 
-- **Agree upfront**: Discuss the markup with your client before starting work. Include it in the assignment terms.
+- **Agree upfront**: Discuss the markup with your client before starting work. Include it in the gig terms.
 - **Be reasonable**: Standard markups for Swedish freelancers range from 5% to 15%.
-- **Document it**: The approved assignment snapshot includes the markup percentage, so both parties have a record of the agreed terms.
+- **Document it**: The approved gig snapshot includes the markup percentage, so both parties have a record of the agreed terms.
 
 ## How Types Affect Invoicing
 
@@ -135,7 +135,7 @@ The expense type directly determines whether and how an expense appears on invoi
 | Non-billable | Never | Not included |
 
 When creating an invoice:
-1. Only handled billable expenses linked to the assignment are available
+1. Only handled billable expenses linked to the gig are available
 2. Each expense appears as an invoice row with its total (amount + margin)
 3. The expense is then linked to the invoice, preventing double-billing
 
@@ -169,8 +169,8 @@ Without tracking non-billable expenses, you might think you are more profitable 
   <Accordion title="Is the markup visible to the client?">
     This depends on how the invoice is configured. The invoice line item typically shows the total amount (cost + markup). The markup percentage itself is not shown to the client unless you choose to itemize it.
   </Accordion>
-  <Accordion title="Can a non-billable expense be linked to an assignment?">
-    Yes. Even though the expense will not be invoiced to the client, linking it to an assignment helps you track the total cost of a project, including costs you absorbed.
+  <Accordion title="Can a non-billable expense be linked to an gig?">
+    Yes. Even though the expense will not be invoiced to the client, linking it to an gig helps you track the total cost of a project, including costs you absorbed.
   </Accordion>
   <Accordion title="What are common billable expense categories for Swedish freelancers?">
     Common billable categories include: travel (flights, trains, taxi), accommodation, materials and supplies, software licenses specific to the project, subcontractor costs, and printing/production costs.

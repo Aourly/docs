@@ -1,6 +1,6 @@
 ---
 title: "Logging Time"
-description: "Learn how to create time entries in Aourly to accurately track the hours you work on each assignment."
+description: "Learn how to create time entries in Aourly to accurately track the hours you work on each gig."
 ---
 
 Time tracking is at the heart of Aourly. Every hour you log feeds into timesheets, invoices, and profitability reports. This guide walks you through creating time entries, understanding the fields involved, and building good logging habits.
@@ -8,11 +8,11 @@ Time tracking is at the heart of Aourly. Every hour you log feeds into timesheet
 ## Before You Begin
 
 To log time, you need:
-- An **Active assignment** (job) to log time against
-- To be added as an **Active performer** on that assignment
-- The assignment must have an hourly rate configured for you
+- An **Active gig** (job) to log time against
+- To be added as an **Active performer** on that gig
+- The gig must have an hourly rate configured for you
 
-If any of these are missing, the assignment will not appear in the time entry form.
+If any of these are missing, the gig will not appear in the time entry form.
 
 ## Creating a Time Entry
 
@@ -29,20 +29,20 @@ The dashboard includes a quick action for creating time entries. Click the time 
 
 ## Time Entry Fields
 
-### Assignment
+### Gig
 
-Select which job this time is for. The dropdown shows only Active assignments where you are a performer. The assignment determines:
+Select which job this time is for. The dropdown shows only Active gigs where you are a performer. The gig determines:
 - Which client the time is billed to
 - What currency is used
 - Which timesheet the entry belongs to
 
 ### Task (Optional)
 
-If the assignment has tasks defined, you can link the entry to a specific task. Tasks help you categorize work within an assignment, for example:
+If the gig has tasks defined, you can link the entry to a specific task. Tasks help you categorize work within an gig, for example:
 - "Design" vs. "Development" vs. "Testing"
 - "Phase 1 - Research" vs. "Phase 2 - Implementation"
 
-Tasks are optional. If your assignment is straightforward, you can skip this field.
+Tasks are optional. If your gig is straightforward, you can skip this field.
 
 ### Date
 
@@ -58,7 +58,7 @@ Alternatively, you can enter the total hours worked directly (e.g., 3.5). Use th
 
 ### Hourly Rate
 
-Automatically filled from your performer configuration on the assignment. The rate is displayed for reference and is used to calculate the total cost:
+Automatically filled from your performer configuration on the gig. The rate is displayed for reference and is used to calculate the total cost:
 
 **Total cost = Hours x Hourly Rate**
 
@@ -116,7 +116,7 @@ The invoice containing this entry has been marked as paid. The billing cycle for
 
 ## Automatic Time Tracking Suggestions
 
-If automatic time tracking is enabled on the assignment, Aourly creates suggested time entries based on each performer's daily workload settings. These entries:
+If automatic time tracking is enabled on the gig, Aourly creates suggested time entries based on each performer's daily workload settings. These entries:
 - Appear as "Planned" (Suggested) status
 - Are pre-filled with the expected hours from the daily workload schedule
 - Can be edited, approved, or deleted like any other entry
@@ -124,7 +124,7 @@ If automatic time tracking is enabled on the assignment, Aourly creates suggeste
 
 ## Timesheets and Grouping
 
-Time entries are automatically organized into **timesheets**. Each timesheet covers a specific period (week or month, depending on the assignment's timesheet frequency) and belongs to a specific performer on a specific assignment.
+Time entries are automatically organized into **timesheets**. Each timesheet covers a specific period (week or month, depending on the gig's timesheet frequency) and belongs to a specific performer on a specific gig.
 
 You do not need to create timesheets manually. They are generated automatically as you log time entries. See the [Timesheets](timesheets) guide for more details.
 
@@ -164,16 +164,16 @@ Before marking time for approval, review your entries for the period. Check for:
 
 ### Use Automatic Time Tracking Wisely
 
-If your schedule is predictable, enable automatic time tracking on the assignment. It will create entries based on your daily workload schedule. You can then adjust the auto-generated entries rather than creating them from scratch each day.
+If your schedule is predictable, enable automatic time tracking on the gig. It will create entries based on your daily workload schedule. You can then adjust the auto-generated entries rather than creating them from scratch each day.
 
 
 <Tip>Log time daily for the most accurate records. It is much harder to remember what you did last week than what you did today.</Tip>
 
 <Tip>Comments help when reviewing timesheets later. Be specific about the work you performed.</Tip>
 
-<Info>Time entries are automatically grouped into timesheets based on the assignment's timesheet frequency.</Info>
+<Info>Time entries are automatically grouped into timesheets based on the gig's timesheet frequency.</Info>
 
-<Warning>Time entries can only be created for Active assignments. If you cannot find an assignment, check that it is Active and that you are an Active performer.</Warning>
+<Warning>Time entries can only be created for Active gigs. If you cannot find an gig, check that it is Active and that you are an Active performer.</Warning>
 
 ## Frequently Asked Questions
 
@@ -181,14 +181,14 @@ If your schedule is predictable, enable automatic time tracking on the assignmen
   <Accordion title="Can I log time for past dates?">
     Yes, you can log time retroactively by changing the date field to any past date. The entry will be added to the correct timesheet period.
   </Accordion>
-  <Accordion title="Can I log time on a completed assignment?">
-    No, the assignment must be Active for time logging. If an assignment has been completed, you would need to reactivate it first.
+  <Accordion title="Can I log time on a completed gig?">
+    No, the gig must be Active for time logging. If an gig has been completed, you would need to reactivate it first.
   </Accordion>
   <Accordion title="Can I edit a time entry after creating it?">
     Yes, you can edit time entries that are in Planned (Suggested) status. Once an entry has been approved or invoiced, it can no longer be edited.
   </Accordion>
   <Accordion title="How are automatic time tracking suggestions generated?">
-    If automatic time tracking is enabled on the assignment, Aourly creates suggested entries based on each performer's daily workload settings. These appear as Planned entries that you can edit, approve, or delete.
+    If automatic time tracking is enabled on the gig, Aourly creates suggested entries based on each performer's daily workload settings. These appear as Planned entries that you can edit, approve, or delete.
   </Accordion>
   <Accordion title="Can I log time on weekends?">
     Yes, you can log time on any day. The daily workload schedule only affects automatic time tracking and progress calculations, not manual time entry.

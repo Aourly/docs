@@ -8,11 +8,11 @@ Tidrapportering är kärnan i Aourly. Varje timme du registrerar matar in i tidr
 ## Innan du börjar
 
 För att registrera tid behöver du:
-- Ett **aktivt uppdrag** (jobb) att registrera tid mot
-- Vara tillagd som **aktiv utförare** på det uppdraget
-- Uppdraget måste ha ett timpris konfigurerat för dig
+- Ett **aktivt gig** (jobb) att registrera tid mot
+- Vara tillagd som **aktiv utförare** på det giget
+- Giget måste ha ett timpris konfigurerat för dig
 
-Om något av detta saknas kommer uppdraget inte att visas i tidpostformuläret.
+Om något av detta saknas kommer giget inte att visas i tidpostformuläret.
 
 ## Skapa en tidpost
 
@@ -29,20 +29,20 @@ Om något av detta saknas kommer uppdraget inte att visas i tidpostformuläret.
 
 ## Fält i tidposten
 
-### Uppdrag
+### Gig
 
-Välj vilket jobb tiden gäller. Rullgardinsmenyn visar bara aktiva uppdrag där du är utförare. Uppdraget avgör:
+Välj vilket jobb tiden gäller. Rullgardinsmenyn visar bara aktiva gig där du är utförare. Giget avgör:
 - Vilken kund tiden faktureras till
 - Vilken valuta som används
 - Vilken tidrapport posten tillhör
 
 ### Uppgift (valfritt)
 
-Om uppdraget har definierade uppgifter kan du koppla posten till en specifik uppgift. Uppgifter hjälper dig att kategorisera arbete inom ett uppdrag, till exempel:
+Om giget har definierade uppgifter kan du koppla posten till en specifik uppgift. Uppgifter hjälper dig att kategorisera arbete inom ett gig, till exempel:
 - "Design" kontra "Utveckling" kontra "Testning"
 - "Fas 1 - Research" kontra "Fas 2 - Implementation"
 
-Uppgifter är valfria. Om ditt uppdrag är enkelt kan du hoppa över detta fält.
+Uppgifter är valfria. Om ditt gig är enkelt kan du hoppa över detta fält.
 
 ### Datum
 
@@ -58,7 +58,7 @@ Alternativt kan du ange det totala antalet arbetade timmar direkt (till exempel 
 
 ### Timpris
 
-Fylls i automatiskt från din utförarkonfiguration på uppdraget. Priset visas som referens och används för att beräkna totalkostnaden:
+Fylls i automatiskt från din utförarkonfiguration på giget. Priset visas som referens och används för att beräkna totalkostnaden:
 
 **Totalkostnad = Timmar x Timpris**
 
@@ -116,7 +116,7 @@ Fakturan som innehåller denna post har markerats som betald. Faktureringscykeln
 
 ## Automatiska tidsförslag
 
-Om automatisk tidrapportering är aktiverad på uppdraget skapar Aourly föreslagna tidposter baserat på varje utförares dagliga arbetsschema. Dessa poster:
+Om automatisk tidrapportering är aktiverad på giget skapar Aourly föreslagna tidposter baserat på varje utförares dagliga arbetsschema. Dessa poster:
 - Visas med status "Föreslagen"
 - Är förfyllda med de förväntade timmarna från det dagliga arbetsschemat
 - Kan redigeras, godkännas eller raderas precis som alla andra poster
@@ -124,7 +124,7 @@ Om automatisk tidrapportering är aktiverad på uppdraget skapar Aourly föresla
 
 ## Tidrapporter och gruppering
 
-Tidposter organiseras automatiskt i **tidrapporter**. Varje tidrapport täcker en specifik period (vecka eller månad, beroende på uppdragets tidrapportfrekvens) och tillhör en specifik utförare på ett specifikt uppdrag.
+Tidposter organiseras automatiskt i **tidrapporter**. Varje tidrapport täcker en specifik period (vecka eller månad, beroende på gigets tidrapportfrekvens) och tillhör en specifik utförare på ett specifikt gig.
 
 Du behöver inte skapa tidrapporter manuellt. De genereras automatiskt när du registrerar tidposter. Se guiden [Tidrapporter](timesheets) för mer information.
 
@@ -164,7 +164,7 @@ Innan du markerar tid för godkännande, granska dina poster för perioden. Kont
 
 ### Använd automatisk tidrapportering klokt
 
-Om ditt schema är förutsägbart, aktivera automatisk tidrapportering på uppdraget. Det skapar poster baserat på ditt dagliga arbetsschema. Du kan sedan justera de autogenererade posterna istället för att skapa dem från grunden varje dag.
+Om ditt schema är förutsägbart, aktivera automatisk tidrapportering på giget. Det skapar poster baserat på ditt dagliga arbetsschema. Du kan sedan justera de autogenererade posterna istället för att skapa dem från grunden varje dag.
 
 
 <Tip>Logga tid dagligen för korrekta underlag.</Tip>
@@ -174,8 +174,8 @@ Om ditt schema är förutsägbart, aktivera automatisk tidrapportering på uppdr
 ## Vanliga frågor
 
 <AccordionGroup>
-  <Accordion title="Kan jag logga tid på ett avslutat uppdrag?">
-    Nej, uppdraget måste vara aktivt.
+  <Accordion title="Kan jag logga tid på ett avslutat gig?">
+    Nej, giget måste vara aktivt.
   </Accordion>
   <Accordion title="Kan jag redigera en sparad tidpost?">
     Ja, så länge den inte är godkänd eller fakturerad.
